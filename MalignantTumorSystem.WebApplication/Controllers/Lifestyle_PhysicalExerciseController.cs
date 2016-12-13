@@ -238,8 +238,8 @@ namespace MalignantTumorSystem.WebApplication.Controllers
 
             entity.physical_other = Request["other0"];
             entity.physical_other_frequency = Request["frequency0"];
-             
-            entity.type = "Therioma";
+
+            entity.type = Enum.GetName(typeof(Model.Enum.EntityTypeEnum), 1);
             entity.worker_user_name = worker;
 
             List<Chronic_disease_PhysicalExercise_Add> subjectiveList = new List<Chronic_disease_PhysicalExercise_Add>();
@@ -302,7 +302,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
                 ehr1.community_code = entity.community_code;
                 ehr1.create_time = DateTime.Now;
                 ehr1.item_id = resident.id;
-                ehr1.item_type = "ResidentInfo";
+                ehr1.item_type = Model.Enum.EHRAbstractTypeEnum.ResidentInfo.ToString();
 
                 eHRAbstractService.AddEntity(ehr1);
 
@@ -344,7 +344,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
                     ehr.community_code = entity.community_code;
                     ehr.create_time = DateTime.Now;
                     ehr.item_id = entity.id;
-                    ehr.item_type = "Physical";
+                    ehr.item_type = Model.Enum.EHRAbstractTypeEnum.Physical.ToString();
 
                     if (eHRAbstractService.AddEntity(ehr))
                     {

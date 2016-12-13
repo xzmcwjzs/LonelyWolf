@@ -135,7 +135,7 @@
                         </td>
 
                         <td class="auto-style1">
-                            @if (!(ViewBag.dell_user_name == worker_user_name) && !(ViewBag.dell_user_name == "loushuai") && !(ViewBag.dell_user_name == "dongjc") && !(ViewBag.dell_user_name == "wangj"))
+                            @if (!(ViewBag.dell_user_name == worker_user_name) && !Enum.GetNames(typeof(MalignantTumorSystem.Model.Enum.UserNameEnum)).Contains(ViewBag.dell_user_name as string))
                             {
                                 <a onclick="Alert();" href="javascript:void(0)">
                                     <img alt="修改该记录" src="/images/imgs/icon_edit.gif" />

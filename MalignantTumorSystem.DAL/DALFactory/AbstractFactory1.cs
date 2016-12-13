@@ -408,6 +408,24 @@ Chronic_disease_Comm_Testing_GeneDetection_AddDal;
 
 Chronic_disease_Comm_Testing_GeneDetectionDal;
 		    }
+	  	    public static ICD_9_oldDal GetICD_9_oldDal()
+		    {
+		        return Assembly.Load(AssemblyPath).CreateInstance(NameSpacePath + ".ICD_9_oldDal") as 
+
+ICD_9_oldDal;
+		    }
+	  	    public static Chronic_disease_Comm_OperationDal GetChronic_disease_Comm_OperationDal()
+		    {
+		        return Assembly.Load(AssemblyPath).CreateInstance(NameSpacePath + ".Chronic_disease_Comm_OperationDal") as 
+
+Chronic_disease_Comm_OperationDal;
+		    }
+	  	    public static Chronic_disease_Comm_OperationAddDal GetChronic_disease_Comm_OperationAddDal()
+		    {
+		        return Assembly.Load(AssemblyPath).CreateInstance(NameSpacePath + ".Chronic_disease_Comm_OperationAddDal") as 
+
+Chronic_disease_Comm_OperationAddDal;
+		    }
 	   
    }
 }

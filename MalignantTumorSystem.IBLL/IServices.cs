@@ -338,4 +338,19 @@ namespace MalignantTumorSystem.IBLL
     {
        
     }
+	
+	 public partial interface IICD_9_oldService:IBaseService<ICD_9_old>
+    {
+       
+    }
+	
+	 public partial interface IChronic_disease_Comm_OperationService:IBaseService<Chronic_disease_Comm_Operation>
+    {
+       
+    }
+	
+	 public partial interface IChronic_disease_Comm_OperationAddService:IBaseService<Chronic_disease_Comm_OperationAdd>
+    {
+       
+    }
 }

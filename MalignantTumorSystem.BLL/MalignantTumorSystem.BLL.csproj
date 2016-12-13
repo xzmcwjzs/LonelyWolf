@@ -55,6 +55,8 @@
     <Compile Include="Chronic_disease_Comm_HumorService.cs" />
     <Compile Include="Chronic_disease_Comm_MedicationAddService.cs" />
     <Compile Include="Chronic_disease_Comm_MedicationService.cs" />
+    <Compile Include="Chronic_disease_Comm_OperationAddService.cs" />
+    <Compile Include="Chronic_disease_Comm_OperationService.cs" />
     <Compile Include="Chronic_disease_Comm_Testing_BloodService.cs" />
     <Compile Include="Chronic_disease_Comm_Testing_Blood_AddService.cs" />
     <Compile Include="Chronic_disease_Comm_Testing_BMCAddService.cs" />

@@ -395,6 +395,7 @@
     <Content Include="Areas\BreastCancer\Views\Web.config" />
     <Content Include="Areas\BreastCancer\Views\SelfCheck\Frame.cshtml" />
     <Content Include="index\download\tjhzb.xls" />
+    <Content Include="Scripts\MedicalHistory_OperationRecord\Operate.js" />
     <Content Include="Scripts\MyJs\jquery-treeview\demo\async.html" />
     <Content Include="Scripts\MyJs\jquery-treeview\demo\bg.gif" />
     <Content Include="Scripts\MyJs\jquery-treeview\demo\demo.js" />
@@ -1274,7 +1275,6 @@
     <Content Include="Scripts\MedicalHistory_Hospitalization\Record.js" />
     <Content Include="Scripts\MedicalHistory_Hospitalization\Update.js" />
     <Content Include="Scripts\MedicalHistory_MedicationInformation\Control.js" />
-    <Content Include="Scripts\MedicalHistory_OperationRecord\Control.js" />
     <Content Include="Scripts\MedicalHistory_Outpatient\Control.js" />
     <Content Include="Scripts\MedicalHistory_Outpatient\Record.js" />
     <Content Include="Scripts\MedicalHistory_Outpatient\Update.js" />
@@ -3329,6 +3329,7 @@
     <Content Include="Scripts\MyJs\jquery-treeview\demo\source.php" />
     <Content Include="Scripts\MyJs\jquery-treeview\demo\source.phps" />
     <Content Include="Scripts\MyJs\jquery-treeview\readme.md" />
+    <Content Include="Views\MedicalHistory_OperationRecord\Detail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

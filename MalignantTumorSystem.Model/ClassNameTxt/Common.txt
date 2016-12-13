@@ -3,9 +3,10 @@ var a1 = date.getMonth() + 1 < 10 ? "0" + (date.getMonth() + 1) : date.getMonth(
 var a2 = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
 
 
-基础框架搭好后  写一个SQLHelper  用原生的ado做
+基础框架搭好后  写一个SQLHelper  用原生的ado做  ---
 学习angular  或者vue  ---GiveUp
 仓储   ---OK  
 soa单点登录
 Log4    --- OK
 源码管理 SVN    VSS TFS Git  ---OK
+ASP.NET请求处理机制  管道事件   ---

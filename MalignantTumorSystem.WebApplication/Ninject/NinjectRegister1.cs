@@ -165,6 +165,12 @@ namespace MalignantTumorSystem.WebApplication.Ninject
 	        Kernel.Bind<IChronic_disease_Comm_Testing_GeneDetection_AddService>().To<Chronic_disease_Comm_Testing_GeneDetection_AddService>();
 		
 	        Kernel.Bind<IChronic_disease_Comm_Testing_GeneDetectionService>().To<Chronic_disease_Comm_Testing_GeneDetectionService>();
+		
+	        Kernel.Bind<IICD_9_oldService>().To<ICD_9_oldService>();
+		
+	        Kernel.Bind<IChronic_disease_Comm_OperationService>().To<Chronic_disease_Comm_OperationService>();
+		
+	        Kernel.Bind<IChronic_disease_Comm_OperationAddService>().To<Chronic_disease_Comm_OperationAddService>();
         }
     }
 }

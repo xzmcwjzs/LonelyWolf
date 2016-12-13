@@ -63,6 +63,8 @@
     <Compile Include="Entities\Chronic_disease_Comm_Medication.cs" />
     <Compile Include="Entities\Chronic_disease_Comm_MedicationAdd.cs" />
     <Compile Include="Entities\Chronic_disease_Comm_Medicine.cs" />
+    <Compile Include="Entities\Chronic_disease_Comm_Operation.cs" />
+    <Compile Include="Entities\Chronic_disease_Comm_OperationAdd.cs" />
     <Compile Include="Entities\Chronic_disease_Comm_Testing_Blood.cs" />
     <Compile Include="Entities\Chronic_disease_Comm_Testing_Blood_Add.cs" />
     <Compile Include="Entities\Chronic_disease_Comm_Testing_BMC.cs" />
@@ -111,6 +113,7 @@
     <Compile Include="Entities\Comm_ResidentFile_Followup_Trauma.cs" />
     <Compile Include="Entities\Comm_Tumour.cs" />
     <Compile Include="Entities\ICD_10_old.cs" />
+    <Compile Include="Entities\ICD_9_old.cs" />
     <Compile Include="Entities\MT_RoleInfo.cs" />
     <Compile Include="Entities\MT_WorkerRoleInfo.cs" />
     <Compile Include="Entities\Share_City.cs" />
@@ -119,6 +122,9 @@
     <Compile Include="Entities\Share_DataDictionary.cs" />
     <Compile Include="Entities\Share_Province.cs" />
     <Compile Include="Entities\Share_Street.cs" />
+    <Compile Include="Enum\EHRAbstractTypeEnum.cs" />
+    <Compile Include="Enum\EntityTypeEnum.cs" />
+    <Compile Include="Enum\UserNameEnum.cs" />
     <Compile Include="Mapping\Chronic_disease_Comm_DiagnosticAddMap.cs" />
     <Compile Include="Mapping\Chronic_disease_Comm_DiagnosticMap.cs" />
     <Compile Include="Mapping\Chronic_disease_Comm_HumorAddMap.cs" />
@@ -130,6 +136,8 @@
     <Compile Include="Mapping\Chronic_disease_Comm_MedicationAddMap.cs" />
     <Compile Include="Mapping\Chronic_disease_Comm_MedicationMap.cs" />
     <Compile Include="Mapping\Chronic_disease_Comm_MedicineMap.cs" />
+    <Compile Include="Mapping\Chronic_disease_Comm_OperationAddMap.cs" />
+    <Compile Include="Mapping\Chronic_disease_Comm_OperationMap.cs" />
     <Compile Include="Mapping\Chronic_disease_Comm_Testing_BloodMap.cs" />
     <Compile Include="Mapping\Chronic_disease_Comm_Testing_Blood_AddMap.cs" />
     <Compile Include="Mapping\Chronic_disease_Comm_Testing_BMCAddMap.cs" />
@@ -177,6 +185,7 @@
     <Compile Include="Mapping\Comm_ResidentFile_Followup_TraumaMap.cs" />
     <Compile Include="Mapping\Comm_TumourMap.cs" />
     <Compile Include="Mapping\ICD_10_oldMap.cs" />
+    <Compile Include="Mapping\ICD_9_oldMap.cs" />
     <Compile Include="Mapping\MT_RoleInfoMap.cs" />
     <Compile Include="Mapping\MT_WorkerRoleInfoMap.cs" />
     <Compile Include="Mapping\Share_CityMap.cs" />
@@ -195,9 +204,7 @@
     <Compile Include="SearchParam\MedicalHistory_OutpatientParam.cs" />
     <Compile Include="ViewModel\BasicInformationViewModel.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Enum\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="ClassNameTxt\ClassName.txt" />
     <Content Include="ClassNameTxt\Common.txt" />

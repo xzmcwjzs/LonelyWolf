@@ -272,4 +272,16 @@ namespace MalignantTumorSystem.IDAL
 	public partial interface IChronic_disease_Comm_Testing_GeneDetectionDal : IBaseDal<Chronic_disease_Comm_Testing_GeneDetection>
     { 
     }   
+	
+	public partial interface IICD_9_oldDal : IBaseDal<ICD_9_old>
+    { 
+    }   
+	
+	public partial interface IChronic_disease_Comm_OperationDal : IBaseDal<Chronic_disease_Comm_Operation>
+    { 
+    }   
+	
+	public partial interface IChronic_disease_Comm_OperationAddDal : IBaseDal<Chronic_disease_Comm_OperationAdd>
+    { 
+    }   
 }

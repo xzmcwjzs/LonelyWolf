@@ -230,7 +230,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
             }
              
             entity.community_code = Request["ddlCommunity"];
-            entity.chronic_disease_type = "Therioma";
+            entity.chronic_disease_type = Enum.GetName(typeof(Model.Enum.EntityTypeEnum), 1);
             entity.worker_user_name = Request["input_person"]; ;
             entity.create_time = CommonFunc.SafeGetDateTimeFromObj(CommonFunc.SafeGetStringFromObj(Request["createTime"]));
             List<Chronic_disease_Diabetes_family_relation> subjectiveList = new List<Chronic_disease_Diabetes_family_relation>(); 
@@ -293,7 +293,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
                 ehr1.community_code = entity.community_code;
                 ehr1.create_time = DateTime.Now;
                 ehr1.item_id = resident.id;
-                ehr1.item_type = "ResidentInfo";
+                ehr1.item_type = Model.Enum.EHRAbstractTypeEnum.ResidentInfo.ToString();
 
                 eHRAbstractService.AddEntity(ehr1);  
                  
@@ -331,7 +331,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
                     ehr.community_code = entity.community_code;
                     ehr.create_time = DateTime.Now;
                     ehr.item_id = entity.id;
-                    ehr.item_type = "Family";
+                    ehr.item_type = Model.Enum.EHRAbstractTypeEnum.Family.ToString();
 
                    if(eHRAbstractService.AddEntity(ehr)){
                        msg="提交成功";

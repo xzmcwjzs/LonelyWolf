@@ -538,4 +538,28 @@ namespace MalignantTumorSystem.BLL
             CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_Testing_GeneDetectionDal();
         } 
 	}  
+	
+	public partial class ICD_9_oldService:BaseService<ICD_9_old>,IICD_9_oldService
+    {	
+		public override void SetCurrentDal()
+        {
+            CurrentDal =DAL.DALFactory.AbstractFactory.GetICD_9_oldDal();
+        } 
+	}  
+	
+	public partial class Chronic_disease_Comm_OperationService:BaseService<Chronic_disease_Comm_Operation>,IChronic_disease_Comm_OperationService
+    {	
+		public override void SetCurrentDal()
+        {
+            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_OperationDal();
+        } 
+	}  
+	
+	public partial class Chronic_disease_Comm_OperationAddService:BaseService<Chronic_disease_Comm_OperationAdd>,IChronic_disease_Comm_OperationAddService
+    {	
+		public override void SetCurrentDal()
+        {
+            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_OperationAddDal();
+        } 
+	}  
 }

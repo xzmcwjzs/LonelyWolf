@@ -28,3 +28,15 @@ D:\王杰\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantT
 D:\王杰\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.Model\bin\Debug\zh-Hans\EntityFramework.resources.dll
 D:\王杰\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.Model\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
 D:\王杰\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.Model\obj\Debug\MalignantTumorSystem.Model.csprojResolveAssemblyReference.cache
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Model\bin\Debug\MalignantTumorSystem.Model.dll.config
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Model\bin\Debug\MalignantTumorSystem.Model.dll
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Model\bin\Debug\MalignantTumorSystem.Model.pdb
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Model\bin\Debug\EntityFramework.dll
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Model\bin\Debug\EntityFramework.xml
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Model\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Model\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Model\obj\Debug\MalignantTumorSystem.Model.csprojResolveAssemblyReference.cache
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Model\obj\Debug\MalignantTumorSystem.Model.dll
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Model\obj\Debug\MalignantTumorSystem.Model.pdb

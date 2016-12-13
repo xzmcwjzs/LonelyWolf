@@ -276,4 +276,16 @@ namespace MalignantTumorSystem.DAL{
 	public partial class Chronic_disease_Comm_Testing_GeneDetectionDal:BaseDal<Chronic_disease_Comm_Testing_GeneDetection>,IChronic_disease_Comm_Testing_GeneDetectionDal
     {
 	}
+		
+	public partial class ICD_9_oldDal:BaseDal<ICD_9_old>,IICD_9_oldDal
+    {
+	}
+		
+	public partial class Chronic_disease_Comm_OperationDal:BaseDal<Chronic_disease_Comm_Operation>,IChronic_disease_Comm_OperationDal
+    {
+	}
+		
+	public partial class Chronic_disease_Comm_OperationAddDal:BaseDal<Chronic_disease_Comm_OperationAdd>,IChronic_disease_Comm_OperationAddDal
+    {
+	}
 }

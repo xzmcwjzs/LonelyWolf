@@ -41,6 +41,8 @@ namespace MalignantTumorSystem.WebApplication.Controllers
         public IComm_Platform_WorkerService platform_WorkerService { get; set; }
         [Inject]
         public IChronic_disease_Comm_MedicationAddService disease_Comm_MedicationAddService { get; set; }
+
+        #region 框架页
         public ActionResult Frame()
         {
             return View();
@@ -56,7 +58,8 @@ namespace MalignantTumorSystem.WebApplication.Controllers
         public ActionResult Left()
         {
             return View();
-        }
+        } 
+        #endregion
         //列表页面
         public ActionResult List()
         {
@@ -229,8 +232,8 @@ namespace MalignantTumorSystem.WebApplication.Controllers
             {
                 entity.finish_time = CommonFunc.SafeGetDateTimeFromObj(CommonFunc.SafeGetStringFromObj(Request["date"]));
             }
-            
-            entity.type = "Therioma";
+
+            entity.type = Enum.GetName(typeof(Model.Enum.EntityTypeEnum), 1);
             entity.worker_user_name = worker;
             entity.sign = "0";
  
@@ -276,7 +279,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
                 ehr1.community_code = entity.community_code;
                 ehr1.create_time = DateTime.Now;
                 ehr1.item_id = resident.id;
-                ehr1.item_type = "ResidentInfo";
+                ehr1.item_type = Model.Enum.EHRAbstractTypeEnum.ResidentInfo.ToString();
 
                 eHRAbstractService.AddEntity(ehr1);
 
@@ -372,7 +375,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
                     dia.create_time = CommonFunc.SafeGetDateTimeFromObj(CommonFunc.SafeGetStringFromObj(DateTime.Now.ToString("yyyy-MM-dd")));
                     dia.community_code = entity.community_code;
                     dia.worker = worker;
-                    dia.type = "Therioma";
+                    dia.type = Enum.GetName(typeof(Model.Enum.EntityTypeEnum), 1);
                 }
                 else
                 {
@@ -380,7 +383,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
                     dia.create_time = CommonFunc.SafeGetDateTimeFromObj(CommonFunc.SafeGetStringFromObj(DateTime.Now.ToString("yyyy-MM-dd")));
                     dia.community_code = entity.community_code;
                     dia.worker = worker;
-                    dia.type = "Therioma";
+                    dia.type = Enum.GetName(typeof(Model.Enum.EntityTypeEnum), 1);
                 }
                 dia.names = Request["name"];
                 dia.sex = Request["sex"];
@@ -485,7 +488,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
                     media.create_time = CommonFunc.SafeGetDateTimeFromObj(CommonFunc.SafeGetStringFromObj(DateTime.Now.ToString("yyyy-MM-dd")));
                     media.community_code = entity.community_code;
                     media.worker = worker;
-                    media.type = "Therioma";
+                    media.type = Enum.GetName(typeof(Model.Enum.EntityTypeEnum), 1);
                 }
                 else
                 {
@@ -493,7 +496,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
                     media.create_time = CommonFunc.SafeGetDateTimeFromObj(CommonFunc.SafeGetStringFromObj(DateTime.Now.ToString("yyyy-MM-dd")));
                     media.community_code = entity.community_code;
                     media.worker = worker;
-                    media.type = "Therioma";
+                    media.type = Enum.GetName(typeof(Model.Enum.EntityTypeEnum), 1);
                 }
 
                 media.names = Request["name"];
@@ -639,7 +642,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
                     ehr.community_code = entity.community_code;
                     ehr.create_time = DateTime.Now;
                     ehr.item_id = entity.id;
-                    ehr.item_type = "Outpatient";
+                    ehr.item_type = Model.Enum.EHRAbstractTypeEnum.Outpatient.ToString();
 
                     if (eHRAbstractService.AddEntity(ehr))
                     {
@@ -744,7 +747,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
                 entity.finish_time = CommonFunc.SafeGetDateTimeFromObj(CommonFunc.SafeGetStringFromObj(Request["date"]));
             }
 
-            entity.type = "Therioma";
+            entity.type = Enum.GetName(typeof(Model.Enum.EntityTypeEnum), 1);
             entity.worker_user_name = worker;
             entity.sign = "1";
 
@@ -790,7 +793,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
                 ehr1.community_code = entity.community_code;
                 ehr1.create_time = DateTime.Now;
                 ehr1.item_id = resident.id;
-                ehr1.item_type = "ResidentInfo";
+                ehr1.item_type = Model.Enum.EHRAbstractTypeEnum.ResidentInfo.ToString();
 
                 eHRAbstractService.AddEntity(ehr1);
 
@@ -886,7 +889,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
                     dia.create_time = CommonFunc.SafeGetDateTimeFromObj(CommonFunc.SafeGetStringFromObj(DateTime.Now.ToString("yyyy-MM-dd")));
                     dia.community_code = entity.community_code;
                     dia.worker = worker;
-                    dia.type = "Therioma";
+                    dia.type = Enum.GetName(typeof(Model.Enum.EntityTypeEnum), 1);
                 }
                 else
                 {
@@ -894,7 +897,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
                     dia.create_time = CommonFunc.SafeGetDateTimeFromObj(CommonFunc.SafeGetStringFromObj(DateTime.Now.ToString("yyyy-MM-dd")));
                     dia.community_code = entity.community_code;
                     dia.worker = worker;
-                    dia.type = "Therioma";
+                    dia.type = Enum.GetName(typeof(Model.Enum.EntityTypeEnum), 1);
                 }
                 dia.names = Request["name"];
                 dia.sex = Request["sex"];
@@ -999,7 +1002,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
                     media.create_time = CommonFunc.SafeGetDateTimeFromObj(CommonFunc.SafeGetStringFromObj(DateTime.Now.ToString("yyyy-MM-dd")));
                     media.community_code = entity.community_code;
                     media.worker = worker;
-                    media.type = "Therioma";
+                    media.type = Enum.GetName(typeof(Model.Enum.EntityTypeEnum), 1);
                 }
                 else
                 {
@@ -1007,7 +1010,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
                     media.create_time = CommonFunc.SafeGetDateTimeFromObj(CommonFunc.SafeGetStringFromObj(DateTime.Now.ToString("yyyy-MM-dd")));
                     media.community_code = entity.community_code;
                     media.worker = worker;
-                    media.type = "Therioma";
+                    media.type = Enum.GetName(typeof(Model.Enum.EntityTypeEnum), 1);
                 }
 
                 media.names = Request["name"];
@@ -1153,7 +1156,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
                     ehr.community_code = entity.community_code;
                     ehr.create_time = DateTime.Now;
                     ehr.item_id = entity.id;
-                    ehr.item_type = "Outpatient";
+                    ehr.item_type = Model.Enum.EHRAbstractTypeEnum.Outpatient.ToString();
 
                     if (eHRAbstractService.AddEntity(ehr))
                     {

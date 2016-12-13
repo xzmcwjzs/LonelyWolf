@@ -245,7 +245,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
             entity.work_type = Request["ddlcraft"];
             entity.worker_time_everyweek = Request["work_time"];
             entity.cost_method_payment = Request["ddlCostPayment"];
-            entity.chronic_disease_type = "Therioma";
+            entity.chronic_disease_type = Enum.GetName(typeof(Model.Enum.EntityTypeEnum), 1);
             //出生地址
             if (!Request["ddlCounty1"].Equals(""))
             {
@@ -670,7 +670,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
             entity2.drinking_yellow_equivalent = Request["count4_dl"];
             entity2.drinking_other_equivalent = Request["count5_dl"];
 
-            entity2.type = "Therioma";
+            entity2.type = Enum.GetName(typeof(Model.Enum.EntityTypeEnum), 1);
             entity2.worker_user_name = worker;
             entity2.create_time = entity.create_time;
             if (string.IsNullOrEmpty(id2))
@@ -761,7 +761,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
                     ehr.community_code = entity.community_code;
                     ehr.create_time =CommonFunc.SafeGetDateTimeFromObj(DateTime.Now.ToString("yyyy-MM-dd"));
                     ehr.item_id = entity.id;
-                    ehr.item_type = "ResidentInfo";
+                    ehr.item_type = Model.Enum.EHRAbstractTypeEnum.ResidentInfo.ToString();
 
 
                     if (string.IsNullOrEmpty(re_id))//添加数据
@@ -795,7 +795,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
                     ehr.community_code = entity.community_code;
                     ehr.create_time = CommonFunc.SafeGetDateTimeFromObj(DateTime.Now);
                     ehr.item_id = entity.id;
-                    ehr.item_type = "ResidentInfo";
+                    ehr.item_type = Model.Enum.EHRAbstractTypeEnum.ResidentInfo.ToString();
                     eHRAbstractService.AddEntity(ehr);
                     #endregion
                 }

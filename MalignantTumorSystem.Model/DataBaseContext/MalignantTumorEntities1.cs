@@ -219,6 +219,15 @@ namespace MalignantTumorSystem.Model.DataBaseContext
 		
 	 
             modelBuilder.Configurations.Add(new Chronic_disease_Comm_Testing_GeneDetectionMap());
+		
+	 
+            modelBuilder.Configurations.Add(new ICD_9_oldMap());
+		
+	 
+            modelBuilder.Configurations.Add(new Chronic_disease_Comm_OperationMap());
+		
+	 
+            modelBuilder.Configurations.Add(new Chronic_disease_Comm_OperationAddMap());
      }
 		
 	     public DbSet<Comm_Platform_Worker> Comm_Platform_Worker { get; set; }
@@ -352,5 +361,11 @@ namespace MalignantTumorSystem.Model.DataBaseContext
 	     public DbSet<Chronic_disease_Comm_Testing_GeneDetection_Add> Chronic_disease_Comm_Testing_GeneDetection_Add { get; set; }
 		
 	     public DbSet<Chronic_disease_Comm_Testing_GeneDetection> Chronic_disease_Comm_Testing_GeneDetection { get; set; }
+		
+	     public DbSet<ICD_9_old> ICD_9_old { get; set; }
+		
+	     public DbSet<Chronic_disease_Comm_Operation> Chronic_disease_Comm_Operation { get; set; }
+		
+	     public DbSet<Chronic_disease_Comm_OperationAdd> Chronic_disease_Comm_OperationAdd { get; set; }
    }
 }

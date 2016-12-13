@@ -183,8 +183,8 @@ namespace MalignantTumorSystem.WebApplication.Controllers
             entity.community_code = Request["ddlCommunity"];
             entity.permanent_address = Request["perment_community_address"];
             entity.phone = Request["phone"];
-           
-            entity.type = "Therioma";
+
+            entity.type = Enum.GetName(typeof(Model.Enum.EntityTypeEnum), 1);
             entity.worker_user_name = worker;
             entity.sign = "0";
 
@@ -230,7 +230,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
                 ehr1.community_code = entity.community_code;
                 ehr1.create_time = DateTime.Now;
                 ehr1.item_id = resident.id;
-                ehr1.item_type = "ResidentInfo";
+                ehr1.item_type = Model.Enum.EHRAbstractTypeEnum.ResidentInfo.ToString();
 
                 eHRAbstractService.AddEntity(ehr1);
 
@@ -332,7 +332,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
             entity.context = Request["context"];
             entity.community_code = Request["ddlCommunity"];
 
-            entity.type = "Therioma";
+            entity.type = Enum.GetName(typeof(Model.Enum.EntityTypeEnum), 1);
             entity.worker_user_name = worker;
             entity.sign = "1";
 
@@ -378,7 +378,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
                 ehr1.community_code = entity.community_code;
                 ehr1.create_time = DateTime.Now;
                 ehr1.item_id = resident.id;
-                ehr1.item_type = "ResidentInfo";
+                ehr1.item_type = Model.Enum.EHRAbstractTypeEnum.ResidentInfo.ToString();
 
                 eHRAbstractService.AddEntity(ehr1);
 

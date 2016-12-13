@@ -190,7 +190,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
             entity.diet_hobby = Request["other_diet"];
             entity.diet_hobby_other = Request["other_diet_other"];
 
-            entity.type = "Therioma";
+            entity.type = Enum.GetName(typeof(Model.Enum.EntityTypeEnum), 1);
             entity.worker_user_name = worker;
 
             //判断个人信息表中是否存在此人信息 2015-06-18 娄帅
@@ -235,7 +235,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
                 ehr1.community_code = entity.community_code;
                 ehr1.create_time = DateTime.Now;
                 ehr1.item_id = resident.id;
-                ehr1.item_type = "ResidentInfo";
+                ehr1.item_type = Model.Enum.EHRAbstractTypeEnum.ResidentInfo.ToString();
 
                 eHRAbstractService.AddEntity(ehr1);
 
@@ -277,7 +277,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
                     ehr.community_code = entity.community_code;
                     ehr.create_time = DateTime.Now;
                     ehr.item_id = entity.id;
-                    ehr.item_type = "EHabits";
+                    ehr.item_type = Model.Enum.EHRAbstractTypeEnum.EHabits.ToString();
 
                     if (eHRAbstractService.AddEntity(ehr))
                     {

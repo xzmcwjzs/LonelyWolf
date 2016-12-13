@@ -75,10 +75,10 @@
                     <td>查看</td>
                     <td>修改</td>
                     <td>门诊病历</td>
-                    @if (ViewBag.dell_user_name == "dongjc" || ViewBag.dell_user_name == "wangj" || ViewBag.dell_user_name == "loushuai")
+                    @*@if (ViewBag.dell_user_name == "dongjc" || ViewBag.dell_user_name == "wangj" || ViewBag.dell_user_name == "loushuai")
                     {
                         <td>删除</td>
-                    }
+                    }*@
                 </tr>
                 <tbody>
 
@@ -168,7 +168,7 @@
                             </td>
                             
                             <td>
-                                @if (!(ViewBag.dell_user_name == worker_user_name) && !(ViewBag.dell_user_name == "loushuai") && !(ViewBag.dell_user_name == "dongjc") && !(ViewBag.dell_user_name == "wangj"))
+                                @if (!(ViewBag.dell_user_name == worker_user_name) && !Enum.GetNames(typeof(MalignantTumorSystem.Model.Enum.UserNameEnum)).Contains(ViewBag.dell_user_name as string))
                                 {
                                     <a onclick="Alert();" href="javascript:void(0)">
                                         <img alt="修改该记录" src="/images/imgs/icon_edit.gif" />
@@ -187,14 +187,14 @@
                                     <img alt="查看详细资料" src="/images/imgs/icon_show.gif" />
                                 </a>
                             </td> 
-                                @if (ViewBag.dell_user_name == "dongjc" || ViewBag.dell_user_name == "wangj" || ViewBag.dell_user_name == "loushuai")
+                                @*@if (ViewBag.dell_user_name == "dongjc" || ViewBag.dell_user_name == "wangj" || ViewBag.dell_user_name == "loushuai")
                                 {
                                 <td>
                                     <a href="javascript:void(0)" onclick="Delete('@id');">
                                         <img alt="删除该记录" src="/images/imgs/icon_del.gif" />
                                     </a>
                                 </td>
-                                } 
+                                }*@ 
                         </tr>
                     }
                 </tbody>

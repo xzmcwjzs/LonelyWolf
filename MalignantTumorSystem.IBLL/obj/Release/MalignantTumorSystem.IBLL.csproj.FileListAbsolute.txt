@@ -1,0 +1,12 @@
+E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.IBLL\bin\Release\MalignantTumorSystem.IBLL.dll
+E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.IBLL\bin\Release\MalignantTumorSystem.IBLL.pdb
+E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.IBLL\bin\Release\MalignantTumorSystem.IDAL.dll
+E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.IBLL\bin\Release\MalignantTumorSystem.Model.dll
+E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.IBLL\bin\Release\EntityFramework.dll
+E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.IBLL\bin\Release\MalignantTumorSystem.IDAL.pdb
+E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.IBLL\bin\Release\MalignantTumorSystem.Model.pdb
+E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.IBLL\bin\Release\EntityFramework.xml
+E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.IBLL\bin\Release\zh-Hans\EntityFramework.resources.dll
+E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.IBLL\obj\Release\MalignantTumorSystem.IBLL.csprojResolveAssemblyReference.cache
+E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.IBLL\obj\Release\MalignantTumorSystem.IBLL.dll
+E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.IBLL\obj\Release\MalignantTumorSystem.IBLL.pdb

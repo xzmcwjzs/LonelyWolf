@@ -1,0 +1,12 @@
+E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.DAL\bin\Release\MalignantTumorSystem.DAL.dll
+E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.DAL\bin\Release\MalignantTumorSystem.DAL.pdb
+E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.DAL\bin\Release\EntityFramework.dll
+E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.DAL\bin\Release\MalignantTumorSystem.IDAL.dll
+E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.DAL\bin\Release\MalignantTumorSystem.Model.dll
+E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.DAL\bin\Release\MalignantTumorSystem.IDAL.pdb
+E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.DAL\bin\Release\MalignantTumorSystem.Model.pdb
+E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.DAL\bin\Release\EntityFramework.xml
+E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.DAL\bin\Release\zh-Hans\EntityFramework.resources.dll
+E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.DAL\obj\Release\MalignantTumorSystem.DAL.csprojResolveAssemblyReference.cache
+E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.DAL\obj\Release\MalignantTumorSystem.DAL.dll
+E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.DAL\obj\Release\MalignantTumorSystem.DAL.pdb

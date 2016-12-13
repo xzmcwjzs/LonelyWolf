@@ -1,0 +1,279 @@
+﻿ 
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using MalignantTumorSystem.Model;
+using MalignantTumorSystem.Model.Entities;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
+using MalignantTumorSystem.IDAL;
+namespace MalignantTumorSystem.DAL{
+
+		
+	public partial class Comm_Platform_WorkerDal:BaseDal<Comm_Platform_Worker>,IComm_Platform_WorkerDal
+    {
+	}
+		
+	public partial class MT_RoleInfoDal:BaseDal<MT_RoleInfo>,IMT_RoleInfoDal
+    {
+	}
+		
+	public partial class MT_WorkerRoleInfoDal:BaseDal<MT_WorkerRoleInfo>,IMT_WorkerRoleInfoDal
+    {
+	}
+		
+	public partial class Share_ProvinceDal:BaseDal<Share_Province>,IShare_ProvinceDal
+    {
+	}
+		
+	public partial class Share_CityDal:BaseDal<Share_City>,IShare_CityDal
+    {
+	}
+		
+	public partial class Share_CountyDal:BaseDal<Share_County>,IShare_CountyDal
+    {
+	}
+		
+	public partial class Share_StreetDal:BaseDal<Share_Street>,IShare_StreetDal
+    {
+	}
+		
+	public partial class Share_CommunityInfoDal:BaseDal<Share_CommunityInfo>,IShare_CommunityInfoDal
+    {
+	}
+		
+	public partial class Comm_TumourDal:BaseDal<Comm_Tumour>,IComm_TumourDal
+    {
+	}
+		
+	public partial class Comm_ResidentFileDal:BaseDal<Comm_ResidentFile>,IComm_ResidentFileDal
+    {
+	}
+		
+	public partial class Comm_ResidentFile_Followup_DiseaseDal:BaseDal<Comm_ResidentFile_Followup_Disease>,IComm_ResidentFile_Followup_DiseaseDal
+    {
+	}
+		
+	public partial class Comm_ResidentFile_Followup_SurgeryDal:BaseDal<Comm_ResidentFile_Followup_Surgery>,IComm_ResidentFile_Followup_SurgeryDal
+    {
+	}
+		
+	public partial class Comm_ResidentFile_Followup_TraumaDal:BaseDal<Comm_ResidentFile_Followup_Trauma>,IComm_ResidentFile_Followup_TraumaDal
+    {
+	}
+		
+	public partial class Comm_ResidentFile_Followup_Blood_TransfusionDal:BaseDal<Comm_ResidentFile_Followup_Blood_Transfusion>,IComm_ResidentFile_Followup_Blood_TransfusionDal
+    {
+	}
+		
+	public partial class Comm_ResidentFile_Followup_Family_DiseaseDal:BaseDal<Comm_ResidentFile_Followup_Family_Disease>,IComm_ResidentFile_Followup_Family_DiseaseDal
+    {
+	}
+		
+	public partial class Chronic_disease_SmokeAndDrinkDal:BaseDal<Chronic_disease_SmokeAndDrink>,IChronic_disease_SmokeAndDrinkDal
+    {
+	}
+		
+	public partial class Comm_EHR_AbstractDal:BaseDal<Comm_EHR_Abstract>,IComm_EHR_AbstractDal
+    {
+	}
+		
+	public partial class Comm_ResidentFile_Change_AddressDal:BaseDal<Comm_ResidentFile_Change_Address>,IComm_ResidentFile_Change_AddressDal
+    {
+	}
+		
+	public partial class Share_DataDictionaryDal:BaseDal<Share_DataDictionary>,IShare_DataDictionaryDal
+    {
+	}
+		
+	public partial class Chronic_disease_Diabetes_familyDal:BaseDal<Chronic_disease_Diabetes_family>,IChronic_disease_Diabetes_familyDal
+    {
+	}
+		
+	public partial class Chronic_disease_Diabetes_family_relationDal:BaseDal<Chronic_disease_Diabetes_family_relation>,IChronic_disease_Diabetes_family_relationDal
+    {
+	}
+		
+	public partial class Chronic_disease_DailyLifeDal:BaseDal<Chronic_disease_DailyLife>,IChronic_disease_DailyLifeDal
+    {
+	}
+		
+	public partial class Chronic_disease_PhysicalExerciseDal:BaseDal<Chronic_disease_PhysicalExercise>,IChronic_disease_PhysicalExerciseDal
+    {
+	}
+		
+	public partial class Chronic_disease_PhysicalExercise_AddDal:BaseDal<Chronic_disease_PhysicalExercise_Add>,IChronic_disease_PhysicalExercise_AddDal
+    {
+	}
+		
+	public partial class ICD_10_oldDal:BaseDal<ICD_10_old>,IICD_10_oldDal
+    {
+	}
+		
+	public partial class Chronic_disease_Comm_MedicineDal:BaseDal<Chronic_disease_Comm_Medicine>,IChronic_disease_Comm_MedicineDal
+    {
+	}
+		
+	public partial class Chronic_disease_Data_DiseaseNameDal:BaseDal<Chronic_disease_Data_DiseaseName>,IChronic_disease_Data_DiseaseNameDal
+    {
+	}
+		
+	public partial class Chronic_disease_Comm_DiagnosticDal:BaseDal<Chronic_disease_Comm_Diagnostic>,IChronic_disease_Comm_DiagnosticDal
+    {
+	}
+		
+	public partial class Chronic_disease_OutpatientDal:BaseDal<Chronic_disease_Outpatient>,IChronic_disease_OutpatientDal
+    {
+	}
+		
+	public partial class Chronic_disease_Comm_MedicationDal:BaseDal<Chronic_disease_Comm_Medication>,IChronic_disease_Comm_MedicationDal
+    {
+	}
+		
+	public partial class Chronic_disease_Outpatient_JudgeDal:BaseDal<Chronic_disease_Outpatient_Judge>,IChronic_disease_Outpatient_JudgeDal
+    {
+	}
+		
+	public partial class Chronic_disease_Outpatient_PrescriptionDal:BaseDal<Chronic_disease_Outpatient_Prescription>,IChronic_disease_Outpatient_PrescriptionDal
+    {
+	}
+		
+	public partial class Chronic_disease_Outpatient_AccessoryExaminationDal:BaseDal<Chronic_disease_Outpatient_AccessoryExamination>,IChronic_disease_Outpatient_AccessoryExaminationDal
+    {
+	}
+		
+	public partial class Chronic_disease_Comm_MedicationAddDal:BaseDal<Chronic_disease_Comm_MedicationAdd>,IChronic_disease_Comm_MedicationAddDal
+    {
+	}
+		
+	public partial class Chronic_disease_HospitalizationDal:BaseDal<Chronic_disease_Hospitalization>,IChronic_disease_HospitalizationDal
+    {
+	}
+		
+	public partial class Chronic_disease_Hospitalization_ConsultationRecordDal:BaseDal<Chronic_disease_Hospitalization_ConsultationRecord>,IChronic_disease_Hospitalization_ConsultationRecordDal
+    {
+	}
+		
+	public partial class Chronic_disease_Hospitalization_CourseRecordDal:BaseDal<Chronic_disease_Hospitalization_CourseRecord>,IChronic_disease_Hospitalization_CourseRecordDal
+    {
+	}
+		
+	public partial class Chronic_disease_Hospitalization_ExpensesDal:BaseDal<Chronic_disease_Hospitalization_Expenses>,IChronic_disease_Hospitalization_ExpensesDal
+    {
+	}
+		
+	public partial class Chronic_disease_Hospitalization_DischargeAbstractDal:BaseDal<Chronic_disease_Hospitalization_DischargeAbstract>,IChronic_disease_Hospitalization_DischargeAbstractDal
+    {
+	}
+		
+	public partial class Chronic_disease_Hospitalization_DischargeAbstract_AdviceDal:BaseDal<Chronic_disease_Hospitalization_DischargeAbstract_Advice>,IChronic_disease_Hospitalization_DischargeAbstract_AdviceDal
+    {
+	}
+		
+	public partial class Chronic_disease_Comm_DiagnosticAddDal:BaseDal<Chronic_disease_Comm_DiagnosticAdd>,IChronic_disease_Comm_DiagnosticAddDal
+    {
+	}
+		
+	public partial class Chronic_disease_Data_NamesDal:BaseDal<Chronic_disease_Data_Names>,IChronic_disease_Data_NamesDal
+    {
+	}
+		
+	public partial class Chronic_disease_Data_UnitsDal:BaseDal<Chronic_disease_Data_Units>,IChronic_disease_Data_UnitsDal
+    {
+	}
+		
+	public partial class Chronic_disease_Data_SectionsDal:BaseDal<Chronic_disease_Data_Sections>,IChronic_disease_Data_SectionsDal
+    {
+	}
+		
+	public partial class Chronic_disease_Comm_Testing_BloodDal:BaseDal<Chronic_disease_Comm_Testing_Blood>,IChronic_disease_Comm_Testing_BloodDal
+    {
+	}
+		
+	public partial class Chronic_disease_Comm_Testing_Blood_AddDal:BaseDal<Chronic_disease_Comm_Testing_Blood_Add>,IChronic_disease_Comm_Testing_Blood_AddDal
+    {
+	}
+		
+	public partial class Chronic_disease_PicturesDal:BaseDal<Chronic_disease_Pictures>,IChronic_disease_PicturesDal
+    {
+	}
+		
+	public partial class Chronic_disease_Data_ResultsDal:BaseDal<Chronic_disease_Data_Results>,IChronic_disease_Data_ResultsDal
+    {
+	}
+		
+	public partial class Chronic_disease_Comm_Testing_UrineDal:BaseDal<Chronic_disease_Comm_Testing_Urine>,IChronic_disease_Comm_Testing_UrineDal
+    {
+	}
+		
+	public partial class Chronic_disease_Comm_Testing_Urine_AddDal:BaseDal<Chronic_disease_Comm_Testing_Urine_Add>,IChronic_disease_Comm_Testing_Urine_AddDal
+    {
+	}
+		
+	public partial class Chronic_disease_Comm_Testing_FaecesDal:BaseDal<Chronic_disease_Comm_Testing_Faeces>,IChronic_disease_Comm_Testing_FaecesDal
+    {
+	}
+		
+	public partial class Chronic_disease_Comm_Testing_SputumDal:BaseDal<Chronic_disease_Comm_Testing_Sputum>,IChronic_disease_Comm_Testing_SputumDal
+    {
+	}
+		
+	public partial class Chronic_disease_Comm_Testing_CSFDal:BaseDal<Chronic_disease_Comm_Testing_CSF>,IChronic_disease_Comm_Testing_CSFDal
+    {
+	}
+		
+	public partial class Chronic_disease_Comm_Testing_CSFAddDal:BaseDal<Chronic_disease_Comm_Testing_CSFAdd>,IChronic_disease_Comm_Testing_CSFAddDal
+    {
+	}
+		
+	public partial class Chronic_disease_Comm_Testing_SCEDal:BaseDal<Chronic_disease_Comm_Testing_SCE>,IChronic_disease_Comm_Testing_SCEDal
+    {
+	}
+		
+	public partial class Chronic_disease_Comm_Testing_SCEAddDal:BaseDal<Chronic_disease_Comm_Testing_SCEAdd>,IChronic_disease_Comm_Testing_SCEAddDal
+    {
+	}
+		
+	public partial class Chronic_disease_Comm_HumorProjectNamesDal:BaseDal<Chronic_disease_Comm_HumorProjectNames>,IChronic_disease_Comm_HumorProjectNamesDal
+    {
+	}
+		
+	public partial class Chronic_disease_Comm_HumorAddDal:BaseDal<Chronic_disease_Comm_HumorAdd>,IChronic_disease_Comm_HumorAddDal
+    {
+	}
+		
+	public partial class Chronic_disease_Comm_HumorDal:BaseDal<Chronic_disease_Comm_Humor>,IChronic_disease_Comm_HumorDal
+    {
+	}
+		
+	public partial class Chronic_disease_Comm_HumorUnitDal:BaseDal<Chronic_disease_Comm_HumorUnit>,IChronic_disease_Comm_HumorUnitDal
+    {
+	}
+		
+	public partial class Chronic_disease_Comm_HumorResultDal:BaseDal<Chronic_disease_Comm_HumorResult>,IChronic_disease_Comm_HumorResultDal
+    {
+	}
+		
+	public partial class Chronic_disease_Comm_HumorQuJianDal:BaseDal<Chronic_disease_Comm_HumorQuJian>,IChronic_disease_Comm_HumorQuJianDal
+    {
+	}
+		
+	public partial class Chronic_disease_Comm_Testing_BMCDal:BaseDal<Chronic_disease_Comm_Testing_BMC>,IChronic_disease_Comm_Testing_BMCDal
+    {
+	}
+		
+	public partial class Chronic_disease_Comm_Testing_BMCAddDal:BaseDal<Chronic_disease_Comm_Testing_BMCAdd>,IChronic_disease_Comm_Testing_BMCAddDal
+    {
+	}
+		
+	public partial class Chronic_disease_Comm_Testing_GeneDetection_AddDal:BaseDal<Chronic_disease_Comm_Testing_GeneDetection_Add>,IChronic_disease_Comm_Testing_GeneDetection_AddDal
+    {
+	}
+		
+	public partial class Chronic_disease_Comm_Testing_GeneDetectionDal:BaseDal<Chronic_disease_Comm_Testing_GeneDetection>,IChronic_disease_Comm_Testing_GeneDetectionDal
+    {
+	}
+}

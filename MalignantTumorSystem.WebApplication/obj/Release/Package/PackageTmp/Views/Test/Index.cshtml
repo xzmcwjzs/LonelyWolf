@@ -1,0 +1,47 @@
+﻿@model MalignantTumorSystem.WebApplication.Helpers.PagerQuery<MalignantTumorSystem.WebApplication.Helpers.PagerInfo, List<MalignantTumorSystem.Model.MT_TestTable>>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <th>编号</th>
+                <th>用户名</th>
+                <th>真实姓名</th>
+                <th>密码</th>
+                <th>备注</th>
+                <th>邮箱</th>
+            </tr>
+            <tbody>
+                @{
+
+                    for (int i = 0; i < Model.EntityList.Count; i++)
+                    {
+                        var item = Model.EntityList[i];
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.Name</td>
+                            <td>@item.RealName</td>
+                            <td>@item.PassWord</td>
+                            <td>@item.Remark</td>
+                            <td>@item.Email</td>
+                        </tr>
+                    }
+
+                }
+            </tbody>
+        </table>
+        @Html.ShowPager(Model.Pager.PageIndex,Model.Pager.PageSize,Model.Pager.TotalCount)
+       
+    </div>
+</body>
+</html>

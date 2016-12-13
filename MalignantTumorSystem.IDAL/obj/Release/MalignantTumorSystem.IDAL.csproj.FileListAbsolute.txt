@@ -1,0 +1,10 @@
+E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.IDAL\bin\Release\MalignantTumorSystem.IDAL.dll
+E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.IDAL\bin\Release\MalignantTumorSystem.IDAL.pdb
+E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.IDAL\bin\Release\MalignantTumorSystem.Model.dll
+E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.IDAL\bin\Release\EntityFramework.dll
+E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.IDAL\bin\Release\MalignantTumorSystem.Model.pdb
+E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.IDAL\bin\Release\EntityFramework.xml
+E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.IDAL\bin\Release\zh-Hans\EntityFramework.resources.dll
+E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.IDAL\obj\Release\MalignantTumorSystem.IDAL.csprojResolveAssemblyReference.cache
+E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.IDAL\obj\Release\MalignantTumorSystem.IDAL.dll
+E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.IDAL\obj\Release\MalignantTumorSystem.IDAL.pdb

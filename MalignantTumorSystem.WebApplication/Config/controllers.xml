@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+
+  <!--<object type="EATMVC.WebApplication.Controllers.HomeController, EATMVC.WebApplication" singleton="false" >
+    <property name="loginService" ref="GP_LoginService" />
+  </object>-->
+   
+
+ 
+</objects>

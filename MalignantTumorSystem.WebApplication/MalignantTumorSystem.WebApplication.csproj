@@ -3330,6 +3330,11 @@
     <Content Include="Scripts\MyJs\jquery-treeview\demo\source.phps" />
     <Content Include="Scripts\MyJs\jquery-treeview\readme.md" />
     <Content Include="Views\MedicalHistory_OperationRecord\Detail.cshtml" />
+    <Content Include="Views\MedicalHistory_CourseRecord\Top.cshtml" />
+    <Content Include="Views\MedicalHistory_CourseRecord\CourseRecord.cshtml" />
+    <Content Include="Views\MedicalHistory_CourseRecord\Body.cshtml" />
+    <Content Include="Views\MedicalHistory_CourseRecord\Left.cshtml" />
+    <Content Include="Views\MedicalHistory_CourseRecord\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -395,6 +395,8 @@
     <Content Include="Areas\BreastCancer\Views\Web.config" />
     <Content Include="Areas\BreastCancer\Views\SelfCheck\Frame.cshtml" />
     <Content Include="index\download\tjhzb.xls" />
+    <Content Include="Scripts\MedicalHistory_CourseRecord\Control.js" />
+    <Content Include="Scripts\MedicalHistory_CourseRecord\Update.js" />
     <Content Include="Scripts\MedicalHistory_OperationRecord\Operate.js" />
     <Content Include="Scripts\MyJs\jquery-treeview\demo\async.html" />
     <Content Include="Scripts\MyJs\jquery-treeview\demo\bg.gif" />

@@ -33,7 +33,8 @@ namespace MalignantTumorSystem.DAL
             return Db.Set<T>().Where(whereLambda).AsQueryable();
         }
         /// <summary>
-        /// EF不跟踪查询AsNoTracking()
+        /// EF不跟踪查询AsNoTracking() 
+        /// 无跟踪查询而已，也就是说查询出来的对象不能直接做修改
         /// </summary>
         /// <param name="whereLambda"></param>
         /// <returns></returns>

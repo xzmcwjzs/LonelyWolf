@@ -3,6 +3,15 @@ var a1 = date.getMonth() + 1 < 10 ? "0" + (date.getMonth() + 1) : date.getMonth(
 var a2 = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
 
 
+EF优化：
+1、
+db.Students.Where(t=>t.Name=="张三").ToList()
+db.Students.Where(t=>t.Name==DbFunctions.AsNonUnicode("张三")).ToList()
+2、
+db.Students.Where(t=>t.Name=="张三").count()>0
+db.Students.Where(t=>t.Name=="张三").FirstOrDefault()!=null
+db.Students.Any(t=>t.Name=="张三")
+
 
 SOA 单点登录
 基础框架搭好后  写一个SQLHelper  用原生的ado做 

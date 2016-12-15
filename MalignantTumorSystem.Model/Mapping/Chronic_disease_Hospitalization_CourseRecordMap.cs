@@ -36,6 +36,11 @@ namespace MalignantTumorSystem.Model.Mapping
             this.Property(t => t.community_code)
                 .HasMaxLength(50);
 
+            this.Property(t => t.address)
+              .HasMaxLength(50);
+            this.Property(t => t.phone)
+               .HasMaxLength(50);
+
             this.Property(t => t.hospitalization_number)
                 .HasMaxLength(50);
 

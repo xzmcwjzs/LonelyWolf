@@ -3333,6 +3333,7 @@
     <Content Include="Views\MedicalHistory_CourseRecord\Body.cshtml" />
     <Content Include="Views\MedicalHistory_CourseRecord\Left.cshtml" />
     <Content Include="Views\MedicalHistory_CourseRecord\List.cshtml" />
+    <Content Include="Views\MedicalHistory_CourseRecord\ListAll.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

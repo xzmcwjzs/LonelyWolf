@@ -9,14 +9,14 @@ using System.Threading.Tasks;
 
 namespace MalignantTumorSystem.BLL
 {
-    public partial class Chronic_disease_Hospitalization_ConsultationRecordService : BaseService<Chronic_disease_Hospitalization_ConsultationRecord>,IChronic_disease_Hospitalization_ConsultationRecordService
+    public partial class Chronic_disease_Hospitalization_CourseRecordService : BaseService<Chronic_disease_Hospitalization_CourseRecord>, IChronic_disease_Hospitalization_CourseRecordService
     {
         DbContext Db = DAL.DALFactory.DbContextFactory.CreateDbContext();
-        public IQueryable<Chronic_disease_Hospitalization_ConsultationRecord> LoadSearchEntities(Model.SearchParam.MedicalHistory_HospitalizationParam pam)
+        public IQueryable<Chronic_disease_Hospitalization_CourseRecord> LoadSearchEntities(Model.SearchParam.MedicalHistory_HospitalizationParam pam)
         {
             int start = (pam.PageIndex - 1) * pam.PageSize + 1;
             int end = pam.PageIndex * pam.PageSize;
-            string sql = "select * from (select *,ROW_NUMBER() over (order by create_time) as num from Chronic_disease_Hospitalization_ConsultationRecord where time in (select  MAX(time) from Chronic_disease_Hospitalization_ConsultationRecord group by resident_id) and type like 'Therioma'";
+            string sql = "select * from (select *,ROW_NUMBER() over (order by create_time) as num from Chronic_disease_Hospitalization_CourseRecord where time in (select  MAX(time) from Chronic_disease_Hospitalization_CourseRecord group by resident_id) and type like 'Therioma'";
 
             if (!string.IsNullOrEmpty(pam.idCard))
             {
@@ -54,7 +54,7 @@ namespace MalignantTumorSystem.BLL
                 sql += ")as t where t.num>=" + start + " and t.num<=" + end + "";
 
             }
-            string sql2 = "select count(*) from  Chronic_disease_Hospitalization_ConsultationRecord where hospitalization_date in (select  MAX(hospitalization_date) from Chronic_disease_Hospitalization_ConsultationRecord group by resident_id)";
+            string sql2 = "select count(*) from  Chronic_disease_Hospitalization_CourseRecord where hospitalization_date in (select  MAX(hospitalization_date) from Chronic_disease_Hospitalization_CourseRecord group by resident_id)";
             var totalCount = Db.Database.SqlQuery<int>(sql2).FirstOrDefault();
             pam.TotalCount = totalCount;
             var temp = CurrentDal.LoadEntityBySql(sql);

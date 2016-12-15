@@ -76,6 +76,7 @@
     <Compile Include="Chronic_disease_Diabetes_family_relationService.cs" />
     <Compile Include="Chronic_disease_HospitalizationService.cs" />
     <Compile Include="Chronic_disease_Hospitalization_ConsultationRecordService.cs" />
+    <Compile Include="Chronic_disease_Hospitalization_CourseRecordService.cs" />
     <Compile Include="Chronic_disease_OutpatientService.cs" />
     <Compile Include="Chronic_disease_Outpatient_AccessoryExaminationService.cs" />
     <Compile Include="Chronic_disease_Outpatient_JudgeService.cs" />

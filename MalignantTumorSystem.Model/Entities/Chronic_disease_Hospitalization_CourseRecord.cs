@@ -15,6 +15,8 @@ namespace MalignantTumorSystem.Model.Entities
         public string id_card_number { get; set; }
         public Nullable<System.DateTime> birth_date { get; set; }
         public string community_code { get; set; }
+        public string address { get; set; }
+        public string phone { get; set; }
         public Nullable<System.DateTime> hospitalization_date { get; set; }
         public string hospitalization_number { get; set; }
         public string bed_number { get; set; }

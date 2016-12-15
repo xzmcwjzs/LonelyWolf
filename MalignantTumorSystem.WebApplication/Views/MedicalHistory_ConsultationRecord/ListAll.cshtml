@@ -28,7 +28,7 @@
         <table style="width:100%;height:22px;">
             <tr>
                 <td class="listTableHeadTR" style="height: 23px;">
-                    <img height="16" src="/images/imgs/Query.gif" width="16" style="vertical-align: middle" />会诊记录查询结果
+                    <img height="16" src="/images/imgs/Query.gif" width="16" style="vertical-align: middle" />@ViewBag.resident_name<span>会诊记录查询结果</span>
                 </td>
             </tr>
         </table>
@@ -41,7 +41,7 @@
                 <td>性别</td>
                 <td>年龄</td>
                 <td>身份证号码</td>
-                @*<td>家庭常住地址</td>*@
+                <td>家庭常住地址</td>
                 <td>会诊日期</td>
                 <td>查看</td>
                 <td>修改</td>
@@ -126,7 +126,7 @@
                         <td>@sex &nbsp;</td>
                         <td>@strAge</td>
                         <td>@id_card_number</td>
-                        @*<td style="text-align:left;padding-left:1em">@family_detail_address &nbsp;</td>*@
+                        <td style="text-align:left;padding-left:1em">@family_detail_address &nbsp;</td>
                         <td>@create_time</td>
                         <td>
                             <a onclick="OpenTopWindow('/MedicalHistory_ConsultationRecord/ConsultationRecord?id=@id',1020,350)" href="javascript:void(0)">

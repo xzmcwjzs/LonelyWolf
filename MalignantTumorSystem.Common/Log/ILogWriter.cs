@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MalignantTumorSystem.WebApplication.Common.Log
+namespace MalignantTumorSystem.Common.Log
 {
-   public  interface ILogWriter
+    public interface ILogWriter
     {
-       void WriteLogInfo(string txt);
+        void WriteLogInfo(string txt);
     }
 }

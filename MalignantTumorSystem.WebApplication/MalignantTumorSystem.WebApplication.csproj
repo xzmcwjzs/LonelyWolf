@@ -62,8 +62,9 @@
     <Reference Include="HibernatingRhinos.Profiler.Appender">
       <HintPath>..\packages\EntityFrameworkProfiler.3.0.3103.0\lib\HibernatingRhinos.Profiler.Appender.dll</HintPath>
     </Reference>
-    <Reference Include="log4net">
-      <HintPath>..\packages\Lib\log4net.dll</HintPath>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\王杰\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\packages\Lib\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="MySql.Data">
@@ -173,12 +174,8 @@
     <Compile Include="Areas\BreastCancer\Controllers\SelfCheckController.cs" />
     <Compile Include="Common\ComunityCode\Address.cs" />
     <Compile Include="Common\ExpressionHelper.cs" />
-    <Compile Include="Common\Log\ILogWriter.cs" />
-    <Compile Include="Common\Log\Log4NetWriter.cs" />
-    <Compile Include="Common\Log\LogHelper.cs" />
-    <Compile Include="Common\Log\MyExceptionAttribute.cs" />
+    <Compile Include="Common\MyAttributes\MyExceptionAttribute.cs" />
     <Compile Include="Common\MyAttributes\MyLoginAttribute.cs" />
-    <Compile Include="Common\Log\TextFileWriter.cs" />
     <Compile Include="Common\ValidateCode.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\BaseTopController.cs" />
@@ -241,8 +238,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Common\Log\Error.html" />
-    <Content Include="Common\Log\2016-10-01.txt" />
+    <Content Include="Common\Error.html" />
     <Content Include="Config\controllers.xml" />
     <Content Include="Config\services.xml" />
     <Content Include="Content\CancerImages\1.png" />

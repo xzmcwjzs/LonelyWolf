@@ -344,13 +344,13 @@ namespace MalignantTumorSystem.DAL
         /// <param name="strSql"></param>  
         /// <param name="paramObjects"></param>  
         /// <returns></returns>  
-        public List<T> LoadListBySql(string strSql, params Object[] paramObjects) 
+        public List<TResult> LoadListBySql<TResult>(string strSql, params Object[] paramObjects) 
         {
             if (paramObjects == null)
             {
                 paramObjects = new object[0];
             }
-            return this.Db.Database.SqlQuery<T>(strSql, paramObjects).ToList();
+            return this.Db.Database.SqlQuery<TResult>(strSql, paramObjects).ToList();
         }  
         /// <summary>
         /// EF执行sql语句 增、删、改
@@ -364,6 +364,17 @@ namespace MalignantTumorSystem.DAL
             var result = Db.Database.ExecuteSqlCommand(sql, parms);
             return result;
         }
+        /// <summary>
+        ///  调用存储过程返回一个指定的TResult
+        /// </summary>
+        /// <typeparam name="TResult"></typeparam>
+        /// <param name="sql"></param>
+        /// <param name="pamrs"></param>
+        /// <returns></returns> 
+        public List<TResult> RunProc<TResult>(string sql, params object[] pamrs)
+        {
+            return Db.Database.SqlQuery<TResult>(sql, pamrs).ToList();
+        } 
         /// <summary>
         /// 对数据库进行一次性操作
         /// </summary>

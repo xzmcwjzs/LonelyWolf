@@ -191,9 +191,9 @@ namespace MalignantTumorSystem.BLL
             var result = CurrentDal.LoadEntityBySql(sql,parms);
             return result;
         }
-        public List<T> LoadListBySql<TEntity>(string strSql, params Object[] paramObjects)
+        public List<TResult> LoadListBySql<TResult>(string strSql, params Object[] paramObjects)
         {
-            var result = CurrentDal.LoadListBySql(strSql, paramObjects);
+            var result = CurrentDal.LoadListBySql<TResult>(strSql, paramObjects);
             return result;
         }
         /// <summary>
@@ -208,6 +208,10 @@ namespace MalignantTumorSystem.BLL
             var result = CurrentDal.OperateEntityBySql(sql, parms);
             return result;
         }
-        
+        public List<TResult> RunProc<TResult>(string sql, params object[] pamrs)
+        {
+            var result = CurrentDal.RunProc<TResult>(sql, pamrs);
+            return result;
+        }
     }
 }

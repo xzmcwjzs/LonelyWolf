@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading;
-using System.Web;
+using System.Threading.Tasks;
 
-namespace MalignantTumorSystem.WebApplication.Common.Log
+namespace MalignantTumorSystem.Common.Log
 {
     //观察者模式
     public class LogHelper
@@ -12,7 +13,8 @@ namespace MalignantTumorSystem.WebApplication.Common.Log
         public static Queue<string> ExceptionStringQueue = new Queue<string>();
         public static List<ILogWriter> LogWriterList = new List<ILogWriter>();
 
-        static LogHelper() {
+        static LogHelper()
+        {
             //LogWriterList.Add(new TextFileWriter());//变化点 
             LogWriterList.Add(new Log4NetWriter());
 
@@ -34,14 +36,15 @@ namespace MalignantTumorSystem.WebApplication.Common.Log
                         {
                             Thread.Sleep(3000);
                         }
-                    } 
-                }
-
+                    }
+                } 
             });
         }
 
-        public static void WriteLog(string exceptionText) { 
-            lock(ExceptionStringQueue){ 
+        public static void WriteLog(string exceptionText)
+        {
+            lock (ExceptionStringQueue)
+            {
                 ExceptionStringQueue.Enqueue(exceptionText);
             }
         }

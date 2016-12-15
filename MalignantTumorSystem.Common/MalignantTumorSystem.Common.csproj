@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>D:\王杰\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\packages\Lib\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="NPOI">
       <HintPath>..\packages\Lib\NPOI.dll</HintPath>
     </Reference>
@@ -45,6 +48,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -54,11 +58,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CacheHelper.cs" />
+    <Compile Include="Cache\ICacheManager.cs" />
+    <Compile Include="Cache\MemoryCacheManager.cs" />
     <Compile Include="CommonFunc.cs" />
     <Compile Include="ExcelHelper.cs" />
     <Compile Include="FileHelper.cs" />
     <Compile Include="JSHelper.cs" />
     <Compile Include="JsonHelper.cs" />
+    <Compile Include="Log\ILogWriter.cs" />
+    <Compile Include="Log\Log4NetWriter.cs" />
+    <Compile Include="Log\LogHelper.cs" />
+    <Compile Include="Log\TextFileWriter.cs" />
     <Compile Include="MD5Helper.cs" />
     <Compile Include="NPOIHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -69,6 +79,7 @@
     <Compile Include="ValidityCheck.cs" />
     <Compile Include="XMLHelper.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

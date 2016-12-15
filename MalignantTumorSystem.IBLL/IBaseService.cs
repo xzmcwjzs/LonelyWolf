@@ -28,7 +28,8 @@ namespace MalignantTumorSystem.IBLL
         bool AddEntity(T entity);
         bool AddAllEntity(IList<T> list);
         IQueryable<T> LoadEntityBySql(string sql, params SqlParameter[] parms);
-        List<T> LoadListBySql<TEntity>(string strSql, params Object[] paramObjects);
+        List<TResult> LoadListBySql<TResult>(string strSql, params Object[] paramObjects);
+        List<TResult> RunProc<TResult>(string sql, params object[] pamrs);
         int OperateEntityBySql(string sql, params SqlParameter[] parms);
         
     }

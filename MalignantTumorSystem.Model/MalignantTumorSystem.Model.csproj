@@ -38,8 +38,12 @@
       <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Activities" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activities" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -204,7 +208,6 @@
     <Compile Include="SearchParam\MedicalHistory_OutpatientParam.cs" />
     <Compile Include="ViewModel\BasicInformationViewModel.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="ClassNameTxt\ClassName.txt" />
     <Content Include="ClassNameTxt\Common.txt" />

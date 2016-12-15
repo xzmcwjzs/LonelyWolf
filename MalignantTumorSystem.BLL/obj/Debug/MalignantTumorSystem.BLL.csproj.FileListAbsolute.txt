@@ -106,3 +106,4 @@ C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\bin\Deb
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\obj\Debug\MalignantTumorSystem.BLL.csprojResolveAssemblyReference.cache
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\obj\Debug\MalignantTumorSystem.BLL.dll
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\obj\Debug\MalignantTumorSystem.BLL.pdb
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\bin\Debug\log4net.dll

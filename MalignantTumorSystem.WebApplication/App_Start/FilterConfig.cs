@@ -8,7 +8,7 @@ namespace MalignantTumorSystem.WebApplication
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
            // filters.Add(new HandleErrorAttribute());
-            filters.Add(new MalignantTumorSystem.WebApplication.Common.Log.MyExceptionAttribute());
+            filters.Add(new MalignantTumorSystem.WebApplication.Common.MyAttributes.MyExceptionAttribute());
         }
     }
 }

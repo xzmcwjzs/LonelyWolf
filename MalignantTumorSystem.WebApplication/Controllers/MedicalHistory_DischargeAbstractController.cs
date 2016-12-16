@@ -11,12 +11,34 @@ namespace MalignantTumorSystem.WebApplication.Controllers
         //
         // GET: /MedicalHistory_DischargeAbstract/
 
+        #region 基本框架页
         public ActionResult Frame()
         {
             return View();
         }
+        public ActionResult Top()
+        {
+            return View();
+        }
+        public ActionResult Body()
+        {
+            return View();
+        }
+        public ActionResult Left()
+        {
+            return View();
+        }
+        #endregion
 
-
-
+        //新增页
+        public ActionResult DischargeAbstract()
+        {
+            return View();
+        }
+        //列表页
+        public ActionResult List()
+        {
+            return View();
+        }
     }
 }

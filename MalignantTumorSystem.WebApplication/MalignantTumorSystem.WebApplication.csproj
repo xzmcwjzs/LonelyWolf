@@ -393,6 +393,8 @@
     <Content Include="index\download\tjhzb.xls" />
     <Content Include="Scripts\MedicalHistory_CourseRecord\Control.js" />
     <Content Include="Scripts\MedicalHistory_CourseRecord\Update.js" />
+    <Content Include="Scripts\MedicalHistory_DischargeAbstract\Control.js" />
+    <Content Include="Scripts\MedicalHistory_DischargeAbstract\Update.js" />
     <Content Include="Scripts\MedicalHistory_OperationRecord\Operate.js" />
     <Content Include="Scripts\MyJs\jquery-treeview\demo\async.html" />
     <Content Include="Scripts\MyJs\jquery-treeview\demo\bg.gif" />
@@ -3334,6 +3336,11 @@
     <Content Include="Views\MedicalHistory_CourseRecord\Left.cshtml" />
     <Content Include="Views\MedicalHistory_CourseRecord\List.cshtml" />
     <Content Include="Views\MedicalHistory_CourseRecord\ListAll.cshtml" />
+    <Content Include="Views\MedicalHistory_DischargeAbstract\Top.cshtml" />
+    <Content Include="Views\MedicalHistory_DischargeAbstract\DischargeAbstract.cshtml" />
+    <Content Include="Views\MedicalHistory_DischargeAbstract\List.cshtml" />
+    <Content Include="Views\MedicalHistory_DischargeAbstract\Body.cshtml" />
+    <Content Include="Views\MedicalHistory_DischargeAbstract\Left.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

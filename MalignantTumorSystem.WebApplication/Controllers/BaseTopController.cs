@@ -14,7 +14,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
         protected override void OnActionExecuting(ActionExecutingContext filterContext)
         {
             base.OnActionExecuting(filterContext);
-            if (Session["worker"] == null)
+            if (Session["worker"] == null || !(Session["worker"] is Model.Entities.Comm_Platform_Worker))
             {
                 //filterContext.Result = Redirect("/Home/Index");
                 filterContext.HttpContext.Response.Write("<script type='text/javascript'> window.top.location.href='/Home/Index';</script>");

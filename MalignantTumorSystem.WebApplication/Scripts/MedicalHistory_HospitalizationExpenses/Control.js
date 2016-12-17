@@ -18,7 +18,7 @@ function save() {
         alert("身份证号码不能为空！")
     }
     else {
-        $.post("/MedicalHistory_DischargeAbstract/AddAndUpdate?id=" + id + "&community_code=" + community_code + "&worker=" + worker,
+        $.post("/MedicalHistory_HospitalizationExpenses/AddAndUpdate?id=" + id + "&community_code=" + community_code + "&worker=" + worker,
                 $("#form1").serialize(),
                 function (msgs) {
                     var msg = msgs.split(',');
@@ -42,7 +42,7 @@ function sure() {
     else {
         if (window.confirm('请确定是否提交，提交完成后将不能对此条信息进行修改！')) {
             $("#bt2").attr("disabled", "disabled");
-            $.post("/MedicalHistory_DischargeAbstract/Sure?id=" + id + "&community_code=" + community_code + "&worker=" + worker,
+            $.post("/MedicalHistory_HospitalizationExpenses/Sure?id=" + id + "&community_code=" + community_code + "&worker=" + worker,
                 $("#form1").serialize(),
                 function (msgs) {
                     var msg = msgs.split(',');
@@ -55,22 +55,5 @@ function sure() {
             return false;
         }
 
-    }
-}
-
-//===============================增加一行==============================================
-var i = 1;
-function add() {
-    if ($("#yz1").val() != "" && $("#yz2").val() != "" && $('#yz' + (i + 2) + '').val() != "") {
-        if (i < 10) {
-            $('#yz' + (i + 2) + '').unbind("keyup");
-            $('#yz' + (i + 2) + '').one('keyup', function () {
-                $('#Tr' + (i + 2) + '').after('<tr id="Tr' + (i + 3) + '">' +
-                        '<td class="auto-style36" colspan="9">' + (i + 3) + '.<textarea id="yz' + (i + 3) + '" name="yz' + (i + 3) + '" style="height: 18px; width: 96%;"  onkeyup="add()"></textarea></td>' +
-                    '</tr>');
-                $("#yz").attr({ "rowspan": i + 3 });
-                i++;
-            })
-        }
     }
 }

@@ -77,6 +77,9 @@
     <Compile Include="Chronic_disease_HospitalizationService.cs" />
     <Compile Include="Chronic_disease_Hospitalization_ConsultationRecordService.cs" />
     <Compile Include="Chronic_disease_Hospitalization_CourseRecordService.cs" />
+    <Compile Include="Chronic_disease_Hospitalization_DischargeAbstractService.cs" />
+    <Compile Include="Chronic_disease_Hospitalization_DischargeAbstract_AdviceService.cs" />
+    <Compile Include="Chronic_disease_Hospitalization_ExpensesService.cs" />
     <Compile Include="Chronic_disease_OutpatientService.cs" />
     <Compile Include="Chronic_disease_Outpatient_AccessoryExaminationService.cs" />
     <Compile Include="Chronic_disease_Outpatient_JudgeService.cs" />

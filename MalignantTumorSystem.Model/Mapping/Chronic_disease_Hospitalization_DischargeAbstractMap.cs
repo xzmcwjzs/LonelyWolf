@@ -36,6 +36,12 @@ namespace MalignantTumorSystem.Model.Mapping
             this.Property(t => t.community_code)
                 .HasMaxLength(50);
 
+            this.Property(t => t.address)
+               .HasMaxLength(50);
+
+            this.Property(t => t.phone)
+               .HasMaxLength(50);
+
             this.Property(t => t.hospitalization_number)
                 .HasMaxLength(50);
 
@@ -81,6 +87,8 @@ namespace MalignantTumorSystem.Model.Mapping
             this.Property(t => t.id_card_number).HasColumnName("id_card_number");
             this.Property(t => t.birth_date).HasColumnName("birth_date");
             this.Property(t => t.community_code).HasColumnName("community_code");
+            this.Property(t => t.address).HasColumnName("address");
+            this.Property(t => t.phone).HasColumnName("phone");
             this.Property(t => t.hospitalization_date).HasColumnName("hospitalization_date");
             this.Property(t => t.hospitalization_number).HasColumnName("hospitalization_number");
             this.Property(t => t.bed_number).HasColumnName("bed_number");

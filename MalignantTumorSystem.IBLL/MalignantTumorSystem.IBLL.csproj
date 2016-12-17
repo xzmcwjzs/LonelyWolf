@@ -69,6 +69,9 @@
     <Compile Include="IChronic_disease_HospitalizationService.cs" />
     <Compile Include="IChronic_disease_Hospitalization_ConsultationRecordService.cs" />
     <Compile Include="IChronic_disease_Hospitalization_CourseRecordService.cs" />
+    <Compile Include="IChronic_disease_Hospitalization_DischargeAbstractService.cs" />
+    <Compile Include="IChronic_disease_Hospitalization_DischargeAbstract_AdviceService.cs" />
+    <Compile Include="IChronic_disease_Hospitalization_ExpensesService.cs" />
     <Compile Include="IChronic_disease_OutpatientService.cs" />
     <Compile Include="IChronic_disease_Outpatient_AccessoryExaminationService.cs" />
     <Compile Include="IChronic_disease_Outpatient_JudgeService.cs" />

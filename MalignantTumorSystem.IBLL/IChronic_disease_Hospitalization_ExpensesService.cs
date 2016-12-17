@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace MalignantTumorSystem.IBLL
 {
-    public partial interface IChronic_disease_Comm_DiagnosticService : IBaseService<Chronic_disease_Comm_Diagnostic>
+    public partial interface IChronic_disease_Hospitalization_ExpensesService :IBaseService<Chronic_disease_Hospitalization_Expenses>
     {
-        IQueryable<Chronic_disease_Comm_Diagnostic> LoadSearchEntities(CommonParam pam);
+        IQueryable<Chronic_disease_Hospitalization_Expenses> LoadSearchEntities(MedicalHistory_HospitalizationParam pam);
     }
 }

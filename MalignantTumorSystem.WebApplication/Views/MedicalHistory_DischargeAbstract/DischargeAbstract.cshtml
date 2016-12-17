@@ -7,7 +7,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>新增出院小结</title>
+    <title>出院小结</title>
     <script src="~/Scripts/jquery-1.8.2.min.js"></script>
     <script src="~/Scripts/PCCSC/pccsc.js"></script>
     <script src="~/Scripts/MyJs/global.js"></script>
@@ -211,9 +211,35 @@
                     </td>
                 </tr>
                 <tr>
+                    <td class="auto-style1">常住地址<span style="color: #ff0000">*</span></td>
+                    <td colspan="5" class="auto-style37" style="height: 25px">
+                        <select style="width: 80px" id="ddlProvince" name="ddlProvince">
+                            <option value="">=请选择=</option>
+                        </select>
+                        <select style="width: 80px" id="ddlCity" name="ddlCity">
+                            <option value="">=请选择=</option>
+                        </select>
+                        <select style="width: 80px" id="ddlCounty" name="ddlCounty">
+                            <option value="">=请选择=</option>
+                        </select>
+                        <select style="width: 85px" id="ddlStreet" name="ddlStreet">
+                            <option value="">=请选择=</option>
+                        </select>
+                        <select style="width: 105px" id="ddlCommunity" name="ddlCommunity">
+                            <option value="">=请选择=</option>
+                        </select>
+                        <input type="text" id="perment_community_address" name="perment_community_address" style="width: 19.5%; height: 14px; padding-top: 2px" />
+                    </td>
+                    <td class="auto-style1">手机号码</td>
+                    <td class="auto-style27" colspan="3">
+                        <input type="text" id="phone" style=" width: 90px; height: 14px;" name="phone" />
+                    </td>
+                </tr>
+
+                <tr>
                     <td class="auto-style1">入院日期</td>
                     <td class="auto-style27">
-                        <input type="text" value="<%=DateTime.Now.ToString(" yyyy-mm-dd") %>" style="width: 100px; height: 18px;" id="data" name="data" readonly="readonly" />
+                        <input type="text" value="@DateTime.Now.ToString("yyyy-MM-dd")" style="width: 100px; height: 18px;" id="data" name="data" readonly="readonly" />
                     </td>
                     <td class="auto-style1">收治医院</td>
                     <td class="auto-style28">

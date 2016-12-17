@@ -1,4 +1,4 @@
-﻿@model MalignantTumorSystem.WebApplication.Helpers.PagerQuery<MalignantTumorSystem.WebApplication.Helpers.PagerInfo, List<MalignantTumorSystem.Model.Entities.Chronic_disease_Hospitalization>>
+﻿@model MalignantTumorSystem.WebApplication.Helpers.PagerQuery<MalignantTumorSystem.WebApplication.Helpers.PagerInfo, List<MalignantTumorSystem.Model.Entities.Chronic_disease_Hospitalization_DischargeAbstract>>
 @using MalignantTumorSystem.Common;
 @using MalignantTumorSystem.WebApplication.Common.ComunityCode;
 @{
@@ -28,7 +28,7 @@
         <table style="width:100%;height:22px;">
             <tr>
                 <td class="listTableHeadTR" style="height: 23px;">
-                    <img height="16" src="/images/imgs/Query.gif" width="16" style="vertical-align: middle" />住院病史查询结果
+                    <img height="16" src="/images/imgs/Query.gif" width="16" style="vertical-align: middle" />@ViewBag.resident_name<span>全部出院小结信息列表</span>
                 </td>
             </tr>
         </table>
@@ -37,16 +37,15 @@
     <div>
         <table id="tbList" class="listTable" cellspacing="1" cellpadding="0" style="width:100%;">
             <tr class="listTableTitleRow">
+                <td>NO</td>
                 <td>姓名</td>
                 <td>性别</td>
                 <td>年龄</td>
                 <td>身份证号码</td>
                 <td>家庭常住地址</td>
-                <td>入院日期</td>
-                <td>查看</td>
-                <td>全部住院</td>
+                <td>出院日期</td>
+                <td>查看</td> 
                 <td>修改</td>
-                <td>住院病历</td>
                 <td>是否提交</td>
             </tr>
             <tbody>
@@ -71,23 +70,23 @@
                     {
                         if (item.community_code.ToString().Length == 2)
                         {
-                            family_detail_address = new Address().GetForwardAddress4(item.community_code.ToString()) + CommonFunc.EncodeString(CommonFunc.SafeGetStringFromObj(item.permanent_address), 0);
+                            family_detail_address = new Address().GetForwardAddress4(item.community_code.ToString()) + CommonFunc.EncodeString(CommonFunc.SafeGetStringFromObj(item.address), 0);
                         }
                         else if (item.community_code.ToString().Length == 4)
                         {
-                            family_detail_address = new Address().GetForwardAddress3(item.community_code.ToString()) + CommonFunc.EncodeString(CommonFunc.SafeGetStringFromObj(item.permanent_address), 0);
+                            family_detail_address = new Address().GetForwardAddress3(item.community_code.ToString()) + CommonFunc.EncodeString(CommonFunc.SafeGetStringFromObj(item.address), 0);
                         }
                         else if (item.community_code.ToString().Length == 6)
                         {
-                            family_detail_address = new Address().GetForwardAddress1(item.community_code.ToString()) + CommonFunc.EncodeString(CommonFunc.SafeGetStringFromObj(item.permanent_address), 0);
+                            family_detail_address = new Address().GetForwardAddress1(item.community_code.ToString()) + CommonFunc.EncodeString(CommonFunc.SafeGetStringFromObj(item.address), 0);
                         }
                         else if (item.community_code.ToString().Length == 9)
                         {
-                            family_detail_address = new Address().GetForwardAddress2(item.community_code.ToString()) + CommonFunc.EncodeString(CommonFunc.SafeGetStringFromObj(item.permanent_address), 0);
+                            family_detail_address = new Address().GetForwardAddress2(item.community_code.ToString()) + CommonFunc.EncodeString(CommonFunc.SafeGetStringFromObj(item.address), 0);
                         }
                         else if (item.community_code.ToString().Length == 12)
                         {
-                            family_detail_address = new Address().GetForwardAddress(item.community_code.ToString()) + CommonFunc.EncodeString(CommonFunc.SafeGetStringFromObj(item.permanent_address), 0);
+                            family_detail_address = new Address().GetForwardAddress(item.community_code.ToString()) + CommonFunc.EncodeString(CommonFunc.SafeGetStringFromObj(item.address), 0);
                         }
 
                     }
@@ -117,7 +116,8 @@
                     sign = CommonFunc.EncodeString(CommonFunc.SafeGetStringFromObj(item.sign), 0);
 
                     <tr class="listTableContentRow" onmouseover="this.className='listTableContentRowMouseOver' " onmouseout="this.className='listTableContentRow'">
-                        @if (name.Length == 2)
+                        <td>@no</td>
+                          @if (name.Length == 2)
                         {
                             <td style="height:21px;">@name.Substring(0, 1)<a style="padding-left:1em"></a>@name.Substring(1, 1)</td>
                         }
@@ -131,16 +131,11 @@
                         <td style="text-align:left;padding-left:1em">@family_detail_address &nbsp;</td>
                         <td>@create_time</td>
                         <td>
-                            <a onclick="OpenTopWindow('/MedicalHistory_Hospitalization/EmergencyRecords?id=@id&NO=1',820,650)" href="javascript:void(0)">
+                            <a onclick="OpenTopWindow('/MedicalHistory_DischargeAbstract/DischargeAbstract?id=@id',1020,550)" href="javascript:void(0)">
                                 <img alt="查看详细资料" src="/images/imgs/icon_show.gif" />
                             </a>
                         </td>
-                        <td>
-                            <a onclick="OpenTopWindow('/MedicalHistory_Hospitalization/ListAll?resident_id=@resident_id&resident_name=@name',820,650)" href="javascript:void(0)">
-                                <img alt="查看详细资料" src="/images/imgs/icon_show.gif" />
-                            </a>
-                        </td>
-
+                        
                         <td>
                             @if (!(ViewBag.dell_user_name == worker_user_name) && !Enum.GetNames(typeof(MalignantTumorSystem.Model.Enum.UserNameEnum)).Contains(ViewBag.dell_user_name as string))
                             {
@@ -156,16 +151,11 @@
                             }
                             else
                             {
-                                <a onclick="OpenTopWindow('/MedicalHistory_Hospitalization/Hospitalization?id=@id&NO=2',1020,550)" href="javascript:void(0)">
+                                <a onclick="OpenTopWindow('/MedicalHistory_DischargeAbstract/DischargeAbstract?id=@id',1020,550)" href="javascript:void(0)">
                                     <img alt="修改该记录" src="/images/imgs/icon_edit.gif" />
                                 </a>
                             }
 
-                        </td>
-                        <td>
-                            <a onclick="OpenTopWindow('/MedicalHistory_Hospitalization/EmergencyRecords?id=@id&NO=1',820,650)" href="javascript:void(0)">
-                                <img alt="查看详细资料" src="/images/imgs/icon_show.gif" />
-                            </a>
                         </td>
                         <td>
                             @if (sign == "1")

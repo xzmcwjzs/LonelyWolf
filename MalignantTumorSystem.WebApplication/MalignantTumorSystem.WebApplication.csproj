@@ -395,6 +395,8 @@
     <Content Include="Scripts\MedicalHistory_CourseRecord\Update.js" />
     <Content Include="Scripts\MedicalHistory_DischargeAbstract\Control.js" />
     <Content Include="Scripts\MedicalHistory_DischargeAbstract\Update.js" />
+    <Content Include="Scripts\MedicalHistory_HospitalizationExpenses\Control.js" />
+    <Content Include="Scripts\MedicalHistory_HospitalizationExpenses\Update.js" />
     <Content Include="Scripts\MedicalHistory_OperationRecord\Operate.js" />
     <Content Include="Scripts\MyJs\jquery-treeview\demo\async.html" />
     <Content Include="Scripts\MyJs\jquery-treeview\demo\bg.gif" />
@@ -3341,6 +3343,12 @@
     <Content Include="Views\MedicalHistory_DischargeAbstract\List.cshtml" />
     <Content Include="Views\MedicalHistory_DischargeAbstract\Body.cshtml" />
     <Content Include="Views\MedicalHistory_DischargeAbstract\Left.cshtml" />
+    <Content Include="Views\MedicalHistory_DischargeAbstract\ListAll.cshtml" />
+    <Content Include="Views\MedicalHistory_HospitalizationExpenses\Top.cshtml" />
+    <Content Include="Views\MedicalHistory_HospitalizationExpenses\Body.cshtml" />
+    <Content Include="Views\MedicalHistory_HospitalizationExpenses\Left.cshtml" />
+    <Content Include="Views\MedicalHistory_HospitalizationExpenses\HospitalizationExpenses.cshtml" />
+    <Content Include="Views\MedicalHistory_HospitalizationExpenses\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -192,6 +192,13 @@
     <Compile Include="Controllers\Lifestyle_PhysicalExerciseController.cs" />
     <Compile Include="Controllers\Lifestyle_SmokeAndDrinkController.cs" />
     <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Controllers\MedicalHistory_AccessoryExamination_CTCheckController.cs" />
+    <Compile Include="Controllers\MedicalHistory_AccessoryExamination_HeartCheckController.cs" />
+    <Compile Include="Controllers\MedicalHistory_AccessoryExamination_LungCheckController.cs" />
+    <Compile Include="Controllers\MedicalHistory_AccessoryExamination_MRICheckController.cs" />
+    <Compile Include="Controllers\MedicalHistory_AccessoryExamination_StomachCheckController.cs" />
+    <Compile Include="Controllers\MedicalHistory_AccessoryExamination_USCheckController.cs" />
+    <Compile Include="Controllers\MedicalHistory_AccessoryExamination_XCheckController.cs" />
     <Compile Include="Controllers\MedicalHistory_ConsultationRecordController.cs" />
     <Compile Include="Controllers\MedicalHistory_CourseRecordController.cs" />
     <Compile Include="Controllers\MedicalHistory_DiagnosticInformationController.cs" />
@@ -391,6 +398,8 @@
     <Content Include="Areas\BreastCancer\Views\Web.config" />
     <Content Include="Areas\BreastCancer\Views\SelfCheck\Frame.cshtml" />
     <Content Include="index\download\tjhzb.xls" />
+    <Content Include="Scripts\MedicalHistory_AccessoryExamination_XCheck\Show.js" />
+    <Content Include="Scripts\MedicalHistory_AccessoryExamination_XCheck\Submit.js" />
     <Content Include="Scripts\MedicalHistory_CourseRecord\Control.js" />
     <Content Include="Scripts\MedicalHistory_CourseRecord\Update.js" />
     <Content Include="Scripts\MedicalHistory_DischargeAbstract\Control.js" />
@@ -2659,7 +2668,6 @@
     <Content Include="Scripts\MyJs\My97DatePicker\开发包\skin\whyGreen\bg.jpg" />
     <Content Include="Scripts\MyJs\My97DatePicker\开发包\skin\whyGreen\datepicker.css" />
     <Content Include="Scripts\MyJs\My97DatePicker\开发包\skin\whyGreen\img.gif" />
-    <Content Include="Scripts\MyJs\MyAjaxForm.js" />
     <Content Include="Scripts\PCCSC\pccsc.js" />
     <Content Include="Scripts\TopBody\Body.js" />
     <Content Include="Scripts\TopBody\Top.js" />
@@ -3349,6 +3357,19 @@
     <Content Include="Views\MedicalHistory_HospitalizationExpenses\Left.cshtml" />
     <Content Include="Views\MedicalHistory_HospitalizationExpenses\HospitalizationExpenses.cshtml" />
     <Content Include="Views\MedicalHistory_HospitalizationExpenses\List.cshtml" />
+    <Content Include="Views\MedicalHistory_HospitalizationExpenses\ListAll.cshtml" />
+    <Content Include="Views\MedicalHistory_AccessoryExamination_XCheck\Frame.cshtml" />
+    <Content Include="Views\MedicalHistory_AccessoryExamination_XCheck\Top.cshtml" />
+    <Content Include="Views\MedicalHistory_AccessoryExamination_XCheck\XCheck.cshtml" />
+    <Content Include="Views\MedicalHistory_AccessoryExamination_XCheck\Body.cshtml" />
+    <Content Include="Views\MedicalHistory_AccessoryExamination_XCheck\Left.cshtml" />
+    <Content Include="Views\MedicalHistory_AccessoryExamination_XCheck\List.cshtml" />
+    <Content Include="Views\MedicalHistory_AccessoryExamination_CTCheck\Frame.cshtml" />
+    <Content Include="Views\MedicalHistory_AccessoryExamination_USCheck\Frame.cshtml" />
+    <Content Include="Views\MedicalHistory_AccessoryExamination_MRICheck\Frame.cshtml" />
+    <Content Include="Views\MedicalHistory_AccessoryExamination_StomachCheck\Frame.cshtml" />
+    <Content Include="Views\MedicalHistory_AccessoryExamination_HeartCheck\Frame.cshtml" />
+    <Content Include="Views\MedicalHistory_AccessoryExamination_LungCheck\Frame.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

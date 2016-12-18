@@ -465,6 +465,54 @@ namespace MalignantTumorSystem.WebApplication.Controllers
             return Content(msg + ',' + entity.id);
         }
 
+        //全部列表页
+        public ActionResult ListAll()
+        {
+            Comm_Platform_Worker workerModel = Session["worker"] as Comm_Platform_Worker;
+            string region_code = CommonFunc.SafeGetStringFromObj(workerModel.region_code);
+            string dell_user_name = CommonFunc.SafeGetStringFromObj(workerModel.user_name);
+            string resident_id = CommonFunc.SafeGetStringFromObj(Request.QueryString["resident_id"]);
+            string resident_name = CommonFunc.SafeGetStringFromObj(Request.QueryString["resident_name"]);
+
+
+            int pageIndex = CommonFunc.SafeGetIntFromObj(this.Request["pageIndex"], 1);
+            int pageSize = this.Request["pageSize"] == null ? PageSize.GetPageSize : int.Parse(Request["pageSize"]);
+            int totalCount = 0;
+
+            var disease_HospitalizationList = disease_Hospitalization_ExpensesService.LoadPageEntities(pageSize, pageIndex, out totalCount, t => (t.resident_id.Contains(resident_id)) && (t.type.Contains("Therioma")), t => t.hospitalization_date, false);
+
+            int PageCount = Convert.ToInt32(Math.Ceiling((double)totalCount / pageSize));
+
+            List<Chronic_disease_Hospitalization_Expenses> result = new List<Chronic_disease_Hospitalization_Expenses>();
+            result.AddRange(disease_HospitalizationList);
+            PagerInfo pager = new PagerInfo();
+            pager.PageIndex = pageIndex;
+            pager.PageSize = pageSize;
+            pager.TotalCount = totalCount;
+            PagerQuery<PagerInfo, List<Chronic_disease_Hospitalization_Expenses>> query = new PagerQuery<PagerInfo, List<Chronic_disease_Hospitalization_Expenses>>(pager, result);
+            ViewData.Model = query;
+            ViewBag.PageIndex = pageIndex;
+            ViewBag.PageSize = pageSize;
+            ViewBag.dell_user_name = dell_user_name;
+            ViewBag.resident_id = resident_id;
+            ViewBag.resident_name = resident_name;
+            return View();
+        }
+
+        //查看显示
+        public ActionResult Show()
+        {
+            string id = CommonFunc.SafeGetStringFromObj(Request["id"]);
+            if (id != "")
+            {
+                var result = disease_Hospitalization_ExpensesService.LoadEntityAsNoTracking(t => t.id.Contains(id));
+                return Json(result, JsonRequestBehavior.AllowGet);
+            }
+            else
+            {
+                return Json("", JsonRequestBehavior.AllowGet);
+            }
+        }
 
     }
 }

@@ -288,4 +288,56 @@ namespace MalignantTumorSystem.DAL{
 	public partial class Chronic_disease_Comm_OperationAddDal:BaseDal<Chronic_disease_Comm_OperationAdd>,IChronic_disease_Comm_OperationAddDal
     {
 	}
+		
+	public partial class Chronic_disease_Supplementary_Examination_CTDal:BaseDal<Chronic_disease_Supplementary_Examination_CT>,IChronic_disease_Supplementary_Examination_CTDal
+    {
+	}
+		
+	public partial class Chronic_disease_Supplementary_Examination_XDal:BaseDal<Chronic_disease_Supplementary_Examination_X>,IChronic_disease_Supplementary_Examination_XDal
+    {
+	}
+		
+	public partial class Chronic_disease_Supplementary_Examination_USDal:BaseDal<Chronic_disease_Supplementary_Examination_US>,IChronic_disease_Supplementary_Examination_USDal
+    {
+	}
+		
+	public partial class Chronic_disease_Supplementary_Examination_StomachDal:BaseDal<Chronic_disease_Supplementary_Examination_Stomach>,IChronic_disease_Supplementary_Examination_StomachDal
+    {
+	}
+		
+	public partial class Chronic_disease_Supplementary_Examination_MRIDal:BaseDal<Chronic_disease_Supplementary_Examination_MRI>,IChronic_disease_Supplementary_Examination_MRIDal
+    {
+	}
+		
+	public partial class Chronic_disease_Supplementary_Examination_HeartDal:BaseDal<Chronic_disease_Supplementary_Examination_Heart>,IChronic_disease_Supplementary_Examination_HeartDal
+    {
+	}
+		
+	public partial class Chronic_disease_Comm_LungProjectNamesDal:BaseDal<Chronic_disease_Comm_LungProjectNames>,IChronic_disease_Comm_LungProjectNamesDal
+    {
+	}
+		
+	public partial class Chronic_disease_Comm_LungQuJianDal:BaseDal<Chronic_disease_Comm_LungQuJian>,IChronic_disease_Comm_LungQuJianDal
+    {
+	}
+		
+	public partial class Chronic_disease_Comm_LungSexQuJianDal:BaseDal<Chronic_disease_Comm_LungSexQuJian>,IChronic_disease_Comm_LungSexQuJianDal
+    {
+	}
+		
+	public partial class Chronic_disease_Comm_LungTitleDal:BaseDal<Chronic_disease_Comm_LungTitle>,IChronic_disease_Comm_LungTitleDal
+    {
+	}
+		
+	public partial class Chronic_disease_Comm_LungUnitDal:BaseDal<Chronic_disease_Comm_LungUnit>,IChronic_disease_Comm_LungUnitDal
+    {
+	}
+		
+	public partial class Chronic_disease_Comm_LungDal:BaseDal<Chronic_disease_Comm_Lung>,IChronic_disease_Comm_LungDal
+    {
+	}
+		
+	public partial class Chronic_disease_Comm_LungAddDal:BaseDal<Chronic_disease_Comm_LungAdd>,IChronic_disease_Comm_LungAddDal
+    {
+	}
 }

@@ -10,10 +10,11 @@ using MalignantTumorSystem.Model.SearchParam;
 using MalignantTumorSystem.Common;
 using Ninject;
 using MalignantTumorSystem.WebApplication.Helpers;
+using System.IO;
 
 namespace MalignantTumorSystem.WebApplication.Controllers
 {
-    public class MedicalHistory_AccessoryExamination_XCheckController : Controller
+    public class MedicalHistory_AccessoryExamination_XCheckController : BaseTopController
     {
         //
         // GET: /MedicalHistory_AccessoryExamination_XCheck/
@@ -23,6 +24,9 @@ namespace MalignantTumorSystem.WebApplication.Controllers
         public IComm_EHR_AbstractService eHRAbstractService { get; set; }
         [Inject]
         public IComm_ResidentFile_Change_AddressService residentFileChangeAddressService { get; set; }
+        [Inject]
+        public IChronic_disease_Supplementary_Examination_XService disease_Supplementary_Examination_XService { get; set; }
+
         #region 框架页
 
         public ActionResult Frame()
@@ -64,6 +68,67 @@ namespace MalignantTumorSystem.WebApplication.Controllers
         //列表页
         public ActionResult List()
         {
+            Comm_Platform_Worker workerModel = Session["worker"] as Comm_Platform_Worker;
+            if (workerModel == null)
+            {
+                redirectTo();
+                return null;
+            }
+            string region_code = CommonFunc.SafeGetStringFromObj(workerModel.region_code);
+            string dell_user_name = CommonFunc.SafeGetStringFromObj(workerModel.user_name);
+            string name = CommonFunc.FilterSpecialString(CommonFunc.SafeGetStringFromObj(Request["names"]).Trim());
+            string sex = CommonFunc.FilterSpecialString(CommonFunc.SafeGetStringFromObj(Request["sex"]).Trim());
+
+            string birthdateBegin = CommonFunc.FilterSpecialString(CommonFunc.SafeGetStringFromObj(Request["txtBirthDateBegin"]).Trim());
+            string birthdateEnd = CommonFunc.FilterSpecialString(CommonFunc.SafeGetStringFromObj(Request["txtBirthDateEnd"]).Trim());
+            string id_card_number = CommonFunc.FilterSpecialString(CommonFunc.SafeGetStringFromObj(Request["idCard"]).Trim());
+            string address = CommonFunc.FilterSpecialString(CommonFunc.SafeGetStringFromObj(Request["address"]).Trim());
+            string s = string.Empty;
+            //获取区域代码
+            if (!string.IsNullOrEmpty(CommonFunc.SafeGetStringFromObj(Request["ddlProvince"])))
+                s = CommonFunc.SafeGetStringFromObj(Request["ddlProvince"]);
+            if (!string.IsNullOrEmpty(CommonFunc.SafeGetStringFromObj(Request["ddlCity"])))
+                s = CommonFunc.SafeGetStringFromObj(Request["ddlCity"]);
+            if (!string.IsNullOrEmpty(CommonFunc.SafeGetStringFromObj(Request["ddlCounty"])))
+                s = CommonFunc.SafeGetStringFromObj(Request["ddlCounty"]);
+            if (!string.IsNullOrEmpty(CommonFunc.SafeGetStringFromObj(Request["ddlStreet"])))
+                s = CommonFunc.SafeGetStringFromObj(Request["ddlStreet"]);
+            if (!string.IsNullOrEmpty(CommonFunc.SafeGetStringFromObj(Request["ddlCommunity"])))
+                s = CommonFunc.SafeGetStringFromObj(Request["ddlCommunity"]);
+            if (s.Length > region_code.Length)
+                region_code = s;
+
+            int pageIndex = CommonFunc.SafeGetIntFromObj(this.Request["pageIndex"], 1);
+            int pageSize = this.Request["pageSize"] == null ? PageSize.GetPageSize : int.Parse(Request["pageSize"]);
+            int totalCount = 0;
+            CommonParam commonParam = new CommonParam()
+            {
+                PageIndex = pageIndex,
+                PageSize = pageSize,
+                TotalCount = totalCount,
+                region_code = region_code,
+                name = name,
+                sex = sex,
+                txtBirthDateBegin = birthdateBegin,
+                txtBirthDateEnd = birthdateEnd,
+                idCard = id_card_number,
+                address = address
+            };
+            var disease_Comm_Testing_BloodList = disease_Supplementary_Examination_XService.LoadSearchEntities(commonParam);
+            totalCount = commonParam.TotalCount;
+            int PageCount = Convert.ToInt32(Math.Ceiling((double)totalCount / pageSize));
+
+            List<Chronic_disease_Supplementary_Examination_X> result = new List<Chronic_disease_Supplementary_Examination_X>();
+            result.AddRange(disease_Comm_Testing_BloodList);
+            PagerInfo pager = new PagerInfo();
+            pager.PageIndex = pageIndex;
+            pager.PageSize = pageSize;
+            pager.TotalCount = totalCount;
+            PagerQuery<PagerInfo, List<Chronic_disease_Supplementary_Examination_X>> query = new PagerQuery<PagerInfo, List<Chronic_disease_Supplementary_Examination_X>>(pager, result);
+            ViewData.Model = query;
+            ViewBag.dell_user_name = dell_user_name;
+            ViewBag.PageIndex = pageIndex;
+            ViewBag.PageSize = pageSize;
             return View();
         }
 
@@ -73,7 +138,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
             string id = CommonFunc.SafeGetStringFromObj(Request["id"]);
             string fill_community_code = CommonFunc.SafeGetStringFromObj(Request["community_code"]);
             string worker = CommonFunc.SafeGetStringFromObj(Request["worker"]);
-            Chronic_disease_Comm_Testing_GeneDetection entity = new Chronic_disease_Comm_Testing_GeneDetection();
+            Chronic_disease_Supplementary_Examination_X entity = new Chronic_disease_Supplementary_Examination_X();
             if (string.IsNullOrEmpty(id))
             {
                 entity.id = Guid.NewGuid().ToString();
@@ -119,48 +184,141 @@ namespace MalignantTumorSystem.WebApplication.Controllers
             }
             entity.address = Request["perment_community_address"];
             entity.phone = Request["phone"];
-            entity.samplenumber = Request["numb"];
-            entity.community_code = Request["ddlCommunity"];
-            entity.inspect_doctor = Request["sjdoctor"];
-            entity.check_doctor = Request["jcdoctor"];
-            entity.report_doctor = Request["bgdoctor"];
+            entity.check_project = Request["types"];
+            entity.inspect_doctor = Request["inspect_doctor"];
+            entity.check_doctor = Request["check_doctor"];
+            entity.report_doctor = Request["report_doctor"];
+            if (string.IsNullOrEmpty(Request["sjtime"]))
+            {
+                entity.inspect_time = null;
+            }
+            else
+            {
+                entity.inspect_time = CommonFunc.SafeGetDateTimeFromObj(CommonFunc.SafeGetStringFromObj(Request["sjtime"]));
+            }
 
-            entity.inspect_time = CommonFunc.SafeGetDateTimeFromObj(CommonFunc.SafeGetStringFromObj(Request["sjtime"]));
-            entity.report_time = CommonFunc.SafeGetDateTimeFromObj(CommonFunc.SafeGetStringFromObj(Request["bgtime"]));
+            if (string.IsNullOrEmpty(Request["bgtime"]))
+            {
+                entity.report_time = null;
+            }
+            else
+            {
+                entity.report_time = CommonFunc.SafeGetDateTimeFromObj(CommonFunc.SafeGetStringFromObj(Request["bgtime"]));
+            }
+            
 
-            entity.name1 = Request["project1"];
-            entity.name2 = Request["project2"];
-            entity.name3 = Request["project3"];
-            entity.name4 = Request["project4"];
-            entity.name5 = Request["project5"];
-            entity.result1 = Request["res1"];
-            entity.result2 = Request["res2"];
-            entity.result3 = Request["res3"];
-            entity.result4 = Request["res4"];
-            entity.result5 = Request["res5"];
-            entity.unit1 = Request["Text1"];
-            entity.unit2 = Request["Text6"];
-            entity.unit3 = Request["Text10"];
-            entity.unit4 = Request["Text14"];
-            entity.unit5 = Request["Text18"];
-            entity.qujian1 = Request["Text2"];
-            entity.qujian2 = Request["Text7"];
-            entity.qujian3 = Request["Text11"];
-            entity.qujian4 = Request["Text15"];
-            entity.qujian5 = Request["Text19"];
-            entity.tishi1 = Request["Text3"];
-            entity.tishi2 = Request["Text8"];
-            entity.tishi3 = Request["Text12"];
-            entity.tishi4 = Request["Text16"];
-            entity.tishi5 = Request["Text20"];
-            entity.beizhu1 = Request["Text4"];
-            entity.beizhu2 = Request["Text9"];
-            entity.beizhu3 = Request["Text13"];
-            entity.beizhu4 = Request["Text17"];
-            entity.beizhu5 = Request["Text21"];
+            entity.check_position = Request["position"];
+            entity.check_view = Request["view"];
+            entity.check_judge = Request["judge"];
+            entity.doctor_suggest = Request["suggest"];
             entity.doctor = worker;
             entity.type = Enum.GetName(typeof(Model.Enum.EntityTypeEnum), 1);
+            entity.community_code = Request["ddlCommunity"];
 
+            //获取file
+            HttpPostedFileBase file1 = Request.Files["jctx1"];
+            if (file1 != null)
+            {
+                string fileName1 = Path.GetFileName(file1.FileName);
+                if (!string.IsNullOrEmpty(fileName1))
+                {
+                    string mapPath = Server.MapPath("~");
+                    string path = "/UploadFiles/X/" + DateTime.Now.ToString("yyyyMM") + "/" + DateTime.Now.ToString("dd") + "/"; 
+                    string savePath = mapPath + path;
+                    if (!Directory.Exists(savePath))
+                    {
+                        Directory.CreateDirectory(savePath);
+                    }
+                    file1.SaveAs(savePath + fileName1);
+                    entity.check_img1 = path + fileName1 + "," + Path.GetFullPath(file1.FileName);
+                }
+                else
+                {
+                    entity.check_img1 = "";
+                }
+            }
+            else
+            {
+                entity.check_img1 = "";
+            }
+
+            HttpPostedFileBase file2 = Request.Files["jctx2"];
+            if (file2 != null)
+            {
+                string fileName2 = Path.GetFileName(file2.FileName);
+                if (!string.IsNullOrEmpty(fileName2))
+                {
+                    string mapPath = Server.MapPath("~");
+                    string path = "/UploadFiles/X/" + DateTime.Now.ToString("yyyyMM") + "/" + DateTime.Now.ToString("dd") + "/";
+                    string savePath = mapPath + path;
+                    if (!Directory.Exists(savePath))
+                    {
+                        Directory.CreateDirectory(savePath);
+                    }
+                    file2.SaveAs(savePath + fileName2);
+                    entity.check_img2 = path + fileName2 + "," + Path.GetFullPath(file2.FileName);
+                }
+                else
+                {
+                    entity.check_img2 = "";
+                }
+            }
+            else
+            {
+                entity.check_img2 = "";
+            }
+            HttpPostedFileBase file3 = Request.Files["jctx3"];
+            if (file3 != null)
+            {
+                string fileName3 = Path.GetFileName(file3.FileName);
+                if (!string.IsNullOrEmpty(fileName3))
+                {
+                    string mapPath = Server.MapPath("~");
+                    string path = "/UploadFiles/X/" + DateTime.Now.ToString("yyyyMM") + "/" + DateTime.Now.ToString("dd") + "/";
+                    string savePath = mapPath + path;
+                    if (!Directory.Exists(savePath))
+                    {
+                        Directory.CreateDirectory(savePath);
+                    }
+                    file3.SaveAs(savePath + fileName3);
+                    entity.check_img3 = path + fileName3 + "," + Path.GetFullPath(file3.FileName);
+                }
+                else
+                {
+                    entity.check_img3 = "";
+                }
+            }
+            else
+            {
+                entity.check_img3 = "";
+            }
+            HttpPostedFileBase file4 = Request.Files["jctx4"];
+            if (file4 != null)
+            {
+                string fileName4 = Path.GetFileName(file4.FileName);
+                if (!string.IsNullOrEmpty(fileName4))
+                {
+                    string mapPath = Server.MapPath("~");
+                    string path = "/UploadFiles/X/" + DateTime.Now.ToString("yyyyMM") + "/" + DateTime.Now.ToString("dd") + "/";
+                    string savePath = mapPath + path;
+                    if (!Directory.Exists(savePath))
+                    {
+                        Directory.CreateDirectory(savePath);
+                    }
+
+                    file4.SaveAs(savePath + fileName4);
+                    entity.check_img4 = path + fileName4 + "," + Path.GetFullPath(file4.FileName);
+                }
+                else
+                {
+                    entity.check_img4 = "";
+                }
+            }
+            else
+            {
+                entity.check_img4 = "";
+            }
+              
             //判断个人信息表中是否存在此人信息 2015-06-18 娄帅
             var dt = residentFileService.LoadEntityAsNoTracking(t => t.id_card_number == id_card_number);
 
@@ -234,33 +392,11 @@ namespace MalignantTumorSystem.WebApplication.Controllers
                 string[] propertyName = new string[] { "resident_name", "sex", "id_card_number", "community_code", "individual_phone", "permanent_home_address" };
                 residentFileService.UpdatePartialPropertity(resident, propertyName);
             }
-
-            System.Collections.Generic.List<Chronic_disease_Comm_Testing_GeneDetection_Add> subjectiveList = new System.Collections.Generic.List<Chronic_disease_Comm_Testing_GeneDetection_Add>();
-
-            for (int i = 1; i < 20; i++)
-            {
-                if (!string.IsNullOrEmpty(Request["project_" + i]))
-                {
-                    Chronic_disease_Comm_Testing_GeneDetection_Add entity1 = new Chronic_disease_Comm_Testing_GeneDetection_Add();
-                    entity1.id = Guid.NewGuid().ToString();
-                    entity1.blood_id = entity.id;
-                    entity1.name = Request["project_" + i];
-                    entity1.result = Request["res_" + i];
-                    entity1.unit = Request["unit_" + i];
-                    entity1.qujian = Request["qujian_" + i];
-                    entity1.tishi = Request["tishi_" + i];
-                    entity1.beizhu = Request["beizhu_" + i];
-                    entity1.create_time = CommonFunc.SafeGetDateTimeFromObj(CommonFunc.SafeGetStringFromObj(DateTime.Now.ToString("yyyy-MM-dd")));
-                    subjectiveList.Add(entity1);
-
-                }
-            }
-
-
+  
             string msg = "";
             if (string.IsNullOrEmpty(id))
             {
-                if (disease_Comm_Testing_GeneDetectionService.AddEntity(entity) && disease_Comm_Testing_GeneDetection_AddService.UpdateSubjective(subjectiveList, entity.id))
+                if (disease_Supplementary_Examination_XService.AddEntity(entity))
                 {
                     Comm_EHR_Abstract ehr = new Comm_EHR_Abstract();
                     ehr.id = Guid.NewGuid().ToString();
@@ -268,7 +404,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
                     ehr.community_code = entity.community_code;
                     ehr.create_time = DateTime.Now;
                     ehr.item_id = entity.id;
-                    ehr.item_type = Model.Enum.EHRAbstractTypeEnum.GeneDetection.ToString();
+                    ehr.item_type = Model.Enum.EHRAbstractTypeEnum.X.ToString();
 
                     if (eHRAbstractService.AddEntity(ehr))
                     {
@@ -283,12 +419,44 @@ namespace MalignantTumorSystem.WebApplication.Controllers
             }
             else
             {
-                if (disease_Comm_Testing_GeneDetectionService.UpdateEntity(entity) && disease_Comm_Testing_GeneDetection_AddService.UpdateSubjective(subjectiveList, entity.id))
+                if (disease_Supplementary_Examination_XService.UpdateEntity(entity))
                 {
                     msg = "修改成功";
                 }
             }
             return Content(msg + ',' + entity.id);
+        }
+
+        //Show方法
+        public ActionResult Show()
+        {
+            string id = CommonFunc.SafeGetStringFromObj(Request["id"]);
+            if (id != "")
+            {
+                var result = disease_Supplementary_Examination_XService.LoadEntityAsNoTracking(t => t.id.Contains(id));
+                return Json(result,JsonRequestBehavior.AllowGet);
+            }else{
+                return Json("",JsonRequestBehavior.AllowGet);
+            }
+        }
+
+        //查看
+        public ActionResult Detail()
+        {
+            string id = CommonFunc.SafeGetStringFromObj(Request.QueryString["id"]);
+            string id_card = CommonFunc.SafeGetStringFromObj(Request.QueryString["id_card"]);
+            ViewBag.id = id;
+            ViewBag.id_card = id_card;
+            return View();
+        }
+
+        //图像
+        public ActionResult Photos()
+        {
+            var id_card = CommonFunc.SafeGetStringFromObj(Request.QueryString["id_card"]);
+            var resident_name = CommonFunc.SafeGetStringFromObj(Request.QueryString["resident_name"]);
+            var type = CommonFunc.SafeGetStringFromObj(Request.QueryString["type"]);
+            return View();
         }
     }
 }

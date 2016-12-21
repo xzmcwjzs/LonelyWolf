@@ -141,23 +141,31 @@ namespace MalignantTumorSystem.WebApplication.Controllers
         public string ConvertAge(string birthDate)
         {
             string temp="";
-            DateTime dtBirthDate = Convert.ToDateTime(birthDate);
-            int age = DateTime.Now.Year - dtBirthDate.Year;
-            if (age > 0)
-                temp = age.ToString() + "岁";
-            else if (age == 0)
+            if (string.IsNullOrEmpty(birthDate))
             {
-                int month = DateTime.Now.Month - dtBirthDate.Month;
-                if (month > 0)
-                    temp = month.ToString() + "月";
-                else if (month == 0)
-                {
-                    int day = DateTime.Now.Day - dtBirthDate.Day;
-                    if (day > 0)
-                        temp = day.ToString() + "天";
-                }
+                return temp;
             }
-            return temp;
+            else
+            {
+                DateTime dtBirthDate = Convert.ToDateTime(birthDate);
+                int age = DateTime.Now.Year - dtBirthDate.Year;
+                if (age > 0)
+                    temp = age.ToString() + "岁";
+                else if (age == 0)
+                {
+                    int month = DateTime.Now.Month - dtBirthDate.Month;
+                    if (month > 0)
+                        temp = month.ToString() + "月";
+                    else if (month == 0)
+                    {
+                        int day = DateTime.Now.Day - dtBirthDate.Day;
+                        if (day > 0)
+                            temp = day.ToString() + "天";
+                    }
+                }
+                return temp;
+            }
+            
         }
 
         //根据parentcode加载city

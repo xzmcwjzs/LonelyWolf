@@ -188,9 +188,23 @@ namespace MalignantTumorSystem.WebApplication.Controllers
             entity.check_doctor = Request["jcdoctor"];
             entity.report_doctor = Request["bgdoctor"];
 
-            entity.inspect_time = CommonFunc.SafeGetDateTimeFromObj(CommonFunc.SafeGetStringFromObj(Request["sjtime"]));
-            entity.report_time = CommonFunc.SafeGetDateTimeFromObj(CommonFunc.SafeGetStringFromObj(Request["bgtime"]));
+            if (string.IsNullOrEmpty(Request["sjtime"]))
+            {
+                entity.inspect_time = null;
+            }
+            else
+            {
+                entity.inspect_time = CommonFunc.SafeGetDateTimeFromObj(CommonFunc.SafeGetStringFromObj(Request["sjtime"]));
+            }
 
+            if (string.IsNullOrEmpty(Request["bgtime"]))
+            {
+                entity.report_time = null;
+            }
+            else
+            {
+                entity.report_time = CommonFunc.SafeGetDateTimeFromObj(CommonFunc.SafeGetStringFromObj(Request["bgtime"]));
+            }
             entity.name1 = Request["project1"];
             entity.name2 = Request["project2"];
             entity.name3 = Request["project3"];

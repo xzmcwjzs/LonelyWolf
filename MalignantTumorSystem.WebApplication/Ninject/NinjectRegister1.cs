@@ -171,6 +171,32 @@ namespace MalignantTumorSystem.WebApplication.Ninject
 	        Kernel.Bind<IChronic_disease_Comm_OperationService>().To<Chronic_disease_Comm_OperationService>();
 		
 	        Kernel.Bind<IChronic_disease_Comm_OperationAddService>().To<Chronic_disease_Comm_OperationAddService>();
+		
+	        Kernel.Bind<IChronic_disease_Supplementary_Examination_CTService>().To<Chronic_disease_Supplementary_Examination_CTService>();
+		
+	        Kernel.Bind<IChronic_disease_Supplementary_Examination_XService>().To<Chronic_disease_Supplementary_Examination_XService>();
+		
+	        Kernel.Bind<IChronic_disease_Supplementary_Examination_USService>().To<Chronic_disease_Supplementary_Examination_USService>();
+		
+	        Kernel.Bind<IChronic_disease_Supplementary_Examination_StomachService>().To<Chronic_disease_Supplementary_Examination_StomachService>();
+		
+	        Kernel.Bind<IChronic_disease_Supplementary_Examination_MRIService>().To<Chronic_disease_Supplementary_Examination_MRIService>();
+		
+	        Kernel.Bind<IChronic_disease_Supplementary_Examination_HeartService>().To<Chronic_disease_Supplementary_Examination_HeartService>();
+		
+	        Kernel.Bind<IChronic_disease_Comm_LungProjectNamesService>().To<Chronic_disease_Comm_LungProjectNamesService>();
+		
+	        Kernel.Bind<IChronic_disease_Comm_LungQuJianService>().To<Chronic_disease_Comm_LungQuJianService>();
+		
+	        Kernel.Bind<IChronic_disease_Comm_LungSexQuJianService>().To<Chronic_disease_Comm_LungSexQuJianService>();
+		
+	        Kernel.Bind<IChronic_disease_Comm_LungTitleService>().To<Chronic_disease_Comm_LungTitleService>();
+		
+	        Kernel.Bind<IChronic_disease_Comm_LungUnitService>().To<Chronic_disease_Comm_LungUnitService>();
+		
+	        Kernel.Bind<IChronic_disease_Comm_LungService>().To<Chronic_disease_Comm_LungService>();
+		
+	        Kernel.Bind<IChronic_disease_Comm_LungAddService>().To<Chronic_disease_Comm_LungAddService>();
         }
     }
 }

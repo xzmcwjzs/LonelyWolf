@@ -284,4 +284,56 @@ namespace MalignantTumorSystem.IDAL
 	public partial interface IChronic_disease_Comm_OperationAddDal : IBaseDal<Chronic_disease_Comm_OperationAdd>
     { 
     }   
+	
+	public partial interface IChronic_disease_Supplementary_Examination_CTDal : IBaseDal<Chronic_disease_Supplementary_Examination_CT>
+    { 
+    }   
+	
+	public partial interface IChronic_disease_Supplementary_Examination_XDal : IBaseDal<Chronic_disease_Supplementary_Examination_X>
+    { 
+    }   
+	
+	public partial interface IChronic_disease_Supplementary_Examination_USDal : IBaseDal<Chronic_disease_Supplementary_Examination_US>
+    { 
+    }   
+	
+	public partial interface IChronic_disease_Supplementary_Examination_StomachDal : IBaseDal<Chronic_disease_Supplementary_Examination_Stomach>
+    { 
+    }   
+	
+	public partial interface IChronic_disease_Supplementary_Examination_MRIDal : IBaseDal<Chronic_disease_Supplementary_Examination_MRI>
+    { 
+    }   
+	
+	public partial interface IChronic_disease_Supplementary_Examination_HeartDal : IBaseDal<Chronic_disease_Supplementary_Examination_Heart>
+    { 
+    }   
+	
+	public partial interface IChronic_disease_Comm_LungProjectNamesDal : IBaseDal<Chronic_disease_Comm_LungProjectNames>
+    { 
+    }   
+	
+	public partial interface IChronic_disease_Comm_LungQuJianDal : IBaseDal<Chronic_disease_Comm_LungQuJian>
+    { 
+    }   
+	
+	public partial interface IChronic_disease_Comm_LungSexQuJianDal : IBaseDal<Chronic_disease_Comm_LungSexQuJian>
+    { 
+    }   
+	
+	public partial interface IChronic_disease_Comm_LungTitleDal : IBaseDal<Chronic_disease_Comm_LungTitle>
+    { 
+    }   
+	
+	public partial interface IChronic_disease_Comm_LungUnitDal : IBaseDal<Chronic_disease_Comm_LungUnit>
+    { 
+    }   
+	
+	public partial interface IChronic_disease_Comm_LungDal : IBaseDal<Chronic_disease_Comm_Lung>
+    { 
+    }   
+	
+	public partial interface IChronic_disease_Comm_LungAddDal : IBaseDal<Chronic_disease_Comm_LungAdd>
+    { 
+    }   
 }

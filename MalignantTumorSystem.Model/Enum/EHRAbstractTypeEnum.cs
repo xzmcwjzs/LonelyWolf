@@ -46,7 +46,19 @@ namespace MalignantTumorSystem.Model.Enum
        [Description("Chronic_disease_Comm_Medication")]
        MedInfo, 
        [Description("Chronic_disease_Comm_Operation")]
-       OperR
-      
+       OperR,
+       [Description("Chronic_disease_Supplementary_Examination_X")]
+       X,
+       [Description("Chronic_disease_Supplementary_Examination_CT")]
+      CT,
+       [Description("Chronic_disease_Supplementary_Examination_US")]
+       US,
+       [Description("Chronic_disease_Supplementary_Examination_MRI")]
+       MRI,
+       [Description("Chronic_disease_Supplementary_Examination_Stomach")]
+       Stomach,
+       [Description("Chronic_disease_Supplementary_Examination_Heart")]
+       Heart
+
     }
 }

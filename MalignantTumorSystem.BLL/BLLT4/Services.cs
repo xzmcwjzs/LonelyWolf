@@ -562,4 +562,108 @@ namespace MalignantTumorSystem.BLL
             CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_OperationAddDal();
         } 
 	}  
+	
+	public partial class Chronic_disease_Supplementary_Examination_CTService:BaseService<Chronic_disease_Supplementary_Examination_CT>,IChronic_disease_Supplementary_Examination_CTService
+    {	
+		public override void SetCurrentDal()
+        {
+            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Supplementary_Examination_CTDal();
+        } 
+	}  
+	
+	public partial class Chronic_disease_Supplementary_Examination_XService:BaseService<Chronic_disease_Supplementary_Examination_X>,IChronic_disease_Supplementary_Examination_XService
+    {	
+		public override void SetCurrentDal()
+        {
+            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Supplementary_Examination_XDal();
+        } 
+	}  
+	
+	public partial class Chronic_disease_Supplementary_Examination_USService:BaseService<Chronic_disease_Supplementary_Examination_US>,IChronic_disease_Supplementary_Examination_USService
+    {	
+		public override void SetCurrentDal()
+        {
+            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Supplementary_Examination_USDal();
+        } 
+	}  
+	
+	public partial class Chronic_disease_Supplementary_Examination_StomachService:BaseService<Chronic_disease_Supplementary_Examination_Stomach>,IChronic_disease_Supplementary_Examination_StomachService
+    {	
+		public override void SetCurrentDal()
+        {
+            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Supplementary_Examination_StomachDal();
+        } 
+	}  
+	
+	public partial class Chronic_disease_Supplementary_Examination_MRIService:BaseService<Chronic_disease_Supplementary_Examination_MRI>,IChronic_disease_Supplementary_Examination_MRIService
+    {	
+		public override void SetCurrentDal()
+        {
+            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Supplementary_Examination_MRIDal();
+        } 
+	}  
+	
+	public partial class Chronic_disease_Supplementary_Examination_HeartService:BaseService<Chronic_disease_Supplementary_Examination_Heart>,IChronic_disease_Supplementary_Examination_HeartService
+    {	
+		public override void SetCurrentDal()
+        {
+            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Supplementary_Examination_HeartDal();
+        } 
+	}  
+	
+	public partial class Chronic_disease_Comm_LungProjectNamesService:BaseService<Chronic_disease_Comm_LungProjectNames>,IChronic_disease_Comm_LungProjectNamesService
+    {	
+		public override void SetCurrentDal()
+        {
+            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_LungProjectNamesDal();
+        } 
+	}  
+	
+	public partial class Chronic_disease_Comm_LungQuJianService:BaseService<Chronic_disease_Comm_LungQuJian>,IChronic_disease_Comm_LungQuJianService
+    {	
+		public override void SetCurrentDal()
+        {
+            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_LungQuJianDal();
+        } 
+	}  
+	
+	public partial class Chronic_disease_Comm_LungSexQuJianService:BaseService<Chronic_disease_Comm_LungSexQuJian>,IChronic_disease_Comm_LungSexQuJianService
+    {	
+		public override void SetCurrentDal()
+        {
+            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_LungSexQuJianDal();
+        } 
+	}  
+	
+	public partial class Chronic_disease_Comm_LungTitleService:BaseService<Chronic_disease_Comm_LungTitle>,IChronic_disease_Comm_LungTitleService
+    {	
+		public override void SetCurrentDal()
+        {
+            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_LungTitleDal();
+        } 
+	}  
+	
+	public partial class Chronic_disease_Comm_LungUnitService:BaseService<Chronic_disease_Comm_LungUnit>,IChronic_disease_Comm_LungUnitService
+    {	
+		public override void SetCurrentDal()
+        {
+            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_LungUnitDal();
+        } 
+	}  
+	
+	public partial class Chronic_disease_Comm_LungService:BaseService<Chronic_disease_Comm_Lung>,IChronic_disease_Comm_LungService
+    {	
+		public override void SetCurrentDal()
+        {
+            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_LungDal();
+        } 
+	}  
+	
+	public partial class Chronic_disease_Comm_LungAddService:BaseService<Chronic_disease_Comm_LungAdd>,IChronic_disease_Comm_LungAddService
+    {	
+		public override void SetCurrentDal()
+        {
+            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_LungAddDal();
+        } 
+	}  
 }

@@ -228,6 +228,45 @@ namespace MalignantTumorSystem.Model.DataBaseContext
 		
 	 
             modelBuilder.Configurations.Add(new Chronic_disease_Comm_OperationAddMap());
+		
+	 
+            modelBuilder.Configurations.Add(new Chronic_disease_Supplementary_Examination_CTMap());
+		
+	 
+            modelBuilder.Configurations.Add(new Chronic_disease_Supplementary_Examination_XMap());
+		
+	 
+            modelBuilder.Configurations.Add(new Chronic_disease_Supplementary_Examination_USMap());
+		
+	 
+            modelBuilder.Configurations.Add(new Chronic_disease_Supplementary_Examination_StomachMap());
+		
+	 
+            modelBuilder.Configurations.Add(new Chronic_disease_Supplementary_Examination_MRIMap());
+		
+	 
+            modelBuilder.Configurations.Add(new Chronic_disease_Supplementary_Examination_HeartMap());
+		
+	 
+            modelBuilder.Configurations.Add(new Chronic_disease_Comm_LungProjectNamesMap());
+		
+	 
+            modelBuilder.Configurations.Add(new Chronic_disease_Comm_LungQuJianMap());
+		
+	 
+            modelBuilder.Configurations.Add(new Chronic_disease_Comm_LungSexQuJianMap());
+		
+	 
+            modelBuilder.Configurations.Add(new Chronic_disease_Comm_LungTitleMap());
+		
+	 
+            modelBuilder.Configurations.Add(new Chronic_disease_Comm_LungUnitMap());
+		
+	 
+            modelBuilder.Configurations.Add(new Chronic_disease_Comm_LungMap());
+		
+	 
+            modelBuilder.Configurations.Add(new Chronic_disease_Comm_LungAddMap());
      }
 		
 	     public DbSet<Comm_Platform_Worker> Comm_Platform_Worker { get; set; }
@@ -367,5 +406,31 @@ namespace MalignantTumorSystem.Model.DataBaseContext
 	     public DbSet<Chronic_disease_Comm_Operation> Chronic_disease_Comm_Operation { get; set; }
 		
 	     public DbSet<Chronic_disease_Comm_OperationAdd> Chronic_disease_Comm_OperationAdd { get; set; }
+		
+	     public DbSet<Chronic_disease_Supplementary_Examination_CT> Chronic_disease_Supplementary_Examination_CT { get; set; }
+		
+	     public DbSet<Chronic_disease_Supplementary_Examination_X> Chronic_disease_Supplementary_Examination_X { get; set; }
+		
+	     public DbSet<Chronic_disease_Supplementary_Examination_US> Chronic_disease_Supplementary_Examination_US { get; set; }
+		
+	     public DbSet<Chronic_disease_Supplementary_Examination_Stomach> Chronic_disease_Supplementary_Examination_Stomach { get; set; }
+		
+	     public DbSet<Chronic_disease_Supplementary_Examination_MRI> Chronic_disease_Supplementary_Examination_MRI { get; set; }
+		
+	     public DbSet<Chronic_disease_Supplementary_Examination_Heart> Chronic_disease_Supplementary_Examination_Heart { get; set; }
+		
+	     public DbSet<Chronic_disease_Comm_LungProjectNames> Chronic_disease_Comm_LungProjectNames { get; set; }
+		
+	     public DbSet<Chronic_disease_Comm_LungQuJian> Chronic_disease_Comm_LungQuJian { get; set; }
+		
+	     public DbSet<Chronic_disease_Comm_LungSexQuJian> Chronic_disease_Comm_LungSexQuJian { get; set; }
+		
+	     public DbSet<Chronic_disease_Comm_LungTitle> Chronic_disease_Comm_LungTitle { get; set; }
+		
+	     public DbSet<Chronic_disease_Comm_LungUnit> Chronic_disease_Comm_LungUnit { get; set; }
+		
+	     public DbSet<Chronic_disease_Comm_Lung> Chronic_disease_Comm_Lung { get; set; }
+		
+	     public DbSet<Chronic_disease_Comm_LungAdd> Chronic_disease_Comm_LungAdd { get; set; }
    }
 }

@@ -79,6 +79,12 @@
     <Compile Include="IChronic_disease_PhysicalExerciseService.cs" />
     <Compile Include="IChronic_disease_PhysicalExercise_AddService.cs" />
     <Compile Include="IChronic_disease_SmokeAndDrinkService.cs" />
+    <Compile Include="IChronic_disease_Supplementary_Examination_HeartService.cs" />
+    <Compile Include="IChronic_disease_Supplementary_Examination_StomachService.cs" />
+    <Compile Include="IChronic_disease_Supplementary_Examination_CTService.cs" />
+    <Compile Include="IChronic_disease_Supplementary_Examination_MRIService.cs" />
+    <Compile Include="IChronic_disease_Supplementary_Examination_USService.cs" />
+    <Compile Include="IChronic_disease_Supplementary_Examination_XService.cs" />
     <Compile Include="IComm_EHR_AbstractService.cs" />
     <Compile Include="IComm_ResidentFileService.cs" />
     <Compile Include="IComm_ResidentFile_Followup_Blood_TransfusionService.cs" />
@@ -86,7 +92,7 @@
     <Compile Include="IComm_ResidentFile_Followup_SurgeryService.cs" />
     <Compile Include="IComm_ResidentFile_Followup_TraumaService.cs" />
     <Compile Include="IComm_TumourService.cs" />
-    <Compile Include="IServices.cs">
+    <Compile Include="IBLLT4\IServices.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>IServices.tt</DependentUpon>
@@ -113,7 +119,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="IServices.tt">
+    <Content Include="IBLLT4\IServices.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>IServices.cs</LastGenOutput>
     </Content>

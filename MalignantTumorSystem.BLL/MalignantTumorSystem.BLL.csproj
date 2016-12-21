@@ -87,6 +87,12 @@
     <Compile Include="Chronic_disease_PhysicalExerciseService.cs" />
     <Compile Include="Chronic_disease_PhysicalExercise_AddService.cs" />
     <Compile Include="Chronic_disease_SmokeAndDrinkService.cs" />
+    <Compile Include="Chronic_disease_Supplementary_Examination_HeartService.cs" />
+    <Compile Include="Chronic_disease_Supplementary_Examination_StomachService.cs" />
+    <Compile Include="Chronic_disease_Supplementary_Examination_CTService.cs" />
+    <Compile Include="Chronic_disease_Supplementary_Examination_MRIService.cs" />
+    <Compile Include="Chronic_disease_Supplementary_Examination_USService.cs" />
+    <Compile Include="Chronic_disease_Supplementary_Examination_XService.cs" />
     <Compile Include="Comm_EHR_AbstractService.cs" />
     <Compile Include="Comm_ResidentFileService.cs" />
     <Compile Include="Comm_ResidentFile_Followup_Blood_TransfusionService.cs" />
@@ -96,7 +102,7 @@
     <Compile Include="Comm_TumourService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SearchTest.cs" />
-    <Compile Include="Services.cs">
+    <Compile Include="BLLT4\Services.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Services.tt</DependentUpon>
@@ -134,7 +140,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Services.tt">
+    <Content Include="BLLT4\Services.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Services.cs</LastGenOutput>
     </Content>

@@ -293,8 +293,23 @@ namespace MalignantTumorSystem.WebApplication.Controllers
             entity.community_code = Request["ddlCommunity"];
             entity.check_company = Request["CheckCompany"];
 
-            entity.inspect_time = CommonFunc.SafeGetDateTimeFromObj(CommonFunc.SafeGetStringFromObj(Request["sjtime"]));
-            entity.report_time = CommonFunc.SafeGetDateTimeFromObj(CommonFunc.SafeGetStringFromObj(Request["bgtime"]));
+            if (string.IsNullOrEmpty(Request["sjtime"]))
+            {
+                entity.inspect_time = null;
+            }
+            else
+            {
+                entity.inspect_time = CommonFunc.SafeGetDateTimeFromObj(CommonFunc.SafeGetStringFromObj(Request["sjtime"]));
+            }
+
+            if (string.IsNullOrEmpty(Request["bgtime"]))
+            {
+                entity.report_time = null;
+            }
+            else
+            {
+                entity.report_time = CommonFunc.SafeGetDateTimeFromObj(CommonFunc.SafeGetStringFromObj(Request["bgtime"]));
+            }
             System.Collections.Generic.List<Chronic_disease_Comm_HumorAdd> subjectiveList = new System.Collections.Generic.List<Chronic_disease_Comm_HumorAdd>();
 
 

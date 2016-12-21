@@ -426,6 +426,84 @@ Chronic_disease_Comm_OperationDal;
 
 Chronic_disease_Comm_OperationAddDal;
 		    }
+	  	    public static Chronic_disease_Supplementary_Examination_CTDal GetChronic_disease_Supplementary_Examination_CTDal()
+		    {
+		        return Assembly.Load(AssemblyPath).CreateInstance(NameSpacePath + ".Chronic_disease_Supplementary_Examination_CTDal") as 
+
+Chronic_disease_Supplementary_Examination_CTDal;
+		    }
+	  	    public static Chronic_disease_Supplementary_Examination_XDal GetChronic_disease_Supplementary_Examination_XDal()
+		    {
+		        return Assembly.Load(AssemblyPath).CreateInstance(NameSpacePath + ".Chronic_disease_Supplementary_Examination_XDal") as 
+
+Chronic_disease_Supplementary_Examination_XDal;
+		    }
+	  	    public static Chronic_disease_Supplementary_Examination_USDal GetChronic_disease_Supplementary_Examination_USDal()
+		    {
+		        return Assembly.Load(AssemblyPath).CreateInstance(NameSpacePath + ".Chronic_disease_Supplementary_Examination_USDal") as 
+
+Chronic_disease_Supplementary_Examination_USDal;
+		    }
+	  	    public static Chronic_disease_Supplementary_Examination_StomachDal GetChronic_disease_Supplementary_Examination_StomachDal()
+		    {
+		        return Assembly.Load(AssemblyPath).CreateInstance(NameSpacePath + ".Chronic_disease_Supplementary_Examination_StomachDal") as 
+
+Chronic_disease_Supplementary_Examination_StomachDal;
+		    }
+	  	    public static Chronic_disease_Supplementary_Examination_MRIDal GetChronic_disease_Supplementary_Examination_MRIDal()
+		    {
+		        return Assembly.Load(AssemblyPath).CreateInstance(NameSpacePath + ".Chronic_disease_Supplementary_Examination_MRIDal") as 
+
+Chronic_disease_Supplementary_Examination_MRIDal;
+		    }
+	  	    public static Chronic_disease_Supplementary_Examination_HeartDal GetChronic_disease_Supplementary_Examination_HeartDal()
+		    {
+		        return Assembly.Load(AssemblyPath).CreateInstance(NameSpacePath + ".Chronic_disease_Supplementary_Examination_HeartDal") as 
+
+Chronic_disease_Supplementary_Examination_HeartDal;
+		    }
+	  	    public static Chronic_disease_Comm_LungProjectNamesDal GetChronic_disease_Comm_LungProjectNamesDal()
+		    {
+		        return Assembly.Load(AssemblyPath).CreateInstance(NameSpacePath + ".Chronic_disease_Comm_LungProjectNamesDal") as 
+
+Chronic_disease_Comm_LungProjectNamesDal;
+		    }
+	  	    public static Chronic_disease_Comm_LungQuJianDal GetChronic_disease_Comm_LungQuJianDal()
+		    {
+		        return Assembly.Load(AssemblyPath).CreateInstance(NameSpacePath + ".Chronic_disease_Comm_LungQuJianDal") as 
+
+Chronic_disease_Comm_LungQuJianDal;
+		    }
+	  	    public static Chronic_disease_Comm_LungSexQuJianDal GetChronic_disease_Comm_LungSexQuJianDal()
+		    {
+		        return Assembly.Load(AssemblyPath).CreateInstance(NameSpacePath + ".Chronic_disease_Comm_LungSexQuJianDal") as 
+
+Chronic_disease_Comm_LungSexQuJianDal;
+		    }
+	  	    public static Chronic_disease_Comm_LungTitleDal GetChronic_disease_Comm_LungTitleDal()
+		    {
+		        return Assembly.Load(AssemblyPath).CreateInstance(NameSpacePath + ".Chronic_disease_Comm_LungTitleDal") as 
+
+Chronic_disease_Comm_LungTitleDal;
+		    }
+	  	    public static Chronic_disease_Comm_LungUnitDal GetChronic_disease_Comm_LungUnitDal()
+		    {
+		        return Assembly.Load(AssemblyPath).CreateInstance(NameSpacePath + ".Chronic_disease_Comm_LungUnitDal") as 
+
+Chronic_disease_Comm_LungUnitDal;
+		    }
+	  	    public static Chronic_disease_Comm_LungDal GetChronic_disease_Comm_LungDal()
+		    {
+		        return Assembly.Load(AssemblyPath).CreateInstance(NameSpacePath + ".Chronic_disease_Comm_LungDal") as 
+
+Chronic_disease_Comm_LungDal;
+		    }
+	  	    public static Chronic_disease_Comm_LungAddDal GetChronic_disease_Comm_LungAddDal()
+		    {
+		        return Assembly.Load(AssemblyPath).CreateInstance(NameSpacePath + ".Chronic_disease_Comm_LungAddDal") as 
+
+Chronic_disease_Comm_LungAddDal;
+		    }
 	   
    }
 }

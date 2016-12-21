@@ -14,6 +14,7 @@ db.Students.Any(t=>t.Name=="张三")
 
 
 SOA 单点登录
+登录较慢
 基础框架搭好后  写一个SQLHelper  用原生的ado做 
 学习angular  或者vue  ---GiveUp
 仓储   ---OK  

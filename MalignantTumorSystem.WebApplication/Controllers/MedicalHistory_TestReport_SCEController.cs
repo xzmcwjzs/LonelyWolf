@@ -189,8 +189,23 @@ namespace MalignantTumorSystem.WebApplication.Controllers
             entity.inspect_doctor = Request["sjdoctor"];
             entity.check_doctor = Request["jcdoctor"];
             entity.report_doctor = Request["bgdoctor"];
-            entity.inspect_time = CommonFunc.SafeGetDateTimeFromObj(CommonFunc.SafeGetStringFromObj(Request["sjtime"]));
-            entity.report_time = CommonFunc.SafeGetDateTimeFromObj(CommonFunc.SafeGetStringFromObj(Request["bgtime"]));
+            if (string.IsNullOrEmpty(Request["sjtime"]))
+            {
+                entity.inspect_time = null;
+            }
+            else
+            {
+                entity.inspect_time = CommonFunc.SafeGetDateTimeFromObj(CommonFunc.SafeGetStringFromObj(Request["sjtime"]));
+            }
+
+            if (string.IsNullOrEmpty(Request["bgtime"]))
+            {
+                entity.report_time = null;
+            }
+            else
+            {
+                entity.report_time = CommonFunc.SafeGetDateTimeFromObj(CommonFunc.SafeGetStringFromObj(Request["bgtime"]));
+            }
             entity.check_company = Request["CheckCompany"];
 
             entity.type = Enum.GetName(typeof(Model.Enum.EHRAbstractTypeEnum), 1);

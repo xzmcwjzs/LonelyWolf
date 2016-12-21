@@ -353,4 +353,69 @@ namespace MalignantTumorSystem.IBLL
     {
        
     }
+	
+	 public partial interface IChronic_disease_Supplementary_Examination_CTService:IBaseService<Chronic_disease_Supplementary_Examination_CT>
+    {
+       
+    }
+	
+	 public partial interface IChronic_disease_Supplementary_Examination_XService:IBaseService<Chronic_disease_Supplementary_Examination_X>
+    {
+       
+    }
+	
+	 public partial interface IChronic_disease_Supplementary_Examination_USService:IBaseService<Chronic_disease_Supplementary_Examination_US>
+    {
+       
+    }
+	
+	 public partial interface IChronic_disease_Supplementary_Examination_StomachService:IBaseService<Chronic_disease_Supplementary_Examination_Stomach>
+    {
+       
+    }
+	
+	 public partial interface IChronic_disease_Supplementary_Examination_MRIService:IBaseService<Chronic_disease_Supplementary_Examination_MRI>
+    {
+       
+    }
+	
+	 public partial interface IChronic_disease_Supplementary_Examination_HeartService:IBaseService<Chronic_disease_Supplementary_Examination_Heart>
+    {
+       
+    }
+	
+	 public partial interface IChronic_disease_Comm_LungProjectNamesService:IBaseService<Chronic_disease_Comm_LungProjectNames>
+    {
+       
+    }
+	
+	 public partial interface IChronic_disease_Comm_LungQuJianService:IBaseService<Chronic_disease_Comm_LungQuJian>
+    {
+       
+    }
+	
+	 public partial interface IChronic_disease_Comm_LungSexQuJianService:IBaseService<Chronic_disease_Comm_LungSexQuJian>
+    {
+       
+    }
+	
+	 public partial interface IChronic_disease_Comm_LungTitleService:IBaseService<Chronic_disease_Comm_LungTitle>
+    {
+       
+    }
+	
+	 public partial interface IChronic_disease_Comm_LungUnitService:IBaseService<Chronic_disease_Comm_LungUnit>
+    {
+       
+    }
+	
+	 public partial interface IChronic_disease_Comm_LungService:IBaseService<Chronic_disease_Comm_Lung>
+    {
+       
+    }
+	
+	 public partial interface IChronic_disease_Comm_LungAddService:IBaseService<Chronic_disease_Comm_LungAdd>
+    {
+       
+    }
 }

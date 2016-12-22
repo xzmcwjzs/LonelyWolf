@@ -3429,6 +3429,8 @@
     <Content Include="Views\MedicalHistory_AccessoryExamination_LungCheck\Left.cshtml" />
     <Content Include="Views\MedicalHistory_AccessoryExamination_LungCheck\LungCheck.cshtml" />
     <Content Include="Views\MedicalHistory_AccessoryExamination_LungCheck\List.cshtml" />
+    <Content Include="Views\MedicalHistory_AccessoryExamination_LungCheck\Detail.cshtml" />
+    <Content Include="Views\MedicalHistory_AccessoryExamination_LungCheck\Photos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

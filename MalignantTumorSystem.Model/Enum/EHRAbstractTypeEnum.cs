@@ -58,7 +58,9 @@ namespace MalignantTumorSystem.Model.Enum
        [Description("Chronic_disease_Supplementary_Examination_Stomach")]
        Stomach,
        [Description("Chronic_disease_Supplementary_Examination_Heart")]
-       Heart
+       Heart,
+       [Description("Chronic_disease_Comm_Lung")]
+       Lung
 
     }
 }

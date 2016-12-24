@@ -21,6 +21,8 @@ namespace MalignantTumorSystem.BLL
             SetCurrentDal();
         }
         public abstract void SetCurrentDal();
+
+        #region 计数
         /// <summary>
         /// 计数
         /// </summary>
@@ -28,7 +30,10 @@ namespace MalignantTumorSystem.BLL
         public int CountEntities()
         {
             return CurrentDal.CountEntities();
-        }
+        } 
+        #endregion
+
+        #region 查询
         /// <summary>
         /// 查询
         /// </summary>
@@ -61,7 +66,10 @@ namespace MalignantTumorSystem.BLL
         {
             return CurrentDal.LoadOrderEntities(whereLambda, orderByLambda, isAsc);
 
-        }
+        } 
+        #endregion
+
+        #region 分页
         /// <summary>
         /// 分页查询
         /// </summary>
@@ -76,7 +84,10 @@ namespace MalignantTumorSystem.BLL
         public IQueryable<T> LoadPageEntities<S>(int pageSize, int pageIndex, out int totalCount, System.Linq.Expressions.Expression<Func<T, bool>> whereLambda, System.Linq.Expressions.Expression<Func<T, S>> orderbyLambda, bool isAsc)
         {
             return CurrentDal.LoadPageEntities<S>(pageSize, pageIndex, out totalCount, whereLambda, orderbyLambda, isAsc);
-        }
+        } 
+        #endregion
+
+        #region 删除
         /// <summary>
         /// 删除
         /// </summary>
@@ -116,8 +127,11 @@ namespace MalignantTumorSystem.BLL
         public bool DeleteByLambda(Expression<Func<T, bool>> whereLambda)
         {
             CurrentDal.DeleteByLambda(whereLambda);
-            return Db.SaveChanges()>0;
-        }
+            return Db.SaveChanges() > 0;
+        } 
+        #endregion
+
+        #region 修改
         /// <summary>
         /// 更新
         /// </summary>
@@ -127,6 +141,16 @@ namespace MalignantTumorSystem.BLL
         {
             CurrentDal.UpdateEntity(entity);
             //return CurrentDbSession.SaveChanges();
+            return Db.SaveChanges() > 0;
+        }
+        /// <summary>
+        /// 批量更新
+        /// </summary>
+        /// <param name="list"></param>
+        /// <returns></returns>
+        public bool UpdateEntity(List<T> list)
+        {
+            CurrentDal.UpdateEntity(list);
             return Db.SaveChanges() > 0;
         }
         /// <summary>
@@ -149,16 +173,20 @@ namespace MalignantTumorSystem.BLL
         public bool UpdatePartialPropertity2(T entity, params string[] propertyName)
         {
             CurrentDal.UpdatePartialPropertity2(entity, propertyName);
-            return Db.SaveChanges()>0;
+            return Db.SaveChanges() > 0;
         }
-         /// <summary>
+        /// <summary>
         /// 根据条件 修改指定的 属性值
         /// </summary>
         /// <returns></returns>
-        public bool UpdatePartialPropertityByLambda(Expression<Func<T, bool>> whereLambda, T entity, params string[] propertyName) {
-            CurrentDal.UpdatePartialPropertityByLambda(whereLambda,entity,propertyName);
-            return Db.SaveChanges()>0;
-        }
+        public bool UpdatePartialPropertityByLambda(Expression<Func<T, bool>> whereLambda, T entity, params string[] propertyName)
+        {
+            CurrentDal.UpdatePartialPropertityByLambda(whereLambda, entity, propertyName);
+            return Db.SaveChanges() > 0;
+        } 
+        #endregion
+
+        #region 新增
         /// <summary>
         /// 添加数据
         /// </summary>
@@ -179,7 +207,10 @@ namespace MalignantTumorSystem.BLL
         {
             CurrentDal.AddAllEntity(list);
             return Db.SaveChanges() > 0;
-        }
+        } 
+        #endregion
+
+        #region EF执行sql语句
         /// <summary>
         /// EF执行sql查询语句
         /// </summary>
@@ -188,7 +219,7 @@ namespace MalignantTumorSystem.BLL
         /// <returns></returns>
         public IQueryable<T> LoadEntityBySql(string sql, params SqlParameter[] parms)
         {
-            var result = CurrentDal.LoadEntityBySql(sql,parms);
+            var result = CurrentDal.LoadEntityBySql(sql, parms);
             return result;
         }
         public List<TResult> LoadListBySql<TResult>(string strSql, params Object[] paramObjects)
@@ -212,6 +243,7 @@ namespace MalignantTumorSystem.BLL
         {
             var result = CurrentDal.RunProc<TResult>(sql, pamrs);
             return result;
-        }
+        } 
+        #endregion
     }
 }

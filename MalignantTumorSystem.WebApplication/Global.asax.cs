@@ -46,10 +46,10 @@ namespace MalignantTumorSystem.WebApplication
              
             #region CodeFirst自动迁移，并允许数据丢失
 
-            //Database.SetInitializer(new MigrateDatabaseToLatestVersion<Model.DataBaseContext.MalignantTumorEntities, MalignantTumorSystem.Model.Migrations.Configuration>());
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<Model.DataBaseContext.MalignantTumorEntities, MalignantTumorSystem.Model.Migrations.Configuration>());
 
-            //var dbMigrator = new DbMigrator(new Model.Migrations.Configuration());
-            //dbMigrator.Update(); 
+            var dbMigrator = new DbMigrator(new Model.Migrations.Configuration());
+            dbMigrator.Update(); 
 
             #endregion
 

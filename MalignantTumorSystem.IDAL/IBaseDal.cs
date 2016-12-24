@@ -25,6 +25,7 @@ namespace MalignantTumorSystem.IDAL
         bool AddAllEntity(IList<T> list);
 
         bool UpdateEntity(T entity);
+        bool UpdateEntity(List<T> list);
         bool UpdatePartialPropertity(T entity, string[] propertyName);
         bool UpdatePartialPropertity2(T entity, params string[] propertyName);
          bool UpdatePartialPropertityByLambda(Expression<Func<T, bool>> whereLambda, T entity, params string[] propertyName);

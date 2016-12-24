@@ -7,3 +7,15 @@ E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSys
 E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.Model\obj\Release\MalignantTumorSystem.Model.csprojResolveAssemblyReference.cache
 E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.Model\obj\Release\MalignantTumorSystem.Model.dll
 E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.Model\obj\Release\MalignantTumorSystem.Model.pdb
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Model\bin\Release\MalignantTumorSystem.Model.dll.config
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Model\bin\Release\MalignantTumorSystem.Model.dll
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Model\bin\Release\MalignantTumorSystem.Model.pdb
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Model\bin\Release\EntityFramework.dll
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Model\bin\Release\EntityFramework.SqlServer.dll
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Model\bin\Release\EntityFramework.xml
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Model\bin\Release\EntityFramework.SqlServer.xml
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Model\bin\Release\zh-Hans\EntityFramework.resources.dll
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Model\bin\Release\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Model\obj\Release\MalignantTumorSystem.Model.csprojResolveAssemblyReference.cache
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Model\obj\Release\MalignantTumorSystem.Model.dll
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Model\obj\Release\MalignantTumorSystem.Model.pdb

@@ -10,3 +10,16 @@ E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSys
 E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.Common\obj\Release\MalignantTumorSystem.Common.csprojResolveAssemblyReference.cache
 E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.Common\obj\Release\MalignantTumorSystem.Common.dll
 E:\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.Common\obj\Release\MalignantTumorSystem.Common.pdb
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Common\bin\Release\MalignantTumorSystem.Common.dll
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Common\bin\Release\MalignantTumorSystem.Common.pdb
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Common\bin\Release\log4net.dll
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Common\bin\Release\NPOI.dll
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Common\bin\Release\NPOI.OOXML.dll
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Common\bin\Release\NPOI.OpenXml4Net.dll
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Common\bin\Release\NPOI.OpenXmlFormats.dll
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Common\bin\Release\NPOI.xml
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Common\bin\Release\NPOI.OOXML.xml
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Common\bin\Release\NPOI.OpenXml4Net.xml
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Common\obj\Release\MalignantTumorSystem.Common.csprojResolveAssemblyReference.cache
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Common\obj\Release\MalignantTumorSystem.Common.dll
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Common\obj\Release\MalignantTumorSystem.Common.pdb

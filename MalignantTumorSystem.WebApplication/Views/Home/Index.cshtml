@@ -22,15 +22,15 @@
             $("#Login").click(function () {
                 var form1 = $("#form1").serializeArray();
                 $.ajax({
-                    cache: false,
-                    asycn: true,
+                    cache: true,
+                    asycn: false,
                     type: "post",
-                    url: "@Url.Action("DengLu","Home")",
+                    url: "/Home/DengLu",
                     dataType: "text",
                     data: form1,
                     success: function (data) {
                         if (data == "ok") { 
-                            location.href = "@Url.Action("Index","Main")";
+                            location.href = "/Main/Index";
                         } else {
                             alert(data);
                             $("#txtPassword").val("");

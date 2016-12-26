@@ -286,6 +286,7 @@ C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplicat
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\WebActivatorEx.dll
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\WebGrease.dll
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\MalignantTumorSystem.IDAL.dll
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\EntityFramework6.Extended.NET45.dll
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\MalignantTumorSystem.DAL.dll
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\NPOI.dll
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\NPOI.OOXML.dll
@@ -315,6 +316,7 @@ C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplicat
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\System.Web.WebPages.Deployment.xml
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\System.Web.WebPages.Razor.xml
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\MalignantTumorSystem.IDAL.pdb
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\EntityFramework6.Extended.NET45.xml
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\MalignantTumorSystem.DAL.pdb
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\NPOI.xml
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\NPOI.OOXML.xml

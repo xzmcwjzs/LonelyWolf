@@ -336,4 +336,8 @@ namespace MalignantTumorSystem.IDAL
 	public partial interface IChronic_disease_Comm_LungAddDal : IBaseDal<Chronic_disease_Comm_LungAdd>
     { 
     }   
+	
+	public partial interface ITestDal : IBaseDal<Test>
+    { 
+    }   
 }

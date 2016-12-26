@@ -340,4 +340,8 @@ namespace MalignantTumorSystem.DAL{
 	public partial class Chronic_disease_Comm_LungAddDal:BaseDal<Chronic_disease_Comm_LungAdd>,IChronic_disease_Comm_LungAddDal
     {
 	}
+		
+	public partial class TestDal:BaseDal<Test>,ITestDal
+    {
+	}
 }

@@ -267,6 +267,9 @@ namespace MalignantTumorSystem.Model.DataBaseContext
 		
 	 
             modelBuilder.Configurations.Add(new Chronic_disease_Comm_LungAddMap());
+		
+	 
+            modelBuilder.Configurations.Add(new TestMap());
      }
 		
 	     public DbSet<Comm_Platform_Worker> Comm_Platform_Worker { get; set; }
@@ -432,5 +435,7 @@ namespace MalignantTumorSystem.Model.DataBaseContext
 	     public DbSet<Chronic_disease_Comm_Lung> Chronic_disease_Comm_Lung { get; set; }
 		
 	     public DbSet<Chronic_disease_Comm_LungAdd> Chronic_disease_Comm_LungAdd { get; set; }
+		
+	     public DbSet<Test> Test { get; set; }
    }
 }

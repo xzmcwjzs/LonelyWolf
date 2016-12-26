@@ -9,7 +9,11 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using MalignantTumorSystem.DAL.DALFactory;
-using System.Reflection; 
+using System.Reflection;
+using EntityFramework.Extensions;
+using EntityFramework.Future;
+using EntityFramework.Caching;  
+using System.Transactions;
 
 namespace MalignantTumorSystem.DAL
 {
@@ -158,10 +162,27 @@ namespace MalignantTumorSystem.DAL
                 if (!string.IsNullOrEmpty(ex.InnerException.Message))
                     throw new Exception("新增失败：" + ex.InnerException.Message);
                 throw new Exception("新增失败：" + ex.Message);
+            } 
+        }
+        public bool AddRangeEntity(IList<T> list)
+        {
+            try
+            { 
+                Db.Configuration.ValidateOnSaveEnabled = false; 
+                Db.Set<T>().AddRange(list);
+                return true;
+            } 
+            catch (Exception ex)
+            {
+                if (!string.IsNullOrEmpty(ex.InnerException.Message))
+                    throw new Exception("新增失败：" + ex.InnerException.Message);
+                throw new Exception("新增失败：" + ex.Message);
             }
-
-
-        } 
+            finally
+            {
+                Db.Configuration.ValidateOnSaveEnabled = true;
+            }
+        }
         #endregion
 
         #region 修改（方法名相同  利用重载）
@@ -216,6 +237,9 @@ namespace MalignantTumorSystem.DAL
         {
             try
             {
+                //关闭EF实体合法性检查（如果创建出来的要修改的数据有的字段没有赋值则关闭实体合法性检查，如果所有字段都赋值了则不用关闭EF实体合法性检查） 
+                Db.Configuration.ValidateOnSaveEnabled = false;
+
                 if (entity == null)
                 {
                     throw new Exception("entity必须为实体对象");
@@ -233,8 +257,7 @@ namespace MalignantTumorSystem.DAL
                     //4.设置该对象的 各个属性为修改状态，同时 entry.State 被修改为 Modified 状态
                     entry.Property(item).IsModified = true;
                 }
-                //5.关闭EF实体合法性检查（如果创建出来的要修改的数据有的字段没有赋值则关闭实体合法性检查，如果所有字段都赋值了则不用关闭EF实体合法性检查） 
-                Db.Configuration.ValidateOnSaveEnabled = false;
+                
                 return true;
             }
             catch (Exception ex)
@@ -242,6 +265,10 @@ namespace MalignantTumorSystem.DAL
                 if (!string.IsNullOrEmpty(ex.InnerException.Message))
                     throw new Exception("修改失败：" + ex.InnerException.Message);
                 throw new Exception("修改失败：" + ex.Message);
+            }
+            finally
+            {
+                Db.Configuration.ValidateOnSaveEnabled = true;
             }
 
         }
@@ -266,8 +293,7 @@ namespace MalignantTumorSystem.DAL
                     //标记要修改的属性
                     entry.Property(propertyName[i]).IsModified = true;
                 }
-                //打开检查
-                Db.Configuration.ValidateOnSaveEnabled = true;
+                
                 return true;
             }
             catch (Exception ex)
@@ -275,6 +301,11 @@ namespace MalignantTumorSystem.DAL
                 if (!string.IsNullOrEmpty(ex.InnerException.Message))
                     throw new Exception("修改失败：" + ex.InnerException.Message);
                 throw new Exception("修改失败：" + ex.Message);
+            }
+            finally
+            { 
+                //打开检查
+                Db.Configuration.ValidateOnSaveEnabled = true;
             }
 
         }
@@ -525,129 +556,141 @@ namespace MalignantTumorSystem.DAL
         }  
         #endregion
 
+        #region EFExtensions批量操作
+
+        #region 更新
         /// <summary>
-        /// 统一ParameterExpression
+        /// 批量  更新
         /// </summary>
-        internal class ParameterReplacer : ExpressionVisitor
-        {
-            public ParameterReplacer(ParameterExpression paramExpr)
-            {
-                this.ParameterExpression = paramExpr;
-            }
-
-            public ParameterExpression ParameterExpression { get; private set; }
-
-            public Expression Replace(Expression expr)
-            {
-                return this.Visit(expr);
-            }
-
-            protected override Expression VisitParameter(ParameterExpression p)
-            {
-                return this.ParameterExpression;
-            }
-        }
-        public static class PredicateExtensionses
-    {
-        public static Expression<Func<T, bool>> True<T>() { return f => true; }
-
-        public static Expression<Func<T, bool>> False<T>() { return f => false; }
-
-        public static Expression<Func<T, bool>> And<T>(this Expression<Func<T, bool>> exp_left, Expression<Func<T, bool>> exp_right)
-        {
-            var candidateExpr = Expression.Parameter(typeof(T), "candidate");
-            var parameterReplacer = new ParameterReplacer(candidateExpr);
-
-            var left = parameterReplacer.Replace(exp_left.Body);
-            var right = parameterReplacer.Replace(exp_right.Body);
-            var body = Expression.And(left, right);
-
-            return Expression.Lambda<Func<T, bool>>(body, candidateExpr);
-        }
-
-        public static Expression<Func<T, bool>> Or<T>(this Expression<Func<T, bool>> exp_left, Expression<Func<T, bool>> exp_right)
-        {
-            var candidateExpr = Expression.Parameter(typeof(T), "candidate");
-            var parameterReplacer = new ParameterReplacer(candidateExpr);
-
-            var left = parameterReplacer.Replace(exp_left.Body);
-            var right = parameterReplacer.Replace(exp_right.Body);
-            var body = Expression.Or(left, right);
-
-            return Expression.Lambda<Func<T, bool>>(body, candidateExpr);
-        }
-        /// <summary>
-        /// 多条件排序
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="source"></param>
-        /// <param name="ordermodel"></param>
+        /// <param name="whereLmbda"></param>
+        /// <param name="updateLambda"></param>
         /// <returns></returns>
-        public static IQueryable<T> OrderBy<T>(this IQueryable<T> source, params OrderModel[] ordermodel) where T : class
+        public bool BulkUpdate(Expression<Func<T, bool>> whereLmbda, Expression<Func<T, T>> updateLambda)
         {
-            var data = source;
-            if (ordermodel == null) return data;
-            Type type = typeof(T);
-            for (int i = 0; i < ordermodel.Length; i++)
+            try
             {
-                var item = ordermodel[i];
-                PropertyInfo property = type.GetProperty(item.Orderby);
-                if (property == null)
-                    throw new ArgumentException("propertyName", "Not Exist");
+                Db.Set<T>().Where(whereLmbda).Update(updateLambda);
+                return Db.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                if (!string.IsNullOrEmpty(ex.InnerException.Message))
+                    throw new Exception("修改失败：" + ex.InnerException.Message);
+                throw new Exception("修改失败：" + ex.Message);
+            }
+        } 
+        #endregion
 
-                ParameterExpression param = Expression.Parameter(type, "p");
-                Expression propertyAccessExpression = Expression.MakeMemberAccess(param, property);
-                LambdaExpression orderByExpression = Expression.Lambda(propertyAccessExpression, param);
+        #region 删除
+        /// <summary>
+        /// 批量删除
+        /// </summary>
+        /// <param name="whereLambda"></param>
+        /// <returns></returns>
+        public bool BulkDelete(Expression<Func<T, bool>> whereLambda)
+        {
+            try
+            {
+                Db.Set<T>().Where(whereLambda).Delete();
+                return Db.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                if (!string.IsNullOrEmpty(ex.InnerException.Message))
+                    throw new Exception("删除失败：" + ex.InnerException.Message);
+                throw new Exception("删除失败：" + ex.Message);
+            }
+        }
+        
+        #endregion
 
-                string methodName = item.ascending ? "OrderBy" : "OrderByDescending";
-
-                MethodCallExpression resultExp = Expression.Call(typeof(Queryable), methodName, new Type[] { type, property.PropertyType }, source.Expression, Expression.Quote(orderByExpression));
-                data = data.Provider.CreateQuery<T>(resultExp);
+        #region 查询
+        /// <summary>
+        /// 这个扩展框架允许你将多个查询表达式包装在同一个连接进行查询，这样可以减少数据库连接数，从而提高查询性能
+        /// </summary>
+        /// <param name="selectLambda"></param>
+        /// <returns></returns>
+        public FutureQuery<T> BulkSelect(Expression<Func<T, bool>> selectLambda)
+        {
+            return Db.Set<T>().Where(selectLambda).Future();
+        }
+        /// <summary>
+        /// 扩展 分页
+        /// </summary>
+        /// <typeparam name="S"></typeparam>
+        /// <param name="pageSize"></param>
+        /// <param name="pageIndex"></param>
+        /// <param name="totalCount"></param>
+        /// <param name="whereLambda"></param>
+        /// <param name="orderByLambda"></param>
+        /// <param name="isAsc"></param>
+        /// <returns></returns>
+        public FutureQuery<T> BulkLoadPage<S>(int pageSize, int pageIndex, out int totalCount,
+                                                Expression<Func<T, bool>> whereLambda,
+                                                  Expression<Func<T, S>> orderByLambda,
+                                                   bool isAsc)
+        {
+            totalCount = Db.Set<T>().Where<T>(whereLambda).FutureCount().Value;
+            if (isAsc)
+            {
+                return Db.Set<T>().Where<T>(whereLambda).OrderBy<T, S>(orderByLambda)
+                             .Skip<T>(pageSize * (pageIndex - 1))
+                             .Take<T>(pageSize).Future();
 
             }
-            return data;
-        }
-    }
-        public class OrderModel
-    {
-        /// <summary>
-        /// 排序字段
-        /// </summary>
-        public string Orderby { get; set; }
-        /// <summary>
-        /// 是否正序
-        /// </summary>
-        public bool ascending { get; set; }
-
-        public static OrderModel[] GetOrderModels(string orderby)
-        {
-            if (string.IsNullOrEmpty(orderby))
-                return null;
-            var orderbys = orderby.TrimEnd(',').Split(',');
-            OrderModel[] ordermodels = new OrderModel[orderbys.Length];
-            for (int i = 0; i < orderbys.Length; i++)
+            else
             {
-                var item = orderbys[i].Split(':');
-                if (item.Length != 2)
-                    throw new Exception("格式不正确,例:字段1:1,字段2:0");
-                var model = new OrderModel();
-                model.Orderby = item[0];
-                model.ascending = item[1] == "1" ? true : false;
-                ordermodels[i] = model;
+                return Db.Set<T>().Where<T>(whereLambda).OrderByDescending<T, S>(orderByLambda)
+                               .Skip<T>(pageSize * (pageIndex - 1))
+                               .Take<T>(pageSize).Future();
             }
-            return ordermodels;
         }
-    } 
+        /// <summary>
+        /// 缓存 查询结果
+        /// </summary>
+        /// <param name="selectLambda"></param>
+        /// <param name="Seconds"></param>
+        /// <returns></returns>
+        public IEnumerable<T> BulkCacheSelect(Expression<Func<T, bool>> selectLambda, double Seconds)
+        {
+            return Db.Set<T>().Where(selectLambda).FromCache(CachePolicy.WithDurationExpiration(TimeSpan.FromSeconds(Seconds)));
+        }
+        //缓存打上TGA标记 
+        #endregion
+
+        #region 批量  插入
+        public void BulkInsert(IEnumerable<T> list)
+        { 
+            using (var transactionScope = new TransactionScope())
+            {
+
+                transactionScope.Complete();
+            }
+        }
+        #endregion
+        
+        #endregion
+
+        #region 事务提交SaveChanges
         /// <summary>
         /// 对数据库进行一次性操作
         /// </summary>
         /// <returns></returns>
         public bool SaveChanges()
         {
-            return Db.SaveChanges() > 0;
-        }
+            try
+            {
+                return Db.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                if (!string.IsNullOrEmpty(ex.InnerException.Message))
+                    throw new Exception("对数据库操作失败：" + ex.InnerException.Message);
+                throw new Exception("对数据库操作失败：" + ex.Message);
+            }
 
-
-
+        } 
+        #endregion
+         
     }
 }

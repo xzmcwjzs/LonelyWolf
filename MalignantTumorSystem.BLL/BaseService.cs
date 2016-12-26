@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MalignantTumorSystem.DAL;
 using MalignantTumorSystem.IDAL;
+using EntityFramework.Future;
 
 namespace MalignantTumorSystem.BLL
 {
@@ -207,7 +208,13 @@ namespace MalignantTumorSystem.BLL
         {
             CurrentDal.AddAllEntity(list);
             return Db.SaveChanges() > 0;
-        } 
+        }
+
+        public bool AddRangeEntity(IList<T> list)
+        {
+            CurrentDal.AddRangeEntity(list);
+            return Db.SaveChanges()>0;
+        }
         #endregion
 
         #region EF执行sql语句
@@ -243,6 +250,43 @@ namespace MalignantTumorSystem.BLL
         {
             var result = CurrentDal.RunProc<TResult>(sql, pamrs);
             return result;
+        } 
+        #endregion
+
+        #region EFExtensions
+        public bool BulkUpdate(Expression<Func<T, bool>> whereLmbda, Expression<Func<T, T>> updateLambda)
+        {
+            return CurrentDal.BulkUpdate(whereLmbda, updateLambda);
+        }
+        public bool BulkDelete(Expression<Func<T, bool>> whereLambda)
+        {
+            return CurrentDal.BulkDelete(whereLambda);
+        }
+        public FutureQuery<T> BulkSelect(Expression<Func<T, bool>> selectLambda)
+        {
+            return CurrentDal.BulkSelect(selectLambda);
+        }
+        public FutureQuery<T> BulkLoadPage<S>(int pageSize, int pageIndex, out int totalCount,
+                                                Expression<Func<T, bool>> whereLambda,
+                                                  Expression<Func<T, S>> orderByLambda,
+                                                   bool isAsc)
+        {
+            return CurrentDal.BulkLoadPage<S>(pageSize, pageIndex, out totalCount, whereLambda, orderByLambda, isAsc);
+        }
+        public IEnumerable<T> BulkCacheSelect(Expression<Func<T, bool>> selectLambda, double Seconds)
+        {
+            return CurrentDal.BulkCacheSelect(selectLambda, Seconds);
+        }
+        public void BulkInsert(IEnumerable<T> list)
+        {
+            CurrentDal.BulkInsert(list);
+        }
+        #endregion
+
+        #region 事务提交 savechanges
+        public bool SaveChanges()
+        {
+            return CurrentDal.SaveChanges();
         } 
         #endregion
     }

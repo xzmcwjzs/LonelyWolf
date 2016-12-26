@@ -82,6 +82,7 @@ C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\bin\Deb
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\bin\Debug\MalignantTumorSystem.BLL.pdb
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\bin\Debug\EntityFramework.dll
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\bin\Debug\EntityFramework6.Extended.NET45.dll
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\bin\Debug\MalignantTumorSystem.Common.dll
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\bin\Debug\MalignantTumorSystem.DAL.dll
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\bin\Debug\MalignantTumorSystem.IBLL.dll
@@ -89,6 +90,7 @@ C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\bin\Deb
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\bin\Debug\MalignantTumorSystem.Model.dll
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\bin\Debug\NPOI.dll
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\bin\Debug\NPOI.OOXML.dll
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\bin\Debug\log4net.dll
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\bin\Debug\NPOI.OpenXmlFormats.dll
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\bin\Debug\NPOI.OpenXml4Net.dll
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\bin\Debug\MalignantTumorSystem.Common.pdb
@@ -98,6 +100,7 @@ C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\bin\Deb
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\bin\Debug\MalignantTumorSystem.Model.pdb
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\bin\Debug\EntityFramework.xml
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\bin\Debug\EntityFramework6.Extended.NET45.xml
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\bin\Debug\NPOI.xml
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\bin\Debug\NPOI.OOXML.xml
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\bin\Debug\NPOI.OpenXml4Net.xml
@@ -106,4 +109,3 @@ C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\bin\Deb
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\obj\Debug\MalignantTumorSystem.BLL.csprojResolveAssemblyReference.cache
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\obj\Debug\MalignantTumorSystem.BLL.dll
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\obj\Debug\MalignantTumorSystem.BLL.pdb
-C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\bin\Debug\log4net.dll

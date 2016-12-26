@@ -504,6 +504,12 @@ Chronic_disease_Comm_LungDal;
 
 Chronic_disease_Comm_LungAddDal;
 		    }
+	  	    public static TestDal GetTestDal()
+		    {
+		        return Assembly.Load(AssemblyPath).CreateInstance(NameSpacePath + ".TestDal") as 
+
+TestDal;
+		    }
 	   
    }
 }

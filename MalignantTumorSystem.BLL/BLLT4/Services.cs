@@ -666,4 +666,12 @@ namespace MalignantTumorSystem.BLL
             CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_LungAddDal();
         } 
 	}  
+	
+	public partial class TestService:BaseService<Test>,ITestService
+    {	
+		public override void SetCurrentDal()
+        {
+            CurrentDal =DAL.DALFactory.AbstractFactory.GetTestDal();
+        } 
+	}  
 }

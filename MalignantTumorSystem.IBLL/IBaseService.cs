@@ -6,6 +6,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using MalignantTumorSystem.IDAL;
+using EntityFramework.Future;
 
 namespace MalignantTumorSystem.IBLL
 {
@@ -28,10 +29,23 @@ namespace MalignantTumorSystem.IBLL
         bool UpdatePartialPropertityByLambda(Expression<Func<T, bool>> whereLambda, T entity, params string[] propertyName);
         bool AddEntity(T entity);
         bool AddAllEntity(IList<T> list);
+        bool AddRangeEntity(IList<T> list);
         IQueryable<T> LoadEntityBySql(string sql, params SqlParameter[] parms);
         List<TResult> LoadListBySql<TResult>(string strSql, params Object[] paramObjects);
         List<TResult> RunProc<TResult>(string sql, params object[] pamrs);
         int OperateEntityBySql(string sql, params SqlParameter[] parms);
-        
+        #region EFExtensions
+        bool BulkUpdate(Expression<Func<T, bool>> whereLmbda, Expression<Func<T, T>> updateLambda);
+        bool BulkDelete(Expression<Func<T, bool>> whereLambda);
+         FutureQuery<T> BulkSelect(Expression<Func<T, bool>> selectLambda);
+         FutureQuery<T> BulkLoadPage<S>(int pageSize, int pageIndex, out int totalCount,
+                                                 Expression<Func<T, bool>> whereLambda,
+                                                   Expression<Func<T, S>> orderByLambda,
+                                                    bool isAsc);
+         IEnumerable<T> BulkCacheSelect(Expression<Func<T, bool>> selectLambda, double Seconds);
+         void BulkInsert(IEnumerable<T> list);
+
+        #endregion
+        bool SaveChanges();
     }
 }

@@ -418,4 +418,9 @@ namespace MalignantTumorSystem.IBLL
     {
        
     }
+	
+	 public partial interface ITestService:IBaseService<Test>
+    {
+       
+    }
 }

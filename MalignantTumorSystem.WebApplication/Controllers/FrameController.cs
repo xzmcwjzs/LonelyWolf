@@ -23,15 +23,19 @@ namespace MalignantTumorSystem.WebApplication.Controllers
             Model.Entities.Comm_Platform_Worker workerModel = new Model.Entities.Comm_Platform_Worker();
             workerModel = Session["worker"] as Model.Entities.Comm_Platform_Worker;
             ViewData.Model = workerModel;
+            string type = CommonFunc.SafeGetStringFromObj(Request.QueryString["type"]);
+            ViewBag.type = type; 
             return View();
         }
 
         public ActionResult LeftFrame()
-        {
-            
+        { 
             return View();
         }
-        
+        public ActionResult LeftBreastCancer()
+        {
+            return View();
+        }
         public ActionResult MainFrame()
         { 
             return View();
@@ -98,6 +102,13 @@ namespace MalignantTumorSystem.WebApplication.Controllers
         public ActionResult ListExpire()
         {
             return View();
+        }
+
+        public ActionResult LogOut()
+        {
+            Session.Clear();
+            System.Web.HttpContext.Current.Application["Online"] = null;
+            return Redirect("/Home/Index");
         }
     }
 }

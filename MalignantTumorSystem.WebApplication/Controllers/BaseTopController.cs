@@ -18,13 +18,12 @@ namespace MalignantTumorSystem.WebApplication.Controllers
             {
                 //filterContext.Result = Redirect("/Home/Index");
                 filterContext.HttpContext.Response.Write("<script type='text/javascript'> window.top.location.href='/Home/Index';</script>");
-            }
+            } 
         }
         public void redirectTo()
         {
            Response.Write("<script type='text/javascript'> window.top.location.href='/Home/Index';</script>");
         }
-
-
+         
     }
 }

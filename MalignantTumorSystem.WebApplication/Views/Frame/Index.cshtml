@@ -8,16 +8,13 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>乳腺癌智能化健康管理系统</title>
-    <script src="~/Scripts/jquery-1.8.2.min.js"></script>
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
     <script src="~/Scripts/MyJs/global.js"></script>
     <link href="~/Content/MyCss/global.css" rel="stylesheet" />
     <script type="text/javascript">
         if (self != top) {
             top.location = self.location;
-        }
-        function Quit() {
-            window.location.href = "/Home/Index";
-        }
+        } 
     </script>
 </head>
 <body onscroll="no">
@@ -32,7 +29,25 @@
                                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                         <tr>
                                             <td width="290" rowspan="2" align="left" style="padding-left: 10px; background-color: white;">
-                                                <div style="color: blue; font-size: 20px; font-weight: bold;">乳腺癌智能化健康管理系统</div>
+                                                <div>
+                                                    @if (ViewBag.type == "BreastCancer")
+                                                    {
+                                                        <span style="color: blue; font-size: 20px; font-weight: bold;">乳腺癌智能化健康管理系统</span>
+                                                    }
+                                                    else if (ViewBag.type == "NasopharynxCancer")
+                                                    {
+                                                        <span style="color: blue; font-size: 20px; font-weight: bold;">鼻咽癌智能化健康管理系统</span>
+                                                    }
+                                                    else if (ViewBag.type == "CervicalCancer")
+                                                    {
+                                                        <span style="color: blue; font-size: 20px; font-weight: bold;">宫颈癌智能化健康管理系统</span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <span style="color: blue; font-size: 20px; font-weight: bold;">恶性肿瘤智能化健康管理系统</span>
+                                                    }
+
+                                                </div>
                                             </td>
                                         </tr>
                                     </table>
@@ -53,7 +68,7 @@
                                                 <span style="color: White;">日期:</span>
                                                 @Html.Label(DateTime.Now.ToString("yyyy年MM月dd日"), new { style = "color:white" })
                                                 <span>&nbsp;</span>
-                                                <a style="color: White;" href="#" onclick="Quit()">安全退出</a>     
+                                                <a style="color: White;" href="/Frame/LogOut">安全退出</a>     
                                             </td>
                                         </tr>
                                     </table>
@@ -64,7 +79,14 @@
                 </tr>
                 <tr>
                     <td align="center" valign="middle" id="frmTitle" style="width:169px;">
-                        <iframe frameborder="0" id="LeftFrame" scrolling="auto" src='@Url.Action("LeftFrame")' style="height: 100%; visibility: inherit; width: 165px; z-index: 2"></iframe>
+                        @if (ViewBag.type == "BreastCancer")
+                        {
+                            <iframe frameborder="0" id="LeftFrame" scrolling="auto" src='@Url.Action("LeftBreastCancer")'  style="height:100%;width:165px;visibility:inherit;z-index:2;"></iframe>
+                        }
+                        else
+                        {
+                            <iframe frameborder="0" id="LeftFrame" scrolling="auto" src='@Url.Action("LeftFrame")' style="height: 100%; visibility: inherit; width: 165px; z-index: 2"></iframe>
+                        } 
                     </td>
                     <td style="width: 100%">
                         <iframe frameborder="0" id="MainFrame" name="MainFrame" scrolling="no" src='@Url.Action("MainFrame")' style="height: 100%; visibility: inherit; width: 100%; z-index: 1"></iframe>

@@ -46,3 +46,4 @@ C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Common\bin\
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Common\bin\Debug\NPOI.OpenXml4Net.xml
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Common\obj\Debug\MalignantTumorSystem.Common.dll
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Common\obj\Debug\MalignantTumorSystem.Common.pdb
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.Common\obj\Debug\MalignantTumorSystem.Common.csprojResolveAssemblyReference.cache

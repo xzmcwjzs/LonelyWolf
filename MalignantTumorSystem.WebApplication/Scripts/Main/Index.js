@@ -18,11 +18,4 @@ $(function () {
         $("#more").fadeOut(1000);
     })
 })
-
-function RedirectTo(id) { 
-    if (id == "BreastCancer") {
-        location.href = "/Frame/Index";
-    } else {
-        alert("该系统尚未开发，敬请期待");
-    }
-}
+ 

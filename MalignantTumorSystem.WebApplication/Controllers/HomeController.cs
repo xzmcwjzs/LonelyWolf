@@ -36,6 +36,10 @@ namespace MalignantTumorSystem.WebApplication.Controllers
             }
             string UserName =CommonFunc.SafeGetStringFromObj(Request["txtUserName"]);
             string Password =CommonFunc.SafeGetStringFromObj( Request["txtPassword"]);
+
+            MalignantTumorSystem.Common.OneLoginHelper oneLogin = new OneLoginHelper();
+            oneLogin.LoginRegister(UserName);
+
             var loginInfo = workerService.LoadEntityAsNoTracking(u => u.user_name == UserName && u.password == Password).FirstOrDefault();
 
             if (loginInfo != null)

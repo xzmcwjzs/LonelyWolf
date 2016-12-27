@@ -73,6 +73,9 @@
     <Reference Include="Ninject">
       <HintPath>..\packages\Lib\Ninject.dll</HintPath>
     </Reference>
+    <Reference Include="RouteDebug">
+      <HintPath>D:\王杰\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\packages\Lib\RouteDebug.dll</HintPath>
+    </Reference>
     <Reference Include="Spring.Core">
       <HintPath>..\packages\Lib\Spring.Core.dll</HintPath>
     </Reference>
@@ -2835,6 +2838,7 @@
     <Content Include="Views\MedicalHistory_AccessoryExamination_LungCheck\List.cshtml" />
     <Content Include="Views\MedicalHistory_AccessoryExamination_LungCheck\Detail.cshtml" />
     <Content Include="Views\MedicalHistory_AccessoryExamination_LungCheck\Photos.cshtml" />
+    <Content Include="Views\Frame\LeftBreastCancer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

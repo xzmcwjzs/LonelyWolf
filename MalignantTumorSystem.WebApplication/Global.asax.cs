@@ -19,6 +19,7 @@ namespace MalignantTumorSystem.WebApplication
     {
         protected void Application_Start()
         {
+             
             #region Ninject IOC/DI 注入
             NinjectRegister.RegisterFovMvc(); //为ASP.NET MVC注册IOC容器
             NinjectRegister.RegisterFovWebApi(GlobalConfiguration.Configuration);//为WebApi注册IOC容器 
@@ -30,6 +31,10 @@ namespace MalignantTumorSystem.WebApplication
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            #region 利用RouteDebug进行调试
+            //RouteDebug.RouteDebugger.RewriteRoutesForTesting(RouteTable.Routes);
+            #endregion
 
             #region LOG4Net读取配置
             //从配置文件读取log4net的配置，然后进行一个初始化工作。
@@ -57,6 +62,11 @@ namespace MalignantTumorSystem.WebApplication
            // Database.SetInitializer<Model.DataBaseContext.MalignantTumorEntities>(null);
            
         }
+
+        protected void Session_End(object sender, EventArgs e)
+        {
+            MalignantTumorSystem.Common.OneLoginHelper.GlobalSessionEnd();
+        } 
  
     }
 }

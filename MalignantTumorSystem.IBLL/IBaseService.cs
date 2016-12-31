@@ -31,8 +31,7 @@ namespace MalignantTumorSystem.IBLL
         bool AddAllEntity(IList<T> list);
         bool AddRangeEntity(IList<T> list);
         IQueryable<T> LoadEntityBySql(string sql, params SqlParameter[] parms);
-        List<TResult> LoadListBySql<TResult>(string strSql, params Object[] paramObjects);
-        List<TResult> RunProc<TResult>(string sql, params object[] pamrs);
+        List<T> LoadListBySql(string strSql, params Object[] paramObjects); 
         int OperateEntityBySql(string sql, params SqlParameter[] parms);
         #region EFExtensions
         bool BulkUpdate(Expression<Func<T, bool>> whereLmbda, Expression<Func<T, T>> updateLambda);

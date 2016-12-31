@@ -57,6 +57,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MalignantTumorEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Chronic_disease_BloodPressure.cs" />
+    <Compile Include="Entities\Chronic_disease_BloodPressure_Add.cs" />
     <Compile Include="Entities\Chronic_disease_Comm_Diagnostic.cs" />
     <Compile Include="Entities\Chronic_disease_Comm_DiagnosticAdd.cs" />
     <Compile Include="Entities\Chronic_disease_Comm_Humor.cs" />
@@ -144,6 +146,8 @@
     <Compile Include="Enum\EHRAbstractTypeEnum.cs" />
     <Compile Include="Enum\EntityTypeEnum.cs" />
     <Compile Include="Enum\UserNameEnum.cs" />
+    <Compile Include="Mapping\Chronic_disease_BloodPressureMap.cs" />
+    <Compile Include="Mapping\Chronic_disease_BloodPressure_AddMap.cs" />
     <Compile Include="Mapping\Chronic_disease_Comm_DiagnosticAddMap.cs" />
     <Compile Include="Mapping\Chronic_disease_Comm_DiagnosticMap.cs" />
     <Compile Include="Mapping\Chronic_disease_Comm_HumorAddMap.cs" />

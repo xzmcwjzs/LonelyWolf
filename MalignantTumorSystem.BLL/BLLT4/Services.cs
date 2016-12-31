@@ -674,4 +674,20 @@ namespace MalignantTumorSystem.BLL
             CurrentDal =DAL.DALFactory.AbstractFactory.GetTestDal();
         } 
 	}  
+	
+	public partial class Chronic_disease_BloodPressureService:BaseService<Chronic_disease_BloodPressure>,IChronic_disease_BloodPressureService
+    {	
+		public override void SetCurrentDal()
+        {
+            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_BloodPressureDal();
+        } 
+	}  
+	
+	public partial class Chronic_disease_BloodPressure_AddService:BaseService<Chronic_disease_BloodPressure_Add>,IChronic_disease_BloodPressure_AddService
+    {	
+		public override void SetCurrentDal()
+        {
+            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_BloodPressure_AddDal();
+        } 
+	}  
 }

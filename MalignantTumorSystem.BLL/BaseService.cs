@@ -96,9 +96,7 @@ namespace MalignantTumorSystem.BLL
         /// <returns></returns>
         public bool DeleteEntity(T entity)
         {
-            CurrentDal.DeleteEntity(entity);
-            //return CurrentDbSession.SaveChanges();
-            return Db.SaveChanges() > 0;
+            return CurrentDal.DeleteEntity(entity); 
         }
         /// <summary>
         /// 删除2
@@ -107,8 +105,7 @@ namespace MalignantTumorSystem.BLL
         /// <returns></returns>
         public bool DeleteEntity2(T entity)
         {
-            CurrentDal.DeleteEntity2(entity);
-            return Db.SaveChanges() > 0;
+            return CurrentDal.DeleteEntity2(entity); 
         }
         /// <summary>
         /// 批量删除
@@ -117,8 +114,7 @@ namespace MalignantTumorSystem.BLL
         /// <returns></returns>
         public bool DeleteAllEntity(IList<T> list)
         {
-            CurrentDal.DeleteAllEntity(list);
-            return Db.SaveChanges() > 0;
+            return CurrentDal.DeleteAllEntity(list); 
         }
         /// <summary>
         /// 根据条件进行删除
@@ -127,8 +123,7 @@ namespace MalignantTumorSystem.BLL
         /// <returns></returns>
         public bool DeleteByLambda(Expression<Func<T, bool>> whereLambda)
         {
-            CurrentDal.DeleteByLambda(whereLambda);
-            return Db.SaveChanges() > 0;
+            return CurrentDal.DeleteByLambda(whereLambda); 
         } 
         #endregion
 
@@ -140,9 +135,7 @@ namespace MalignantTumorSystem.BLL
         /// <returns></returns>
         public bool UpdateEntity(T entity)
         {
-            CurrentDal.UpdateEntity(entity);
-            //return CurrentDbSession.SaveChanges();
-            return Db.SaveChanges() > 0;
+            return CurrentDal.UpdateEntity(entity); 
         }
         /// <summary>
         /// 批量更新
@@ -151,8 +144,7 @@ namespace MalignantTumorSystem.BLL
         /// <returns></returns>
         public bool UpdateEntity(List<T> list)
         {
-            CurrentDal.UpdateEntity(list);
-            return Db.SaveChanges() > 0;
+            return CurrentDal.UpdateEntity(list); 
         }
         /// <summary>
         /// 部分更新
@@ -162,8 +154,7 @@ namespace MalignantTumorSystem.BLL
         /// <returns></returns>
         public bool UpdatePartialPropertity(T entity, string[] propertyName)
         {
-            CurrentDal.UpdatePartialPropertity(entity, propertyName);
-            return Db.SaveChanges() > 0;
+            return CurrentDal.UpdatePartialPropertity(entity, propertyName); 
         }
         /// <summary>
         /// 修改某个实体的 某些属性(根据id修改)【*用这个需要注意关闭检查】
@@ -173,8 +164,7 @@ namespace MalignantTumorSystem.BLL
         /// <returns></returns>
         public bool UpdatePartialPropertity2(T entity, params string[] propertyName)
         {
-            CurrentDal.UpdatePartialPropertity2(entity, propertyName);
-            return Db.SaveChanges() > 0;
+            return CurrentDal.UpdatePartialPropertity2(entity, propertyName); 
         }
         /// <summary>
         /// 根据条件 修改指定的 属性值
@@ -182,8 +172,7 @@ namespace MalignantTumorSystem.BLL
         /// <returns></returns>
         public bool UpdatePartialPropertityByLambda(Expression<Func<T, bool>> whereLambda, T entity, params string[] propertyName)
         {
-            CurrentDal.UpdatePartialPropertityByLambda(whereLambda, entity, propertyName);
-            return Db.SaveChanges() > 0;
+            return CurrentDal.UpdatePartialPropertityByLambda(whereLambda, entity, propertyName); 
         } 
         #endregion
 
@@ -195,9 +184,7 @@ namespace MalignantTumorSystem.BLL
         /// <returns></returns>
         public bool AddEntity(T entity)
         {
-            CurrentDal.AddEntity(entity);
-            //CurrentDbSession.SaveChanges();
-            return Db.SaveChanges() > 0;
+            return CurrentDal.AddEntity(entity); 
         }
         /// <summary>
         /// 批量增加
@@ -206,14 +193,12 @@ namespace MalignantTumorSystem.BLL
         /// <returns></returns>
         public bool AddAllEntity(IList<T> list)
         {
-            CurrentDal.AddAllEntity(list);
-            return Db.SaveChanges() > 0;
+            return CurrentDal.AddAllEntity(list); 
         }
 
         public bool AddRangeEntity(IList<T> list)
         {
-            CurrentDal.AddRangeEntity(list);
-            return Db.SaveChanges()>0;
+            return CurrentDal.AddRangeEntity(list); 
         }
         #endregion
 
@@ -229,9 +214,9 @@ namespace MalignantTumorSystem.BLL
             var result = CurrentDal.LoadEntityBySql(sql, parms);
             return result;
         }
-        public List<TResult> LoadListBySql<TResult>(string strSql, params Object[] paramObjects)
+        public List<T> LoadListBySql(string strSql, params Object[] paramObjects)
         {
-            var result = CurrentDal.LoadListBySql<TResult>(strSql, paramObjects);
+            var result = CurrentDal.LoadListBySql(strSql, paramObjects);
             return result;
         }
         /// <summary>
@@ -244,11 +229,6 @@ namespace MalignantTumorSystem.BLL
         public int OperateEntityBySql(string sql, params SqlParameter[] parms)
         {
             var result = CurrentDal.OperateEntityBySql(sql, parms);
-            return result;
-        }
-        public List<TResult> RunProc<TResult>(string sql, params object[] pamrs)
-        {
-            var result = CurrentDal.RunProc<TResult>(sql, pamrs);
             return result;
         } 
         #endregion

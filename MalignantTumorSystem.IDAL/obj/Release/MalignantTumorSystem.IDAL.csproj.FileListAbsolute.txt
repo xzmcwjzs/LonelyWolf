@@ -18,3 +18,9 @@ C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.IDAL\bin\Re
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.IDAL\obj\Release\MalignantTumorSystem.IDAL.csprojResolveAssemblyReference.cache
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.IDAL\obj\Release\MalignantTumorSystem.IDAL.dll
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.IDAL\obj\Release\MalignantTumorSystem.IDAL.pdb
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.IDAL\bin\Release\MalignantTumorSystem.IDAL.dll.config
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.IDAL\bin\Release\EntityFramework.SqlServer.dll
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.IDAL\bin\Release\EntityFramework6.Extended.NET45.dll
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.IDAL\bin\Release\EntityFramework.SqlServer.xml
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.IDAL\bin\Release\EntityFramework6.Extended.NET45.xml
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.IDAL\bin\Release\zh-Hans\EntityFramework.SqlServer.resources.dll

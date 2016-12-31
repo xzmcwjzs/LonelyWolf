@@ -344,4 +344,12 @@ namespace MalignantTumorSystem.DAL{
 	public partial class TestDal:BaseDal<Test>,ITestDal
     {
 	}
+		
+	public partial class Chronic_disease_BloodPressureDal:BaseDal<Chronic_disease_BloodPressure>,IChronic_disease_BloodPressureDal
+    {
+	}
+		
+	public partial class Chronic_disease_BloodPressure_AddDal:BaseDal<Chronic_disease_BloodPressure_Add>,IChronic_disease_BloodPressure_AddDal
+    {
+	}
 }

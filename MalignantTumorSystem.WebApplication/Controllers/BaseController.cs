@@ -22,10 +22,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
                 filterContext.Result = Redirect("/Home/Index");
                 //filterContext.HttpContext.Response.Write("<script type='text/javascript'> window.top.location.href='/Home/Index';</script>");
             }
-            if (!MalignantTumorSystem.Common.OneLoginHelper.CheckOnline())
-            {
-                filterContext.HttpContext.Response.Write("<script>alert('您的账号在别处登录，你被强迫下线'); window.top.location.href='/Home/Index';</script>");
-            }
+           
         }
          
     }

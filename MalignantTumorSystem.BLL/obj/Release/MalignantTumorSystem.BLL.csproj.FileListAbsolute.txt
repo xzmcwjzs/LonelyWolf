@@ -53,3 +53,5 @@ C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\bin\Rel
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\obj\Release\MalignantTumorSystem.BLL.csprojResolveAssemblyReference.cache
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\obj\Release\MalignantTumorSystem.BLL.dll
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\obj\Release\MalignantTumorSystem.BLL.pdb
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\bin\Release\EntityFramework6.Extended.NET45.dll
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.BLL\bin\Release\EntityFramework6.Extended.NET45.xml

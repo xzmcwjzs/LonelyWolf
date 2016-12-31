@@ -166,3 +166,6 @@ C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplicat
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\obj\Release\MalignantTumorSystem.WebApplication.csprojResolveAssemblyReference.cache
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\obj\Release\MalignantTumorSystem.WebApplication.dll
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\obj\Release\MalignantTumorSystem.WebApplication.pdb
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\RouteDebug.dll
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\EntityFramework6.Extended.NET45.dll
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\EntityFramework6.Extended.NET45.xml

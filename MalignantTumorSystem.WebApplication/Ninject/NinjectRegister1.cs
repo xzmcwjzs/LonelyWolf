@@ -199,6 +199,10 @@ namespace MalignantTumorSystem.WebApplication.Ninject
 	        Kernel.Bind<IChronic_disease_Comm_LungAddService>().To<Chronic_disease_Comm_LungAddService>();
 		
 	        Kernel.Bind<ITestService>().To<TestService>();
+		
+	        Kernel.Bind<IChronic_disease_BloodPressureService>().To<Chronic_disease_BloodPressureService>();
+		
+	        Kernel.Bind<IChronic_disease_BloodPressure_AddService>().To<Chronic_disease_BloodPressure_AddService>();
         }
     }
 }

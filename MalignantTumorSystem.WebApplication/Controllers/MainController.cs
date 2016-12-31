@@ -7,9 +7,11 @@ using MalignantTumorSystem.Model;
 using MalignantTumorSystem.Common;
 using Ninject;
 using MalignantTumorSystem.IBLL;
+using MalignantTumorSystem.WebApplication.Common.MyAttributes;
 
 namespace MalignantTumorSystem.WebApplication.Controllers
 {
+    //[MyLoginAttribute]
     public class MainController : BaseController
     {
         //

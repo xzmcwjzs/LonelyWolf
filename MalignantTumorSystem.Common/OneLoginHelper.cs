@@ -17,7 +17,7 @@ namespace MalignantTumorSystem.Common
        public void LoginRegister(string UserId)
        {
            Hashtable hOnline = (Hashtable)System.Web.HttpContext.Current.Application["Online"];
-           if (hOnline != null)
+           if (hOnline != null&&hOnline.Count>0)
            {
                IDictionaryEnumerator idE = hOnline.GetEnumerator();
                string strKey = "";
@@ -29,7 +29,7 @@ namespace MalignantTumorSystem.Common
                        strKey = idE.Key.ToString();
                        hOnline[strKey] = "XXXXXX";
                        break;
-                   }
+                   } 
                }
                return; 
            }

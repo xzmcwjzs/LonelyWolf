@@ -53,6 +53,8 @@
   <ItemGroup>
     <Compile Include="BaseService.cs" />
     <Compile Include="BasicInformationService.cs" />
+    <Compile Include="Chronic_disease_BloodPressureService.cs" />
+    <Compile Include="Chronic_disease_BloodPressure_AddService.cs" />
     <Compile Include="Chronic_disease_Comm_DiagnosticAddService.cs" />
     <Compile Include="Chronic_disease_Comm_DiagnosticService.cs" />
     <Compile Include="Chronic_disease_Comm_HumorAddService.cs" />

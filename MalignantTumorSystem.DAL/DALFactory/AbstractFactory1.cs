@@ -510,6 +510,18 @@ Chronic_disease_Comm_LungAddDal;
 
 TestDal;
 		    }
+	  	    public static Chronic_disease_BloodPressureDal GetChronic_disease_BloodPressureDal()
+		    {
+		        return Assembly.Load(AssemblyPath).CreateInstance(NameSpacePath + ".Chronic_disease_BloodPressureDal") as 
+
+Chronic_disease_BloodPressureDal;
+		    }
+	  	    public static Chronic_disease_BloodPressure_AddDal GetChronic_disease_BloodPressure_AddDal()
+		    {
+		        return Assembly.Load(AssemblyPath).CreateInstance(NameSpacePath + ".Chronic_disease_BloodPressure_AddDal") as 
+
+Chronic_disease_BloodPressure_AddDal;
+		    }
 	   
    }
 }

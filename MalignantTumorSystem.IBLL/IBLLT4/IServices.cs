@@ -423,4 +423,14 @@ namespace MalignantTumorSystem.IBLL
     {
        
     }
+	
+	 public partial interface IChronic_disease_BloodPressureService:IBaseService<Chronic_disease_BloodPressure>
+    {
+       
+    }
+	
+	 public partial interface IChronic_disease_BloodPressure_AddService:IBaseService<Chronic_disease_BloodPressure_Add>
+    {
+       
+    }
 }

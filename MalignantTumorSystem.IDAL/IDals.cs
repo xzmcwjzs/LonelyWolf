@@ -340,4 +340,12 @@ namespace MalignantTumorSystem.IDAL
 	public partial interface ITestDal : IBaseDal<Test>
     { 
     }   
+	
+	public partial interface IChronic_disease_BloodPressureDal : IBaseDal<Chronic_disease_BloodPressure>
+    { 
+    }   
+	
+	public partial interface IChronic_disease_BloodPressure_AddDal : IBaseDal<Chronic_disease_BloodPressure_Add>
+    { 
+    }   
 }

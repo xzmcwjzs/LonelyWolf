@@ -7,9 +7,10 @@ using MalignantTumorSystem.IBLL;
 using Ninject;
 using MalignantTumorSystem.Model;
 using MalignantTumorSystem.Common;
+using MalignantTumorSystem.WebApplication.Common.MyAttributes;
 
 namespace MalignantTumorSystem.WebApplication.Controllers
-{
+{ 
     public class FrameController : BaseController
     {
         //

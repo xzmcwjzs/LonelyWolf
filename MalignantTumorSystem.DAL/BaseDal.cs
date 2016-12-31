@@ -124,7 +124,7 @@ namespace MalignantTumorSystem.DAL
             {
                 Db.Set<T>().Add(entity);
                 Db.Entry(entity).State = EntityState.Added;
-                return true;
+                return Db.SaveChanges() > 0;
             }
             catch (Exception ex)
             {
@@ -150,7 +150,7 @@ namespace MalignantTumorSystem.DAL
                         Db.Set<T>().Add(item);
                         Db.Entry(item).State = EntityState.Added;
                     }
-                    return true;
+                    return Db.SaveChanges() > 0;
                 }
                 else
                 {
@@ -170,7 +170,7 @@ namespace MalignantTumorSystem.DAL
             { 
                 Db.Configuration.ValidateOnSaveEnabled = false; 
                 Db.Set<T>().AddRange(list);
-                return true;
+                return Db.SaveChanges() > 0;
             } 
             catch (Exception ex)
             {
@@ -197,8 +197,7 @@ namespace MalignantTumorSystem.DAL
             {
                 Db.Set<T>().Attach(entity);
                 Db.Entry<T>(entity).State = EntityState.Modified;
-                //return Db.SaveChanges() > 0;
-                return true;
+                return Db.SaveChanges() > 0;
             }
             catch (Exception ex)
             {
@@ -218,7 +217,7 @@ namespace MalignantTumorSystem.DAL
                     Db.Set<T>().Attach(entity);
                     Db.Entry(entity).State = EntityState.Modified;
                 });
-                return true;
+                return Db.SaveChanges() > 0;
             }
             catch (Exception ex)
             {
@@ -237,6 +236,7 @@ namespace MalignantTumorSystem.DAL
         {
             try
             {
+                //部分更新时 要关闭 不然 会报错
                 //关闭EF实体合法性检查（如果创建出来的要修改的数据有的字段没有赋值则关闭实体合法性检查，如果所有字段都赋值了则不用关闭EF实体合法性检查） 
                 Db.Configuration.ValidateOnSaveEnabled = false;
 
@@ -256,9 +256,8 @@ namespace MalignantTumorSystem.DAL
                 {
                     //4.设置该对象的 各个属性为修改状态，同时 entry.State 被修改为 Modified 状态
                     entry.Property(item).IsModified = true;
-                }
-                
-                return true;
+                } 
+             return Db.SaveChanges() > 0;
             }
             catch (Exception ex)
             {
@@ -270,8 +269,7 @@ namespace MalignantTumorSystem.DAL
             {
                 Db.Configuration.ValidateOnSaveEnabled = true;
             }
-
-        }
+ }
         /// <summary>
         /// 修改某个实体的 某些属性(根据id修改)【*用这个需要注意关闭检查】
         /// </summary>
@@ -282,7 +280,6 @@ namespace MalignantTumorSystem.DAL
         {
             try
             {
-                //关闭检查
                 Db.Configuration.ValidateOnSaveEnabled = false;
                 //附加到上下文
                 var entry = Db.Entry<T>(entity);
@@ -293,8 +290,7 @@ namespace MalignantTumorSystem.DAL
                     //标记要修改的属性
                     entry.Property(propertyName[i]).IsModified = true;
                 }
-                
-                return true;
+                return Db.SaveChanges() > 0;
             }
             catch (Exception ex)
             {
@@ -303,11 +299,10 @@ namespace MalignantTumorSystem.DAL
                 throw new Exception("修改失败：" + ex.Message);
             }
             finally
-            { 
-                //打开检查
+            {
                 Db.Configuration.ValidateOnSaveEnabled = true;
             }
-
+            
         }
         /// <summary>
         /// 根据条件 修改指定的 属性值
@@ -349,7 +344,7 @@ namespace MalignantTumorSystem.DAL
                         }
                     }
                 }
-                return true;
+                return Db.SaveChanges() > 0;
             }
             catch (Exception ex)
             {
@@ -379,7 +374,7 @@ namespace MalignantTumorSystem.DAL
                 entry.Property(properties[i].Name).IsModified = true;
             }
             Db.Configuration.ValidateOnSaveEnabled = false;
-            return true;
+            return Db.SaveChanges() > 0;
         } 
         #endregion
 
@@ -402,8 +397,7 @@ namespace MalignantTumorSystem.DAL
                 var entry = Db.Entry<T>(entity);
                 //2.设置该对象的状态为删除
                 entry.State = EntityState.Deleted;
-                //return Db.SaveChanges() > 0;
-                return true;
+                return Db.SaveChanges() > 0;
             }
             catch (Exception ex)
             {
@@ -430,7 +424,7 @@ namespace MalignantTumorSystem.DAL
                 //2.删除entity对象
                 Db.Set<T>().Remove(entity);
                 //Db.Entry<T>(entity).State = EntityState.Deleted;
-                return true;
+                return Db.SaveChanges() > 0;
             }
             catch (Exception ex)
             {
@@ -457,7 +451,7 @@ namespace MalignantTumorSystem.DAL
                         Db.Entry<T>(item).State = EntityState.Deleted;
                         //Db.Set<T>().Remove(item);
                     }
-                    return true;
+                    return Db.SaveChanges() > 0;
                 }
                 else
                 {
@@ -469,9 +463,28 @@ namespace MalignantTumorSystem.DAL
                 if (!string.IsNullOrEmpty(ex.InnerException.Message))
                     throw new Exception("删除失败：" + ex.InnerException.Message);
                 throw new Exception("删除失败：" + ex.Message);
+            } 
+        }
+        public bool DeleteRange(IList<T> list)
+        {
+            try
+            {
+                if (list != null && list.Any())
+                {
+                    Db.Set<T>().RemoveRange(list);
+                    return Db.SaveChanges() > 0;
+                }
+                else
+                {
+                    throw new Exception("删除的实体集合为空");
+                }
             }
-
-
+            catch (Exception ex)
+            {
+                if (!string.IsNullOrEmpty(ex.InnerException.Message))
+                    throw new Exception("删除失败：" + ex.InnerException.Message);
+                throw new Exception("删除失败：" + ex.Message);
+            } 
         }
         /// <summary>
         /// 根据条件进行删除
@@ -491,7 +504,7 @@ namespace MalignantTumorSystem.DAL
                     //标记为删除状态
                     Db.Set<T>().Remove(u);
                 });
-                return true;
+                return Db.SaveChanges() > 0;
             }
             catch (Exception ex)
             {
@@ -523,13 +536,13 @@ namespace MalignantTumorSystem.DAL
         /// <param name="strSql"></param>  
         /// <param name="paramObjects"></param>  
         /// <returns></returns>  
-        public List<TResult> LoadListBySql<TResult>(string strSql, params Object[] paramObjects)
+        public List<T> LoadListBySql(string strSql, params Object[] paramObjects)
         {
             if (paramObjects == null)
             {
                 paramObjects = new object[0];
             }
-            return this.Db.Database.SqlQuery<TResult>(strSql, paramObjects).ToList();
+            return this.Db.Database.SqlQuery<T>(strSql, paramObjects).ToList();
         }
         /// <summary>
         /// EF执行sql语句 增、删、改
@@ -543,17 +556,7 @@ namespace MalignantTumorSystem.DAL
             var result = Db.Database.ExecuteSqlCommand(sql, parms);
             return result;
         }
-        /// <summary>
-        ///  调用存储过程返回一个指定的TResult
-        /// </summary>
-        /// <typeparam name="TResult"></typeparam>
-        /// <param name="sql"></param>
-        /// <param name="pamrs"></param>
-        /// <returns></returns> 
-        public List<TResult> RunProc<TResult>(string sql, params object[] pamrs)
-        {
-            return Db.Database.SqlQuery<TResult>(sql, pamrs).ToList();
-        }  
+       
         #endregion
 
         #region EFExtensions批量操作

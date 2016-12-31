@@ -35,9 +35,8 @@ namespace MalignantTumorSystem.IDAL
         bool DeleteAllEntity(IList<T> list);
         bool DeleteByLambda(Expression<Func<T, bool>> whereLambda);
         IQueryable<T> LoadEntityBySql(string sql, params SqlParameter[] parms);
-        List<TResult> LoadListBySql<TResult>(string strSql, params Object[] paramObjects);
-        int OperateEntityBySql(string sql, params SqlParameter[] parms);
-        List<TResult> RunProc<TResult>(string sql, params object[] pamrs);
+        List<T> LoadListBySql(string strSql, params Object[] paramObjects);
+        int OperateEntityBySql(string sql, params SqlParameter[] parms); 
         #region EFExtensions
         bool BulkUpdate(Expression<Func<T, bool>> whereLmbda, Expression<Func<T, T>> updateLambda);
         bool BulkDelete(Expression<Func<T, bool>> whereLambda);

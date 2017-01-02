@@ -2,7 +2,7 @@
     $.post("/Lifestyle_PhysicalExercise/Show?id=" + id,
                  function (data) {
                      dat = eval(data);
-                     if (dat != "") {
+                     if (dat != "" && dat != null) {
                          $("#name").val(dat[0].name);
                          $("input[name=" + "sex" + "][value=" + dat[0].sex + "]").attr("checked", "checked");
                          $("#age").val(dat[0].age);
@@ -279,7 +279,7 @@
     $.post("/Lifestyle_PhysicalExercise/ShowAdd?id=" + id,
                       function (data) {
                           dat = eval(data);
-                          if (dat != "") {
+                          if (dat != "" && dat != null) {
                               for (i = 1; i < dat.length + 1; i++) {
                                   $('#tr' + i + '').after('<tr id="tr' + (i + 1) + '">' +
                                 '<td class="auto-style1"><a style=padding-left:2em></a><input type="text" id="other' + i + '" name="other' + i + '" style="width: 50px" onkeyup="added()"/></td>' +

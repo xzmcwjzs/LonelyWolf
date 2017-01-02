@@ -690,4 +690,28 @@ namespace MalignantTumorSystem.BLL
             CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_BloodPressure_AddDal();
         } 
 	}  
+	
+	public partial class Chronic_disease_BloodGlucoseService:BaseService<Chronic_disease_BloodGlucose>,IChronic_disease_BloodGlucoseService
+    {	
+		public override void SetCurrentDal()
+        {
+            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_BloodGlucoseDal();
+        } 
+	}  
+	
+	public partial class Chronic_disease_BloodGlucose_AddService:BaseService<Chronic_disease_BloodGlucose_Add>,IChronic_disease_BloodGlucose_AddService
+    {	
+		public override void SetCurrentDal()
+        {
+            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_BloodGlucose_AddDal();
+        } 
+	}  
+	
+	public partial class Chronic_disease_ConstitutionService:BaseService<Chronic_disease_Constitution>,IChronic_disease_ConstitutionService
+    {	
+		public override void SetCurrentDal()
+        {
+            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_ConstitutionDal();
+        } 
+	}  
 }

@@ -348,4 +348,16 @@ namespace MalignantTumorSystem.IDAL
 	public partial interface IChronic_disease_BloodPressure_AddDal : IBaseDal<Chronic_disease_BloodPressure_Add>
     { 
     }   
+	
+	public partial interface IChronic_disease_BloodGlucoseDal : IBaseDal<Chronic_disease_BloodGlucose>
+    { 
+    }   
+	
+	public partial interface IChronic_disease_BloodGlucose_AddDal : IBaseDal<Chronic_disease_BloodGlucose_Add>
+    { 
+    }   
+	
+	public partial interface IChronic_disease_ConstitutionDal : IBaseDal<Chronic_disease_Constitution>
+    { 
+    }   
 }

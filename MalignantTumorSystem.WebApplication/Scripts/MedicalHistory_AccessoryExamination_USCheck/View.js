@@ -2,7 +2,7 @@
     $.post("/MedicalHistory_AccessoryExamination_USCheck/Show?id=" + id,
           function (data) {
               dts = eval(data);
-              if (dts != "") {
+              if (dts != "" && dts != null) {
                   $("#name").html(dts[0].names);
                   if (dts[0].sex == "01") {
                       $("#sex").html("男");

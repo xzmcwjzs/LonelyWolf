@@ -52,6 +52,8 @@
   <ItemGroup>
     <Compile Include="IBaseService.cs" />
     <Compile Include="IBasicInformationService.cs" />
+    <Compile Include="IChronic_disease_BloodGlucoseService.cs" />
+    <Compile Include="IChronic_disease_BloodGlucose_AddService.cs" />
     <Compile Include="IChronic_disease_BloodPressureService.cs" />
     <Compile Include="IChronic_disease_BloodPressure_AddService.cs" />
     <Compile Include="IChronic_disease_Comm_DiagnosticAddService.cs" />

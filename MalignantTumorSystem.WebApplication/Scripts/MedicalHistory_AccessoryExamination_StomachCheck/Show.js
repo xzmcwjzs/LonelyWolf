@@ -2,7 +2,7 @@
     $.post("/MedicalHistory_AccessoryExamination_StomachCheck/Show?id=" + id,
           function (data) {
               dts = eval(data);
-              if (dts != "") {
+              if (dts != "" && dts != null) {
                   $("#name").val(dts[0].names);
                   $("input[name=" + "sex" + "][value=" + dts[0].sex + "]").attr("checked", "checked");
                   $("#id_card_number").val(dts[0].id_card_number);

@@ -352,4 +352,16 @@ namespace MalignantTumorSystem.DAL{
 	public partial class Chronic_disease_BloodPressure_AddDal:BaseDal<Chronic_disease_BloodPressure_Add>,IChronic_disease_BloodPressure_AddDal
     {
 	}
+		
+	public partial class Chronic_disease_BloodGlucoseDal:BaseDal<Chronic_disease_BloodGlucose>,IChronic_disease_BloodGlucoseDal
+    {
+	}
+		
+	public partial class Chronic_disease_BloodGlucose_AddDal:BaseDal<Chronic_disease_BloodGlucose_Add>,IChronic_disease_BloodGlucose_AddDal
+    {
+	}
+		
+	public partial class Chronic_disease_ConstitutionDal:BaseDal<Chronic_disease_Constitution>,IChronic_disease_ConstitutionDal
+    {
+	}
 }

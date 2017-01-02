@@ -522,6 +522,24 @@ Chronic_disease_BloodPressureDal;
 
 Chronic_disease_BloodPressure_AddDal;
 		    }
+	  	    public static Chronic_disease_BloodGlucoseDal GetChronic_disease_BloodGlucoseDal()
+		    {
+		        return Assembly.Load(AssemblyPath).CreateInstance(NameSpacePath + ".Chronic_disease_BloodGlucoseDal") as 
+
+Chronic_disease_BloodGlucoseDal;
+		    }
+	  	    public static Chronic_disease_BloodGlucose_AddDal GetChronic_disease_BloodGlucose_AddDal()
+		    {
+		        return Assembly.Load(AssemblyPath).CreateInstance(NameSpacePath + ".Chronic_disease_BloodGlucose_AddDal") as 
+
+Chronic_disease_BloodGlucose_AddDal;
+		    }
+	  	    public static Chronic_disease_ConstitutionDal GetChronic_disease_ConstitutionDal()
+		    {
+		        return Assembly.Load(AssemblyPath).CreateInstance(NameSpacePath + ".Chronic_disease_ConstitutionDal") as 
+
+Chronic_disease_ConstitutionDal;
+		    }
 	   
    }
 }

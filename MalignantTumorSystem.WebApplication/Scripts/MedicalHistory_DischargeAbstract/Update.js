@@ -3,7 +3,7 @@
     $.post("/MedicalHistory_DischargeAbstract/Show?id=" + id,
                function (data) {
                    dat = eval(data);
-                   if (dat != "") {
+                   if (dat != "" && dat != null) {
                        $("#name").val(dat[0].name);
                        $("input[name='sex'][value=" + dat[0].sex + "]").attr("checked", "checked");
                        $("#id_card_number").val(dat[0].id_card_number);
@@ -218,7 +218,7 @@
     $.post("/MedicalHistory_DischargeAbstract/ShowAdvice?contact_id=" + id,
               function (data) {
                   dat = eval(data);
-                  if (dat != "") {
+                  if (dat != "" && dat != null) {
                       if (dat[0].context != "" && dat[0].context != null) {
                           $("#yz1").val(dat[0].context);
                       }

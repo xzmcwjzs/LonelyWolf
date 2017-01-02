@@ -276,6 +276,15 @@ namespace MalignantTumorSystem.Model.DataBaseContext
 		
 	 
             modelBuilder.Configurations.Add(new Chronic_disease_BloodPressure_AddMap());
+		
+	 
+            modelBuilder.Configurations.Add(new Chronic_disease_BloodGlucoseMap());
+		
+	 
+            modelBuilder.Configurations.Add(new Chronic_disease_BloodGlucose_AddMap());
+		
+	 
+            modelBuilder.Configurations.Add(new Chronic_disease_ConstitutionMap());
      }
 		
 	     public DbSet<Comm_Platform_Worker> Comm_Platform_Worker { get; set; }
@@ -447,5 +456,11 @@ namespace MalignantTumorSystem.Model.DataBaseContext
 	     public DbSet<Chronic_disease_BloodPressure> Chronic_disease_BloodPressure { get; set; }
 		
 	     public DbSet<Chronic_disease_BloodPressure_Add> Chronic_disease_BloodPressure_Add { get; set; }
+		
+	     public DbSet<Chronic_disease_BloodGlucose> Chronic_disease_BloodGlucose { get; set; }
+		
+	     public DbSet<Chronic_disease_BloodGlucose_Add> Chronic_disease_BloodGlucose_Add { get; set; }
+		
+	     public DbSet<Chronic_disease_Constitution> Chronic_disease_Constitution { get; set; }
    }
 }

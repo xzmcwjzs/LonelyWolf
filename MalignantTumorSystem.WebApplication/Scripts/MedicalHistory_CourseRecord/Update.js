@@ -3,7 +3,7 @@
     $.post("/MedicalHistory_CourseRecord/Show?id=" + id,
                function (data) {
                    dat = eval(data);
-                   if (dat != "") {
+                   if (dat != "" && dat != null) {
                        $("#name").val(dat[0].name);
                        $("input[name=" + "sex" + "][value=" + dat[0].sex + "]").attr("checked", "checked");
                        $("#id_card_number").val(dat[0].id_card_number);

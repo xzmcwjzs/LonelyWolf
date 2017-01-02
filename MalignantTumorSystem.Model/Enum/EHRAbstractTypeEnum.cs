@@ -62,7 +62,11 @@ namespace MalignantTumorSystem.Model.Enum
        [Description("Chronic_disease_Comm_Lung")]
        Lung,
        [Description("Chronic_disease_BloodPressure")]
-       BloodPressure
+       BloodPressure,
+       [Description("Chronic_disease_BloodGlucose")]
+       BloodGlucose,
+       [Description("Chronic_disease_Constitution")]
+       Constitution
 
     }
 }

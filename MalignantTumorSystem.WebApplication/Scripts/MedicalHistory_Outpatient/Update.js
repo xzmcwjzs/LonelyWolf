@@ -5,7 +5,7 @@
                    //var tt = data.replace(/\r\n/ig, "");
                    //dat = eval(tt);
                    dat = eval(data);
-                   if (dat != "") {
+                   if (dat != "" && dat != null) {
                        $("#name").val(dat[0].name);
                        $("input[name=" + "sex" + "][value=" + dat[0].sex + "]").attr("checked", "checked");
                        $("#id_card_number").val(dat[0].id_card_number);
@@ -176,7 +176,7 @@
     $.post("/MedicalHistory_Outpatient/ShowAccessoryExamination?contact_id=" + id,
               function (data) {
                   dat = eval(data);
-                  if (dat != "") {
+                  if (dat != "" && dat != null) {
                       if (dat[0].context != "") {
                           $("#fzjc1").val(dat[0].context);
                       }
@@ -201,7 +201,7 @@
     $.post("/MedicalHistory_Outpatient/ShowJudge?contact_id=" + id,
               function (data) {
                   dat = eval(data);
-                  if (dat != "") {
+                  if (dat != "" && dat != null) {
                       if (dat[0].context != "") {
                           $("#judge1").val(dat[0].context);
                       }
@@ -256,7 +256,7 @@
     $.post("/MedicalHistory_Outpatient/ShowPrescription?contact_id=" + id,
              function (data) {
                  dat = eval(data);
-                 if (dat != "") {
+                 if (dat != "" && dat != null) {
                      if (dat[0].medical_name) {
                          $("#medical_name1").val(dat[0].medical_name);
                          $("#specifications1").val(dat[0].medical_specifications);

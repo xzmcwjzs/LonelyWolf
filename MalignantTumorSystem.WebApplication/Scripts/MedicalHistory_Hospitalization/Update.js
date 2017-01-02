@@ -5,7 +5,7 @@
                   // var tt = data.replace(/\r\n/ig, "");
                   // dat = eval(tt);
                    dat = eval(data);
-                   if (dat != "") { 
+                   if (dat != "" && dat != null) {
                        $("#name").val(dat[0].name);
 
                        $("input[name=" + "sex" + "][value=" + dat[0].sex + "]").attr("checked", "checked");

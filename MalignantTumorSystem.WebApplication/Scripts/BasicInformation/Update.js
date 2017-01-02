@@ -4,7 +4,7 @@
     $.post("/BasicInformation/Show?resident_id=" + resident_id,
                function (data) {
                    dat = eval(data);
-                   if (dat != "") {
+                   if (dat != ""&&dat!=null) {
                        $("#txtResidentName").val(dat[0].resident_name);
                        $("input[name=" + "rdlSex" + "][value=" + dat[0].sex + "]").attr("checked", "checked");
                        $("#txtCardNumber").val(dat[0].id_card_number);
@@ -819,10 +819,11 @@
 
     $.post("/BasicInformation/ShowTumour?resident_id=" + resident_id, function (data) {
         dat = eval(data);
-        if (dat != "") {
+        if (dat != "" && dat != null) {
             //$("#fillIdentity").val(dat[0].worker_user_name);转换为真实姓名
             $.post("/Data/UserNameConventToRealName?username=" + dat[0].worker_user_name, function (data) {
-                $("#fillIdentity").val(data);
+                if(data!=""&&data!=null)
+                     $("#fillIdentity").val(data);
             })
 
             if (dat[0].create_time != "") { 
@@ -839,7 +840,7 @@
     $.post("/BasicInformation/ShowSmokeAndDrink?resident_id=" + resident_id,
                         function (data) {
                             dat = eval(data);
-                            if (dat != "") {
+                            if (dat != "" && dat != null) {
                                 if (dat[0].smoke_never != "" && dat[0].smoke_never !=null) {
                                     $("input[name='smoke']").attr("checked", "checked");
                                 } else if (dat[0].smoking != "") {

@@ -78,7 +78,27 @@ namespace MalignantTumorSystem.BLL
             return resultList;
         } 
         #endregion
+         
 
+        public List<string> GetDiffTimeList(string id)
+        {
+            string sql = "select distinct convert(char(7),data,20) data from Chronic_disease_BloodPressure_Add where add_id=@id order by data desc";
+            SqlParameter[] parms = new SqlParameter[] { new SqlParameter("@id", id) };
+           var dateList = Db.Database.SqlQuery<string>(sql, parms).ToList();
+           return dateList;
+        }
+         
+        public List<Chronic_disease_BloodPressure_Add> GetYearMonth(string id, string year, string month)
+        {
+            string sql = "select * from Chronic_disease_BloodPressure_Add where add_id like @id and year(data)=@year and month(data)=@month order by data";
+            SqlParameter[] parms = new SqlParameter[] { 
+                new SqlParameter("@id", id),
+                new SqlParameter("@year",year),
+                new SqlParameter("@month",month)
+            };
+            var list = Db.Database.SqlQuery<Chronic_disease_BloodPressure_Add>(sql, parms).ToList();
+            return list;
 
+        }
     }  
 }

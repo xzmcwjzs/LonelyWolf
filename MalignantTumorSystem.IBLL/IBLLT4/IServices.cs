@@ -433,4 +433,19 @@ namespace MalignantTumorSystem.IBLL
     {
        
     }
+	
+	 public partial interface IChronic_disease_BloodGlucoseService:IBaseService<Chronic_disease_BloodGlucose>
+    {
+       
+    }
+	
+	 public partial interface IChronic_disease_BloodGlucose_AddService:IBaseService<Chronic_disease_BloodGlucose_Add>
+    {
+       
+    }
+	
+	 public partial interface IChronic_disease_ConstitutionService:IBaseService<Chronic_disease_Constitution>
+    {
+       
+    }
 }

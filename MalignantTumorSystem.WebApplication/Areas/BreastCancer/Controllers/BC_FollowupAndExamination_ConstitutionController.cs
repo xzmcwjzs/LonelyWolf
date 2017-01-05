@@ -13,7 +13,7 @@ using MalignantTumorSystem.WebApplication.Helpers;
 
 namespace MalignantTumorSystem.WebApplication.Areas.BreastCancer.Controllers
 {
-    public class BC_FollowupAndExamination_ConstitutionController : Controller
+    public class BC_FollowupAndExamination_ConstitutionController : BaseTopController
     {
         //
         // GET: /BreastCancer/BC_FollowupAndExamination_Constitution/
@@ -67,6 +67,67 @@ namespace MalignantTumorSystem.WebApplication.Areas.BreastCancer.Controllers
         //列表页
         public ActionResult List()
         {
+            Comm_Platform_Worker workerModel = Session["worker"] as Comm_Platform_Worker;
+            if (workerModel == null)
+            {
+                redirectTo();
+                return null;
+            }
+            string region_code = CommonFunc.SafeGetStringFromObj(workerModel.region_code);
+            string dell_user_name = CommonFunc.SafeGetStringFromObj(workerModel.user_name);
+            string name = CommonFunc.FilterSpecialString(CommonFunc.SafeGetStringFromObj(Request["names"]).Trim());
+            string sex = CommonFunc.FilterSpecialString(CommonFunc.SafeGetStringFromObj(Request["sex"]).Trim());
+
+            string birthdateBegin = CommonFunc.FilterSpecialString(CommonFunc.SafeGetStringFromObj(Request["txtBirthDateBegin"]).Trim());
+            string birthdateEnd = CommonFunc.FilterSpecialString(CommonFunc.SafeGetStringFromObj(Request["txtBirthDateEnd"]).Trim());
+            string id_card_number = CommonFunc.FilterSpecialString(CommonFunc.SafeGetStringFromObj(Request["idCard"]).Trim());
+            string address = CommonFunc.FilterSpecialString(CommonFunc.SafeGetStringFromObj(Request["address"]).Trim());
+            string s = string.Empty;
+            //获取区域代码
+            if (!string.IsNullOrEmpty(CommonFunc.SafeGetStringFromObj(Request["ddlProvince"])))
+                s = CommonFunc.SafeGetStringFromObj(Request["ddlProvince"]);
+            if (!string.IsNullOrEmpty(CommonFunc.SafeGetStringFromObj(Request["ddlCity"])))
+                s = CommonFunc.SafeGetStringFromObj(Request["ddlCity"]);
+            if (!string.IsNullOrEmpty(CommonFunc.SafeGetStringFromObj(Request["ddlCounty"])))
+                s = CommonFunc.SafeGetStringFromObj(Request["ddlCounty"]);
+            if (!string.IsNullOrEmpty(CommonFunc.SafeGetStringFromObj(Request["ddlStreet"])))
+                s = CommonFunc.SafeGetStringFromObj(Request["ddlStreet"]);
+            if (!string.IsNullOrEmpty(CommonFunc.SafeGetStringFromObj(Request["ddlCommunity"])))
+                s = CommonFunc.SafeGetStringFromObj(Request["ddlCommunity"]);
+            if (s.Length > region_code.Length)
+                region_code = s;
+
+            int pageIndex = CommonFunc.SafeGetIntFromObj(this.Request["pageIndex"], 1);
+            int pageSize = this.Request["pageSize"] == null ? PageSize.GetPageSize : int.Parse(Request["pageSize"]);
+            int totalCount = 0;
+            CommonParam commonParam = new CommonParam()
+            {
+                PageIndex = pageIndex,
+                PageSize = pageSize,
+                TotalCount = totalCount,
+                region_code = region_code,
+                name = name,
+                sex = sex,
+                txtBirthDateBegin = birthdateBegin,
+                txtBirthDateEnd = birthdateEnd,
+                idCard = id_card_number,
+                address = address
+            };
+            var disease_Comm_Testing_BloodList = disease_ConstitutionService.LoadSearchEntities(commonParam);
+            totalCount = commonParam.TotalCount;
+            int PageCount = Convert.ToInt32(Math.Ceiling((double)totalCount / pageSize));
+
+            List<Model.ViewModel.BasicAndConstitutionViewModel> result = new List<Model.ViewModel.BasicAndConstitutionViewModel>();
+            result.AddRange(disease_Comm_Testing_BloodList);
+            PagerInfo pager = new PagerInfo();
+            pager.PageIndex = pageIndex;
+            pager.PageSize = pageSize;
+            pager.TotalCount = totalCount;
+            PagerQuery<PagerInfo, List<Model.ViewModel.BasicAndConstitutionViewModel>> query = new PagerQuery<PagerInfo, List<Model.ViewModel.BasicAndConstitutionViewModel>>(pager, result);
+            ViewData.Model = query;
+            ViewBag.dell_user_name = dell_user_name;
+            ViewBag.PageIndex = pageIndex;
+            ViewBag.PageSize = pageSize;
             return View();
         }
 
@@ -561,7 +622,7 @@ namespace MalignantTumorSystem.WebApplication.Areas.BreastCancer.Controllers
                     ehr.community_code = Request["ddlCommunity"];
                     ehr.create_time = DateTime.Now;
                     ehr.item_id = entity.id;
-                    ehr.item_type = Model.Enum.EHRAbstractTypeEnum.CT.ToString();
+                    ehr.item_type = Model.Enum.EHRAbstractTypeEnum.Constitution.ToString();
 
                     if (eHRAbstractService.AddEntity(ehr))
                     {
@@ -573,8 +634,34 @@ namespace MalignantTumorSystem.WebApplication.Areas.BreastCancer.Controllers
                     }
                 }
 
-            } 
-            return Content(msg + ',' + entity.id);
+            }
+            return Content(msg + ',' + entity.id + "," + entity.result);
+        }
+
+        //查看全部测量结果
+        public ActionResult Show()
+        {
+            string resident_id = CommonFunc.SafeGetStringFromObj(Request.QueryString["resident_id"]);
+            string resident_name = CommonFunc.SafeGetStringFromObj(Request.QueryString["resident_name"]);
+            string sex = CommonFunc.SafeGetStringFromObj(Request.QueryString["sex"]);
+            ViewBag.resident_id = resident_id;
+            ViewBag.resident_name = resident_name;
+            ViewBag.sex = sex;
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Show(string resident_id)
+        {
+
+            if (resident_id != "")
+            {
+                var result = disease_ConstitutionService.LoadEntityAsNoTracking(t => t.resident_id.Contains(resident_id)).OrderByDescending(t => t.create_time).FirstOrDefault();
+                return Json(result, JsonRequestBehavior.AllowGet);
+            }
+            else
+            {
+                return Json("", JsonRequestBehavior.AllowGet);
+            }
         }
     }
 }

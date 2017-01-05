@@ -80,6 +80,7 @@
     <Compile Include="IChronic_disease_Comm_Testing_SputumService.cs" />
     <Compile Include="IChronic_disease_Comm_Testing_UrineService.cs" />
     <Compile Include="IChronic_disease_Comm_Testing_Urine_AddService.cs" />
+    <Compile Include="IChronic_disease_ConstitutionService.cs" />
     <Compile Include="IChronic_disease_DailyLifeService.cs" />
     <Compile Include="IChronic_disease_Diabetes_familyService.cs" />
     <Compile Include="IChronic_disease_Diabetes_family_relationService.cs" />

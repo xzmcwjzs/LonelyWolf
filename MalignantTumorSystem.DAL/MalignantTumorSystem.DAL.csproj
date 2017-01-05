@@ -67,7 +67,6 @@
       <DependentUpon>Dals.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository.Db\DbHelper.cs" />
     <Compile Include="Repository.EF\EFRepository.cs" />
     <Compile Include="T4\DalsMulti.cs">
       <AutoGen>True</AutoGen>

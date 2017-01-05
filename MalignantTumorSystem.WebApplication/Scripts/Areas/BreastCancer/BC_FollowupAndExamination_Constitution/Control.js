@@ -9,31 +9,7 @@
     var arr8 = ["您感到闷闷不乐吗？", "您容易精神紧张、焦虑不安吗？", "您多愁善感、感情脆弱吗？", "您容易感到害怕或受到惊吓吗？", "您胁肋部或乳房腹痛吗？", "您无缘无故叹气吗？", "您咽喉部有异物感，且吐之不出、咽之不下吗？"];
     var arr9 = ["您精力充沛吗？", "您容易疲乏吗？", "您说话声音无力吗？", "您感到闷闷不乐吗？", "您比一般 人耐受不了寒冷（冬天的寒冷，夏天的冷空调、电扇）吗？", "您能适应外界自然和社会环境的变化吗？", "您容易失眠吗？", "您容易忘事（健忘）吗？"];
     $.each(arr1, function (i) {
-        /*if (i % 2 == 0) {
-            $("#yangxz").before('<tr id="eq' + i + '"></tr>');
-
-            $('#eq' + i + '').append('<td class="auto-style122">（' + (i + 1) + '）</td>' +
-                    '<td class="auto-style38" colspan="3">' + this +
-                    '</td>' +
-                    '<td class="auto-style41" colspan="1">' +
-                        '<input type="radio" name="test' + (i + 1) + '" value="1" />A' +
-                        '<input type="radio" name="test' + (i + 1) + '" value="2" />B' +
-                        '<input type="radio" name="test' + (i + 1) + '" value="3" />C' +
-                        '<input type="radio" name="test' + (i + 1) + '" value="4" />D' +
-                        '<input type="radio" name="test' + (i + 1) + '" value="5" />E' +
-                    '</td>');
-        } else {
-            $('#eq' + (i-1) + '').append('<td class="auto-style122">（' + (i + 1) + '）</td>' +
-                   '<td class="auto-style38" colspan="3">' + this +
-                   '</td>' +
-                   '<td class="auto-style41" colspan="1">' +
-                       '<input type="radio" name="test' + (i + 1) + '" value="1" />A' +
-                       '<input type="radio" name="test' + (i + 1) + '" value="2" />B' +
-                       '<input type="radio" name="test' + (i + 1) + '" value="3" />C' +
-                       '<input type="radio" name="test' + (i + 1) + '" value="4" />D' +
-                       '<input type="radio" name="test' + (i + 1) + '" value="5" />E' +
-                   '</td>');
-        }*/
+        
         if (i % 2 == 0) {
             $("#yangxz").before('<tr>' +
                         '<td class="auto-style122">（' + (i + 1) + '）</td>' +
@@ -83,11 +59,11 @@
                         '<td class="auto-style36" colspan="5">' + this +
                         '</td>' +
                         '<td class="auto-style42" colspan="4">' +
-                            '<input type="radio" name="test' + (i + 1) + '" value="1" />A' +
-                            '<input type="radio" name="test' + (i + 1) + '" value="2" />B' +
-                            '<input type="radio" name="test' + (i + 1) + '" value="3" />C' +
-                            '<input type="radio" name="test' + (i + 1) + '" value="4" />D' +
-                            '<input type="radio" name="test' + (i + 1) + '" value="5" />E' +
+                            '<input type="radio" name="test' + (i + 8) + '" value="1" />A' +
+                            '<input type="radio" name="test' + (i + 8) + '" value="2" />B' +
+                            '<input type="radio" name="test' + (i + 8) + '" value="3" />C' +
+                            '<input type="radio" name="test' + (i + 8) + '" value="4" />D' +
+                            '<input type="radio" name="test' + (i + 8) + '" value="5" />E' +
                         '</td>' +
                     '</tr>');
         }
@@ -101,11 +77,11 @@
                         '<td class="auto-style38" colspan="5">' + this +
                         '</td>' +
                         '<td class="auto-style41" colspan="4">' +
-                            '<input type="radio" name="test' + (i + 8) + '" value="1" />A' +
-                            '<input type="radio" name="test' + (i + 8) + '" value="2" />B' +
-                            '<input type="radio" name="test' + (i + 8) + '" value="3" />C' +
-                            '<input type="radio" name="test' + (i + 8) + '" value="4" />D' +
-                            '<input type="radio" name="test' + (i + 8) + '" value="5" />E' +
+                            '<input type="radio" name="test' + (i + 16) + '" value="1" />A' +
+                            '<input type="radio" name="test' + (i + 16) + '" value="2" />B' +
+                            '<input type="radio" name="test' + (i + 16) + '" value="3" />C' +
+                            '<input type="radio" name="test' + (i + 16) + '" value="4" />D' +
+                            '<input type="radio" name="test' + (i + 16) + '" value="5" />E' +
                         '</td>' +
                     '</tr>');
         } else {
@@ -114,11 +90,11 @@
                         '<td class="auto-style36" colspan="5">' + this +
                         '</td>' +
                         '<td class="auto-style42" colspan="4">' +
-                            '<input type="radio" name="test' + (i + 1) + '" value="1" />A' +
-                            '<input type="radio" name="test' + (i + 1) + '" value="2" />B' +
-                            '<input type="radio" name="test' + (i + 1) + '" value="3" />C' +
-                            '<input type="radio" name="test' + (i + 1) + '" value="4" />D' +
-                            '<input type="radio" name="test' + (i + 1) + '" value="5" />E' +
+                            '<input type="radio" name="test' + (i + 16) + '" value="1" />A' +
+                            '<input type="radio" name="test' + (i + 16) + '" value="2" />B' +
+                            '<input type="radio" name="test' + (i + 16) + '" value="3" />C' +
+                            '<input type="radio" name="test' + (i + 16) + '" value="4" />D' +
+                            '<input type="radio" name="test' + (i + 16) + '" value="5" />E' +
                         '</td>' +
                     '</tr>');
         }
@@ -132,11 +108,11 @@
                         '<td class="auto-style38" colspan="5">' + this +
                         '</td>' +
                         '<td class="auto-style41" colspan="4">' +
-                            '<input type="radio" name="test' + (i + 8) + '" value="1" />A' +
-                            '<input type="radio" name="test' + (i + 8) + '" value="2" />B' +
-                            '<input type="radio" name="test' + (i + 8) + '" value="3" />C' +
-                            '<input type="radio" name="test' + (i + 8) + '" value="4" />D' +
-                            '<input type="radio" name="test' + (i + 8) + '" value="5" />E' +
+                            '<input type="radio" name="test' + (i + 24) + '" value="1" />A' +
+                            '<input type="radio" name="test' + (i + 24) + '" value="2" />B' +
+                            '<input type="radio" name="test' + (i + 24) + '" value="3" />C' +
+                            '<input type="radio" name="test' + (i + 24) + '" value="4" />D' +
+                            '<input type="radio" name="test' + (i + 24) + '" value="5" />E' +
                         '</td>' +
                     '</tr>');
         } else {
@@ -145,11 +121,11 @@
                         '<td class="auto-style36" colspan="5">' + this +
                         '</td>' +
                         '<td class="auto-style42" colspan="4">' +
-                            '<input type="radio" name="test' + (i + 1) + '" value="1" />A' +
-                            '<input type="radio" name="test' + (i + 1) + '" value="2" />B' +
-                            '<input type="radio" name="test' + (i + 1) + '" value="3" />C' +
-                            '<input type="radio" name="test' + (i + 1) + '" value="4" />D' +
-                            '<input type="radio" name="test' + (i + 1) + '" value="5" />E' +
+                            '<input type="radio" name="test' + (i + 24) + '" value="1" />A' +
+                            '<input type="radio" name="test' + (i + 24) + '" value="2" />B' +
+                            '<input type="radio" name="test' + (i + 24) + '" value="3" />C' +
+                            '<input type="radio" name="test' + (i + 24) + '" value="4" />D' +
+                            '<input type="radio" name="test' + (i + 24) + '" value="5" />E' +
                         '</td>' +
                     '</tr>');
         }
@@ -163,11 +139,11 @@
                         '<td class="auto-style38" colspan="5">' + this +
                         '</td>' +
                         '<td class="auto-style41" colspan="4">' +
-                            '<input type="radio" name="test' + (i + 8) + '" value="1" />A' +
-                            '<input type="radio" name="test' + (i + 8) + '" value="2" />B' +
-                            '<input type="radio" name="test' + (i + 8) + '" value="3" />C' +
-                            '<input type="radio" name="test' + (i + 8) + '" value="4" />D' +
-                            '<input type="radio" name="test' + (i + 8) + '" value="5" />E' +
+                            '<input type="radio" name="test' + (i + 32) + '" value="1" />A' +
+                            '<input type="radio" name="test' + (i + 32) + '" value="2" />B' +
+                            '<input type="radio" name="test' + (i + 32) + '" value="3" />C' +
+                            '<input type="radio" name="test' + (i + 32) + '" value="4" />D' +
+                            '<input type="radio" name="test' + (i + 32) + '" value="5" />E' +
                         '</td>' +
                     '</tr>');
         } else {
@@ -176,11 +152,11 @@
                         '<td class="auto-style36" colspan="5">' + this +
                         '</td>' +
                         '<td class="auto-style42" colspan="4">' +
-                            '<input type="radio" name="test' + (i + 1) + '" value="1" />A' +
-                            '<input type="radio" name="test' + (i + 1) + '" value="2" />B' +
-                            '<input type="radio" name="test' + (i + 1) + '" value="3" />C' +
-                            '<input type="radio" name="test' + (i + 1) + '" value="4" />D' +
-                            '<input type="radio" name="test' + (i + 1) + '" value="5" />E' +
+                            '<input type="radio" name="test' + (i + 32) + '" value="1" />A' +
+                            '<input type="radio" name="test' + (i + 32) + '" value="2" />B' +
+                            '<input type="radio" name="test' + (i + 32) + '" value="3" />C' +
+                            '<input type="radio" name="test' + (i + 32) + '" value="4" />D' +
+                            '<input type="radio" name="test' + (i + 32) + '" value="5" />E' +
                         '</td>' +
                     '</tr>');
         }
@@ -193,11 +169,11 @@
                         '<td class="auto-style38" colspan="5">' + this +
                         '</td>' +
                         '<td class="auto-style41" colspan="4">' +
-                            '<input type="radio" name="test' + (i + 8) + '" value="1" />A' +
-                            '<input type="radio" name="test' + (i + 8) + '" value="2" />B' +
-                            '<input type="radio" name="test' + (i + 8) + '" value="3" />C' +
-                            '<input type="radio" name="test' + (i + 8) + '" value="4" />D' +
-                            '<input type="radio" name="test' + (i + 8) + '" value="5" />E' +
+                            '<input type="radio" name="test' + (i + 39) + '" value="1" />A' +
+                            '<input type="radio" name="test' + (i + 39) + '" value="2" />B' +
+                            '<input type="radio" name="test' + (i + 39) + '" value="3" />C' +
+                            '<input type="radio" name="test' + (i + 39) + '" value="4" />D' +
+                            '<input type="radio" name="test' + (i + 39) + '" value="5" />E' +
                         '</td>' +
                     '</tr>');
         } else {
@@ -206,11 +182,11 @@
                         '<td class="auto-style36" colspan="5">' + this +
                         '</td>' +
                         '<td class="auto-style42" colspan="4">' +
-                            '<input type="radio" name="test' + (i + 1) + '" value="1" />A' +
-                            '<input type="radio" name="test' + (i + 1) + '" value="2" />B' +
-                            '<input type="radio" name="test' + (i + 1) + '" value="3" />C' +
-                            '<input type="radio" name="test' + (i + 1) + '" value="4" />D' +
-                            '<input type="radio" name="test' + (i + 1) + '" value="5" />E' +
+                            '<input type="radio" name="test' + (i + 39) + '" value="1" />A' +
+                            '<input type="radio" name="test' + (i + 39) + '" value="2" />B' +
+                            '<input type="radio" name="test' + (i + 39) + '" value="3" />C' +
+                            '<input type="radio" name="test' + (i + 39) + '" value="4" />D' +
+                            '<input type="radio" name="test' + (i + 39) + '" value="5" />E' +
                         '</td>' +
                     '</tr>');
         }
@@ -223,11 +199,11 @@
                         '<td class="auto-style38" colspan="5">' + this +
                         '</td>' +
                         '<td class="auto-style41" colspan="4">' +
-                            '<input type="radio" name="test' + (i + 8) + '" value="1" />A' +
-                            '<input type="radio" name="test' + (i + 8) + '" value="2" />B' +
-                            '<input type="radio" name="test' + (i + 8) + '" value="3" />C' +
-                            '<input type="radio" name="test' + (i + 8) + '" value="4" />D' +
-                            '<input type="radio" name="test' + (i + 8) + '" value="5" />E' +
+                            '<input type="radio" name="test' + (i + 46) + '" value="1" />A' +
+                            '<input type="radio" name="test' + (i + 46) + '" value="2" />B' +
+                            '<input type="radio" name="test' + (i + 46) + '" value="3" />C' +
+                            '<input type="radio" name="test' + (i + 46) + '" value="4" />D' +
+                            '<input type="radio" name="test' + (i + 46) + '" value="5" />E' +
                         '</td>' +
                     '</tr>');
         } else {
@@ -236,11 +212,11 @@
                         '<td class="auto-style36" colspan="5">' + this +
                         '</td>' +
                         '<td class="auto-style42" colspan="4">' +
-                            '<input type="radio" name="test' + (i + 1) + '" value="1" />A' +
-                            '<input type="radio" name="test' + (i + 1) + '" value="2" />B' +
-                            '<input type="radio" name="test' + (i + 1) + '" value="3" />C' +
-                            '<input type="radio" name="test' + (i + 1) + '" value="4" />D' +
-                            '<input type="radio" name="test' + (i + 1) + '" value="5" />E' +
+                            '<input type="radio" name="test' + (i + 46) + '" value="1" />A' +
+                            '<input type="radio" name="test' + (i + 46) + '" value="2" />B' +
+                            '<input type="radio" name="test' + (i + 46) + '" value="3" />C' +
+                            '<input type="radio" name="test' + (i + 46) + '" value="4" />D' +
+                            '<input type="radio" name="test' + (i + 46) + '" value="5" />E' +
                         '</td>' +
                     '</tr>');
         }
@@ -253,11 +229,11 @@
                         '<td class="auto-style38" colspan="5">' + this +
                         '</td>' +
                         '<td class="auto-style41" colspan="4">' +
-                            '<input type="radio" name="test' + (i + 8) + '" value="1" />A' +
-                            '<input type="radio" name="test' + (i + 8) + '" value="2" />B' +
-                            '<input type="radio" name="test' + (i + 8) + '" value="3" />C' +
-                            '<input type="radio" name="test' + (i + 8) + '" value="4" />D' +
-                            '<input type="radio" name="test' + (i + 8) + '" value="5" />E' +
+                            '<input type="radio" name="test' + (i + 53) + '" value="1" />A' +
+                            '<input type="radio" name="test' + (i + 53) + '" value="2" />B' +
+                            '<input type="radio" name="test' + (i + 53) + '" value="3" />C' +
+                            '<input type="radio" name="test' + (i + 53) + '" value="4" />D' +
+                            '<input type="radio" name="test' + (i + 53) + '" value="5" />E' +
                         '</td>' +
                     '</tr>');
         } else {
@@ -266,11 +242,11 @@
                         '<td class="auto-style36" colspan="5">' + this +
                         '</td>' +
                         '<td class="auto-style42" colspan="4">' +
-                            '<input type="radio" name="test' + (i + 1) + '" value="1" />A' +
-                            '<input type="radio" name="test' + (i + 1) + '" value="2" />B' +
-                            '<input type="radio" name="test' + (i + 1) + '" value="3" />C' +
-                            '<input type="radio" name="test' + (i + 1) + '" value="4" />D' +
-                            '<input type="radio" name="test' + (i + 1) + '" value="5" />E' +
+                            '<input type="radio" name="test' + (i + 53) + '" value="1" />A' +
+                            '<input type="radio" name="test' + (i + 53) + '" value="2" />B' +
+                            '<input type="radio" name="test' + (i + 53) + '" value="3" />C' +
+                            '<input type="radio" name="test' + (i + 53) + '" value="4" />D' +
+                            '<input type="radio" name="test' + (i + 53) + '" value="5" />E' +
                         '</td>' +
                     '</tr>');
         }
@@ -351,24 +327,7 @@
 
     //==============================提交页面=======================================
     $("#bt1").click(function () {
-        /*$("#form1").validate({
-            rules: {
-                name: "required",
-                id_card_number: "required",
-                ddlCommunity: "required",
-                test1: "required",
-                test2: "required",
-                test3: "required",
-            },
-            messages: {
-                name: "姓名不能为空",
-                id_card_number: "身份证号码不能为空",
-                ddlCommunity: "常住地址必须填写到社区、村或者居委会",
-                test1: "请选择第1题",
-                test2: "请选择第2题",
-                test3: "请选择第3题",
-            }
-        });*/
+         
         if ($("#name").val() == "") {
             alert("姓名不能为空！")
         }
@@ -378,205 +337,205 @@
         else if ($("#ddlCommunity").val() == "") {
             alert("常住地址必须填写到社区、村或者居委会！")
         }
-        else if (!$(".test1").attr("checked")) {
+        else if ($('input:radio[name="test1"]:checked').val()==null) {
             alert("请选择阳虚质第1题答案");
         }
-        else if (!$(".test2").attr("checked")) {
+        else if ($('input:radio[name="test2"]:checked').val()==null) {
             alert("请选择阳虚质第2题答案");
         }
-        else if (!$(".test3").attr("checked")) {
+        else if ($('input:radio[name="test3"]:checked').val() == null) {
             alert("请选择阳虚质第3题答案");
         }
-        else if (!$(".test4").attr("checked")) {
+        else if ($('input:radio[name="test4"]:checked').val() == null) {
             alert("请选择阳虚质第4题答案");
         }
-        else if (!$(".test5").attr("checked")) {
+        else if ($('input:radio[name="test5"]:checked').val() == null) {
             alert("请选择阳虚质第5题答案");
         }
-        else if (!$(".test6").attr("checked")) {
+        else if ($('input:radio[name="test6"]:checked').val() == null) {
             alert("请选择阳虚质第6题答案");
         }
-        else if (!$(".test7").attr("checked")) {
+        else if ($('input:radio[name="test7"]:checked').val() == null) {
             alert("请选择阳虚质第7题答案");
         }
-        else if (!$(".test8").attr("checked")) {
+        else if ($('input:radio[name="test8"]:checked').val() == null) {
             alert("请选择阴虚质第1题答案");
         }
-        else if (!$(".test9").attr("checked")) {
+        else if ($('input:radio[name="test9"]:checked').val() == null) {
             alert("请选择阴虚质第2题答案");
         }
-        else if (!$(".test10").attr("checked")) {
+        else if ($('input:radio[name="test10"]:checked').val() == null) {
             alert("请选择阴虚质第3题答案");
         }
-        else if (!$(".test11").attr("checked")) {
+        else if ($('input:radio[name="test11"]:checked').val() == null) {
             alert("请选择阴虚质第4题答案");
         }
-        else if (!$(".test12").attr("checked")) {
+        else if ($('input:radio[name="test12"]:checked').val() == null) {
             alert("请选择阴虚质第5题答案");
         }
-        else if (!$(".test13").attr("checked")) {
+        else if ($('input:radio[name="test13"]:checked').val() == null) {
             alert("请选择阴虚质第6题答案");
         }
-        else if (!$(".test14").attr("checked")) {
+        else if ($('input:radio[name="test14"]:checked').val() == null) {
             alert("请选择阴虚质第7题答案");
         }
-        else if (!$(".test15").attr("checked")) {
+        else if ($('input:radio[name="test15"]:checked').val() == null) {
             alert("请选择阴虚质第8题答案");
         }
-        else if (!$(".test16").attr("checked")) {
+        else if ($('input:radio[name="test16"]:checked').val() == null) {
             alert("请选择气虚质第1题答案");
         }
-        else if (!$(".test17").attr("checked")) {
+        else if ($('input:radio[name="test17"]:checked').val() == null) {
             alert("请选择气虚质第2题答案");
         }
-        else if (!$(".test18").attr("checked")) {
+        else if ($('input:radio[name="test18"]:checked').val() == null) {
             alert("请选择气虚质第3题答案");
         }
-        else if (!$(".test19").attr("checked")) {
+        else if ($('input:radio[name="test19"]:checked').val() == null) {
             alert("请选择气虚质第4题答案");
         }
-        else if (!$(".test20").attr("checked")) {
+        else if ($('input:radio[name="test20"]:checked').val() == null) {
             alert("请选择气虚质第5题答案");
         }
-        else if (!$(".test21").attr("checked")) {
+        else if ($('input:radio[name="test21"]:checked').val() == null) {
             alert("请选择气虚质第6题答案");
         }
-        else if (!$(".test22").attr("checked")) {
+        else if ($('input:radio[name="test22"]:checked').val() == null) {
             alert("请选择气虚质第7题答案");
         }
-        else if (!$(".test23").attr("checked")) {
+        else if ($('input:radio[name="test23"]:checked').val() == null) {
             alert("请选择气虚质第8题答案");
         }
-        else if (!$(".test24").attr("checked")) {
+        else if ($('input:radio[name="test24"]:checked').val() == null) {
             alert("请选择痰湿质第1题答案");
         }
-        else if (!$(".test25").attr("checked")) {
+        else if ($('input:radio[name="test25"]:checked').val() == null) {
             alert("请选择痰湿质第2题答案");
         }
-        else if (!$(".test26").attr("checked")) {
+        else if ($('input:radio[name="test26"]:checked').val() == null) {
             alert("请选择痰湿质第3题答案");
         }
-        else if (!$(".test27").attr("checked")) {
+        else if ($('input:radio[name="test27"]:checked').val() == null) {
             alert("请选择痰湿质第4题答案");
         }
-        else if (!$(".test28").attr("checked")) {
+        else if ($('input:radio[name="test28"]:checked').val() == null) {
             alert("请选择痰湿质第5题答案");
         }
-        else if (!$(".test29").attr("checked")) {
+        else if ($('input:radio[name="test29"]:checked').val() == null) {
             alert("请选择痰湿质第6题答案");
         }
-        else if (!$(".test30").attr("checked")) {
+        else if ($('input:radio[name="test30"]:checked').val() == null) {
             alert("请选择痰湿质第7题答案");
         }
-        else if (!$(".test31").attr("checked")) {
+        else if ($('input:radio[name="test31"]:checked').val() == null) {
             alert("请选择痰湿质第8题答案");
         }
-        else if (!$(".test32").attr("checked")) {
+        else if ($('input:radio[name="test32"]:checked').val() == null) {
             alert("请选择湿热质第1题答案");
         }
-        else if (!$(".test33").attr("checked")) {
+        else if ($('input:radio[name="test33"]:checked').val() == null) {
             alert("请选择湿热质第2题答案");
         }
-        else if (!$(".test34").attr("checked")) {
+        else if ($('input:radio[name="test34"]:checked').val() == null) {
             alert("请选择湿热质第3题答案");
         }
-        else if (!$(".test35").attr("checked")) {
+        else if ($('input:radio[name="test35"]:checked').val() == null) {
             alert("请选择湿热质第4题答案");
         }
-        else if (!$(".test36").attr("checked")) {
+        else if ($('input:radio[name="test36"]:checked').val() == null) {
             alert("请选择湿热质第5题答案");
         }
-        else if (!$(".test37").attr("checked") && $("#sex").val() == "02") {
+        else if ($('input:radio[name="test37"]:checked').val() == null && $("#sex").val() == "02") {
             alert("请选择湿热质第6题答案");
         }
-        else if (!$(".test38").attr("checked")) {
+        else if ($('input:radio[name="test38"]:checked').val() == null) {
             alert("请选择湿热质第7题答案");
         }
-        else if (!$(".test39").attr("checked")) {
+        else if ($('input:radio[name="test39"]:checked').val() == null) {
             alert("请选择血瘀质第1题答案");
         }
-        else if (!$(".test40").attr("checked")) {
+        else if ($('input:radio[name="test40"]:checked').val() == null) {
             alert("请选择血瘀质第2题答案");
         }
-        else if (!$(".test41").attr("checked")) {
+        else if ($('input:radio[name="test41"]:checked').val() == null) {
             alert("请选择血瘀质第3题答案");
         }
-        else if (!$(".test42").attr("checked")) {
+        else if ($('input:radio[name="test42"]:checked').val() == null) {
             alert("请选择血瘀质第4题答案");
         }
-        else if (!$(".test43").attr("checked")) {
+        else if ($('input:radio[name="test43"]:checked').val() == null) {
             alert("请选择血瘀质第5题答案");
         }
-        else if (!$(".test44").attr("checked")) {
+        else if ($('input:radio[name="test44"]:checked').val() == null) {
             alert("请选择血瘀质第6题答案");
         }
-        else if (!$(".test45").attr("checked")) {
+        else if ($('input:radio[name="test45"]:checked').val() == null) {
             alert("请选择血瘀质第7题答案");
         }
-        else if (!$(".test46").attr("checked")) {
+        else if ($('input:radio[name="test46"]:checked').val() == null) {
             alert("请选择特禀质第1题答案");
         }
-        else if (!$(".test47").attr("checked")) {
+        else if ($('input:radio[name="test47"]:checked').val() == null) {
             alert("请选择特禀质第2题答案");
         }
-        else if (!$(".test48").attr("checked")) {
+        else if ($('input:radio[name="test48"]:checked').val() == null) {
             alert("请选择特禀质第3题答案");
         }
-        else if (!$(".test49").attr("checked")) {
+        else if ($('input:radio[name="test49"]:checked').val() == null) {
             alert("请选择特禀质第4题答案");
         }
-        else if (!$(".test50").attr("checked")) {
+        else if ($('input:radio[name="test50"]:checked').val() == null) {
             alert("请选择特禀质第5题答案");
         }
-        else if (!$(".test51").attr("checked")) {
+        else if ($('input:radio[name="test51"]:checked').val() == null) {
             alert("请选择特禀质第6题答案");
         }
-        else if (!$(".test52").attr("checked")) {
+        else if ($('input:radio[name="test52"]:checked').val() == null) {
             alert("请选择特禀质第7题答案");
         }
-        else if (!$(".test53").attr("checked")) {
+        else if ($('input:radio[name="test53"]:checked').val() == null) {
             alert("请选择气郁质第1题答案");
         }
-        else if (!$(".test54").attr("checked")) {
+        else if ($('input:radio[name="test54"]:checked').val() == null) {
             alert("请选择气郁质第2题答案");
         }
-        else if (!$(".test55").attr("checked")) {
+        else if ($('input:radio[name="test55"]:checked').val() == null) {
             alert("请选择气郁质第3题答案");
         }
-        else if (!$(".test56").attr("checked")) {
+        else if ($('input:radio[name="test56"]:checked').val() == null) {
             alert("请选择气郁质第4题答案");
         }
-        else if (!$(".test57").attr("checked")) {
+        else if ($('input:radio[name="test57"]:checked').val() == null) {
             alert("请选择气郁质第5题答案");
         }
-        else if (!$(".test58").attr("checked")) {
+        else if ($('input:radio[name="test58"]:checked').val() == null) {
             alert("请选择气郁质第6题答案");
         }
-        else if (!$(".test59").attr("checked")) {
+        else if ($('input:radio[name="test59"]:checked').val() == null) {
             alert("请选择气郁质第7题答案");
         }
-        else if (!$(".test60").attr("checked")) {
+        else if ($('input:radio[name="test60"]:checked').val() == null) {
             alert("请选择平和质第1题答案");
         }
-        else if (!$(".test61").attr("checked")) {
+        else if ($('input:radio[name="test61"]:checked').val() == null) {
             alert("请选择平和质第2题答案");
         }
-        else if (!$(".test62").attr("checked")) {
+        else if ($('input:radio[name="test62"]:checked').val() == null) {
             alert("请选择平和质第3题答案");
         }
-        else if (!$(".test63").attr("checked")) {
+        else if ($('input:radio[name="test63"]:checked').val() == null) {
             alert("请选择平和质第4题答案");
         }
-        else if (!$(".test64").attr("checked")) {
+        else if ($('input:radio[name="test64"]:checked').val() == null) {
             alert("请选择平和质第5题答案");
         }
-        else if (!$(".test65").attr("checked")) {
+        else if ($('input:radio[name="test65"]:checked').val() == null) {
             alert("请选择平和质第6题答案");
         }
-        else if (!$(".test66").attr("checked")) {
+        else if ($('input:radio[name="test66"]:checked').val() == null) {
             alert("请选择平和质第7题答案");
         }
-        else if (!$(".test67").attr("checked")) {
+        else if ($('input:radio[name="test67"]:checked').val() == null) {
             alert("请选择平和质第8题答案");
         }
         else {

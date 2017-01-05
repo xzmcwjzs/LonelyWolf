@@ -245,6 +245,7 @@
     <Compile Include="SearchParam\FamilyInformationParam.cs" />
     <Compile Include="SearchParam\MedicalHistory_HospitalizationParam.cs" />
     <Compile Include="SearchParam\MedicalHistory_OutpatientParam.cs" />
+    <Compile Include="ViewModel\BasicAndConstitutionViewModel.cs" />
     <Compile Include="ViewModel\BasicInformationViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

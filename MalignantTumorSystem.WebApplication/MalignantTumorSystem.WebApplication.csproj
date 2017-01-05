@@ -434,6 +434,7 @@
     <Content Include="Areas\BreastCancer\Views\BC_FollowupAndExamination_PE\Left.cshtml" />
     <Content Include="Areas\BreastCancer\Views\BC_FollowupAndExamination_PE\PE.cshtml" />
     <Content Include="Areas\BreastCancer\Views\BC_FollowupAndExamination_PE\List.cshtml" />
+    <Content Include="Areas\BreastCancer\Views\BC_FollowupAndExamination_Constitution\Show.cshtml" />
     <None Include="Scripts\jquery-1.12.3.intellisense.js" />
     <Content Include="Scripts\Areas\BreastCancer\BC_FollowupAndExamination_BloodGlucose\Control.js" />
     <Content Include="Scripts\Areas\BreastCancer\BC_FollowupAndExamination_BloodGlucose\DateDeal.js" />
@@ -448,6 +449,7 @@
     <Content Include="Scripts\Areas\BreastCancer\BC_FollowupAndExamination_BloodPressure\ShowAll.js" />
     <Content Include="Scripts\Areas\BreastCancer\BC_FollowupAndExamination_BloodPressure\ShowAllDataBase.js" />
     <Content Include="Scripts\Areas\BreastCancer\BC_FollowupAndExamination_Constitution\Control.js" />
+    <Content Include="Scripts\Areas\BreastCancer\BC_FollowupAndExamination_Constitution\Show.js" />
     <Content Include="Scripts\Areas\BreastCancer\BC_FollowupAndExamination_PE\Control.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

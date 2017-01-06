@@ -1608,6 +1608,10 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MalignantTumorSystem.ADO\MalignantTumorSystem.ADO.csproj">
+      <Project>{3cd866f8-59de-4097-8c35-ded26192ee5e}</Project>
+      <Name>MalignantTumorSystem.ADO</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MalignantTumorSystem.BLL\MalignantTumorSystem.BLL.csproj">
       <Project>{3bbb5e0b-70d3-4490-953e-5f6cdc4c7084}</Project>
       <Name>MalignantTumorSystem.BLL</Name>

@@ -665,8 +665,7 @@ namespace MalignantTumorSystem.DAL
         public void BulkInsert(IEnumerable<T> list)
         { 
             using (var transactionScope = new TransactionScope())
-            {
-
+            { 
                 transactionScope.Complete();
             }
         }

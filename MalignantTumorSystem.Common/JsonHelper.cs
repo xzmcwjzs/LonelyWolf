@@ -318,8 +318,7 @@ namespace MalignantTumorSystem.Common
             return jsonString.ToString();
         }
         #endregion
-
-
+        
         #region 返回错误
         public static string error()
         {

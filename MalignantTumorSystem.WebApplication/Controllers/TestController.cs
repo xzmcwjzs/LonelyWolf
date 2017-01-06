@@ -8,6 +8,8 @@ using MalignantTumorSystem.BLL;
 using MalignantTumorSystem.Model;
 using MalignantTumorSystem.Model.Entities;
 using System.Diagnostics;
+using MalignantTumorSystem.ADO;
+using System.Data;
 
 namespace MalignantTumorSystem.WebApplication.Controllers
 {
@@ -16,7 +18,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
         //
         // GET: /Test/
         ITestService testService = new TestService();
-
+        SqlHelper ado = new SqlHelper();
         public ActionResult Index()
         {
             return View();
@@ -73,7 +75,8 @@ namespace MalignantTumorSystem.WebApplication.Controllers
         public ActionResult AddBulk()
         {
             List<Test> listModel = new List<Test>();
-            int count = 1000;
+           
+            int count = 100000;
             for (int i = 0; i < count; i++)
             {
                 Model.Entities.Test model = new Test();
@@ -88,10 +91,29 @@ namespace MalignantTumorSystem.WebApplication.Controllers
             }
             Stopwatch sw = new Stopwatch();
             sw.Start();
-            testService.BulkInsert( listModel);
+            //DataTable dt = new DataTable();
+            //dt.Columns.Add("id", typeof(string));
+            //dt.Columns.Add("id1", typeof(string));
+            //dt.Columns.Add("id2", typeof(string));
+            //dt.Columns.Add("id3", typeof(string));
+            //dt.Columns.Add("id4", typeof(string));
+            //dt.Columns.Add("id5", typeof(string));
+            //foreach (Test item in listModel)
+            //{
+            //    DataRow row = dt.NewRow();
+            //    row["id"] = item.id;
+            //    row["id1"] = item.id1;
+            //    row["id2"] = item.id2;
+            //    row["id3"] = item.id3;
+            //    row["id4"] = item.id4;
+            //    row["id5"] = item.id5;
+            //    dt.Rows.Add(row);
+            //}
+            //ado.InsertBySqlBulkCopy(dt, "Test");
+            ado.InsertBySqlBulkCopy<Test>(listModel, "Test");
             sw.Stop();
             var temp = sw.Elapsed;
-            string date = "5W 数据 使用BulkInsert的批量插入总耗时为：" + temp.ToString();
+            string date = "10W 数据 使用BulkInsert的批量插入总耗时为：" + temp.ToString();
             return Content(date);
         }
 

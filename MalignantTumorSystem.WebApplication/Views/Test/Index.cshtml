@@ -58,8 +58,7 @@
                         alert("系统繁忙，请联系管理员");
                     }
                 });
-            });
-
+            }); 
             $("#updateBulk").click(function () {
                 $.ajax({
                     cache: true,
@@ -75,8 +74,7 @@
                         alert("系统繁忙，请联系管理员");
                     }
                 });
-            });
-
+            }); 
             $("#deleteBulk").click(function () {
                 $.ajax({
                     cache: true,
@@ -101,11 +99,11 @@
       <table>
           <tr>
               <td>
-                  <input type="button" id="addEF" name="addEF" value="测试1W条数据的批量新增EF" />
-                  <input type="button" id="addRange" name="addRange" value="测试1W条数据的批量新增AddRange" />
-                  <input type="button" id="addBulk" name="addBulk" value="测试1W条数据的批量新增Bulk" />
-                  <input type="button" id="updateBulk" name="updateBulk" value="测试1W条数据的批量更新Bulk" />
-                  <input type="button" id="deleteBulk" name="deleteBulk" value="测试1W条数据的批量删除Bulk" />
+                  <input type="button" id="addEF" name="addEF" value="测试数据的批量新增EF" />
+                  <input type="button" id="addRange" name="addRange" value="测试数据的批量新增AddRange" />
+                  <input type="button" id="addBulk" name="addBulk" value="测试数据的批量新增Bulk" />
+                  <input type="button" id="updateBulk" name="updateBulk" value="测试数据的批量更新Bulk" />
+                  <input type="button" id="deleteBulk" name="deleteBulk" value="测试数据的批量删除Bulk" />
               </td>
           </tr>
           <tr>

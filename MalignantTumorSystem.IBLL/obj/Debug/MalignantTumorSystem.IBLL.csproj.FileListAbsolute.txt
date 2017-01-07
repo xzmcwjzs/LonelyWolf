@@ -47,8 +47,8 @@ C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.IBLL\bin\De
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.IBLL\bin\Debug\EntityFramework.xml
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.IBLL\bin\Debug\EntityFramework.SqlServer.xml
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.IBLL\bin\Debug\EntityFramework6.Extended.NET45.xml
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.IBLL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.IBLL\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.IBLL\obj\Debug\MalignantTumorSystem.IBLL.csprojResolveAssemblyReference.cache
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.IBLL\obj\Debug\MalignantTumorSystem.IBLL.dll
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.IBLL\obj\Debug\MalignantTumorSystem.IBLL.pdb
-C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.IBLL\bin\Debug\zh-Hans\EntityFramework.resources.dll
-C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.IBLL\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll

@@ -248,6 +248,7 @@ D:\王杰\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantT
 D:\王杰\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.WebApplication\bin\zh-Hans\EntityFramework.resources.dll
 D:\王杰\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.WebApplication\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
 D:\王杰\王杰-锅只是个传说\肿瘤系统\MalignantTumorSystem\MalignantTumorSystem.WebApplication\bin\log4net.dll
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\MalignantTumorSystem.BLL.pdb
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\MalignantTumorSystem.WebApplication.dll.config
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\MalignantTumorSystem.WebApplication.dll
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\MalignantTumorSystem.WebApplication.pdb
@@ -260,6 +261,7 @@ C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplicat
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\Framework.dll
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\HibernatingRhinos.Profiler.Appender.dll
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\log4net.dll
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\MalignantTumorSystem.ADO.dll
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\MalignantTumorSystem.BLL.dll
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\MalignantTumorSystem.Common.dll
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\MalignantTumorSystem.IBLL.dll
@@ -269,6 +271,7 @@ C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplicat
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\MySql.Data.dll
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\Newtonsoft.Json.dll
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\Ninject.dll
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\RouteDebug.dll
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\Spring.Core.dll
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\Spring.Web.dll
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\Spring.Web.Extensions.dll
@@ -292,7 +295,7 @@ C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplicat
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\NPOI.OOXML.dll
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\NPOI.OpenXmlFormats.dll
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\NPOI.OpenXml4Net.dll
-C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\MalignantTumorSystem.BLL.pdb
+C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\MalignantTumorSystem.ADO.pdb
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\MalignantTumorSystem.Common.pdb
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\MalignantTumorSystem.IBLL.pdb
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\MalignantTumorSystem.Model.pdb
@@ -336,6 +339,3 @@ C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplicat
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\obj\Debug\MalignantTumorSystem.WebApplication.csprojResolveAssemblyReference.cache
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\obj\Debug\MalignantTumorSystem.WebApplication.dll
 C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\obj\Debug\MalignantTumorSystem.WebApplication.pdb
-C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\RouteDebug.dll
-C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\MalignantTumorSystem.ADO.dll
-C:\MyRepository\MalignantTumorSystem\LonelyWolf\MalignantTumorSystem.WebApplication\bin\MalignantTumorSystem.ADO.pdb

@@ -70,6 +70,7 @@
     <Compile Include="Log\LogHelper.cs" />
     <Compile Include="Log\TextFileWriter.cs" />
     <Compile Include="MD5Helper.cs" />
+    <Compile Include="MessageBox.cs" />
     <Compile Include="MyPath.cs" />
     <Compile Include="NPOIHelper.cs" />
     <Compile Include="OneLoginHelper.cs" />

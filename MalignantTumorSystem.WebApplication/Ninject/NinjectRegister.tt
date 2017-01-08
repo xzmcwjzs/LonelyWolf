@@ -16,6 +16,8 @@ using System.Web.Http;
 using System.Web.Mvc;
 using MalignantTumorSystem.IBLL;
 using MalignantTumorSystem.BLL;
+using MalignantTumorSystem.IDAL;
+using MalignantTumorSystem.DAL;
 
 namespace MalignantTumorSystem.WebApplication.Ninject
 {
@@ -59,6 +61,7 @@ namespace MalignantTumorSystem.WebApplication.Ninject
 foreach (string className in ClassNameList)
 { 
 #>		
+            Kernel.Bind<I<#=className#>Dal>().To<<#=className#>Dal>();
 	        Kernel.Bind<I<#=className#>Service>().To<<#=className#>Service>();
 <#}
 }#>

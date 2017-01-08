@@ -20,7 +20,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
         public IMT_RoleInfoService roleInfoService { get; set; }
         public ActionResult Index()
         {
-            string tmp = "",sex;
+            string tmp = "";
             int outNum;
             Model.Entities.Comm_Platform_Worker workerModel=(Model.Entities.Comm_Platform_Worker)Session["worker"];
             ViewBag.HospitalName = CommonFunc.SafeGetStringFromObj(workerModel.company);
@@ -37,13 +37,11 @@ namespace MalignantTumorSystem.WebApplication.Controllers
             int sx = int.Parse(tmp);
             Math.DivRem(sx,2,out outNum);
             if (outNum == 0)
-            {
-                sex = "女";
+            { 
                 ViewBag.Sex = "女士";
             }
             else
-            {
-                sex = "男";
+            { 
                 ViewBag.Sex = "先生";
             } 
             return View();

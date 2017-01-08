@@ -1620,9 +1620,21 @@
       <Project>{d0749ec3-39fd-4e75-adf0-d4a9a2b49fa2}</Project>
       <Name>MalignantTumorSystem.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MalignantTumorSystem.DAL\MalignantTumorSystem.DAL.csproj">
+      <Project>{7a3a2255-f1ec-4327-b42a-a33466fbe3d4}</Project>
+      <Name>MalignantTumorSystem.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MalignantTumorSystem.DI\MalignantTumorSystem.DI.csproj">
+      <Project>{4bf77f5f-4a09-46a6-82b0-56124189b29d}</Project>
+      <Name>MalignantTumorSystem.DI</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MalignantTumorSystem.IBLL\MalignantTumorSystem.IBLL.csproj">
       <Project>{f5585894-3d8e-45ef-a4fa-89750793b2a4}</Project>
       <Name>MalignantTumorSystem.IBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MalignantTumorSystem.IDAL\MalignantTumorSystem.IDAL.csproj">
+      <Project>{fad96e81-597c-4ee2-985c-38e3a72e83da}</Project>
+      <Name>MalignantTumorSystem.IDAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\MalignantTumorSystem.Model\MalignantTumorSystem.Model.csproj">
       <Project>{1b546131-c4bb-4069-815a-48906c34fd1b}</Project>

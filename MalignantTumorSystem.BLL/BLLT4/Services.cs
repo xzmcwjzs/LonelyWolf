@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MalignantTumorSystem.DAL;
+using MalignantTumorSystem.DI;
 using MalignantTumorSystem.IBLL;
 using MalignantTumorSystem.Model;
 using MalignantTumorSystem.Model.Entities;
@@ -15,7 +15,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetComm_Platform_WorkerDal();
+            CurrentDal =AbstractFactory.GetComm_Platform_WorkerDal();
+            //CurrentDal =NinjectDI.GetComm_Platform_WorkerDal;
         } 
 	}  
 	
@@ -23,7 +24,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetMT_RoleInfoDal();
+            CurrentDal =AbstractFactory.GetMT_RoleInfoDal();
+            //CurrentDal =NinjectDI.GetMT_RoleInfoDal;
         } 
 	}  
 	
@@ -31,7 +33,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetMT_WorkerRoleInfoDal();
+            CurrentDal =AbstractFactory.GetMT_WorkerRoleInfoDal();
+            //CurrentDal =NinjectDI.GetMT_WorkerRoleInfoDal;
         } 
 	}  
 	
@@ -39,7 +42,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetShare_ProvinceDal();
+            CurrentDal =AbstractFactory.GetShare_ProvinceDal();
+            //CurrentDal =NinjectDI.GetShare_ProvinceDal;
         } 
 	}  
 	
@@ -47,7 +51,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetShare_CityDal();
+            CurrentDal =AbstractFactory.GetShare_CityDal();
+            //CurrentDal =NinjectDI.GetShare_CityDal;
         } 
 	}  
 	
@@ -55,7 +60,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetShare_CountyDal();
+            CurrentDal =AbstractFactory.GetShare_CountyDal();
+            //CurrentDal =NinjectDI.GetShare_CountyDal;
         } 
 	}  
 	
@@ -63,7 +69,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetShare_StreetDal();
+            CurrentDal =AbstractFactory.GetShare_StreetDal();
+            //CurrentDal =NinjectDI.GetShare_StreetDal;
         } 
 	}  
 	
@@ -71,7 +78,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetShare_CommunityInfoDal();
+            CurrentDal =AbstractFactory.GetShare_CommunityInfoDal();
+            //CurrentDal =NinjectDI.GetShare_CommunityInfoDal;
         } 
 	}  
 	
@@ -79,7 +87,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetComm_TumourDal();
+            CurrentDal =AbstractFactory.GetComm_TumourDal();
+            //CurrentDal =NinjectDI.GetComm_TumourDal;
         } 
 	}  
 	
@@ -87,7 +96,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetComm_ResidentFileDal();
+            CurrentDal =AbstractFactory.GetComm_ResidentFileDal();
+            //CurrentDal =NinjectDI.GetComm_ResidentFileDal;
         } 
 	}  
 	
@@ -95,7 +105,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetComm_ResidentFile_Followup_DiseaseDal();
+            CurrentDal =AbstractFactory.GetComm_ResidentFile_Followup_DiseaseDal();
+            //CurrentDal =NinjectDI.GetComm_ResidentFile_Followup_DiseaseDal;
         } 
 	}  
 	
@@ -103,7 +114,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetComm_ResidentFile_Followup_SurgeryDal();
+            CurrentDal =AbstractFactory.GetComm_ResidentFile_Followup_SurgeryDal();
+            //CurrentDal =NinjectDI.GetComm_ResidentFile_Followup_SurgeryDal;
         } 
 	}  
 	
@@ -111,7 +123,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetComm_ResidentFile_Followup_TraumaDal();
+            CurrentDal =AbstractFactory.GetComm_ResidentFile_Followup_TraumaDal();
+            //CurrentDal =NinjectDI.GetComm_ResidentFile_Followup_TraumaDal;
         } 
 	}  
 	
@@ -119,7 +132,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetComm_ResidentFile_Followup_Blood_TransfusionDal();
+            CurrentDal =AbstractFactory.GetComm_ResidentFile_Followup_Blood_TransfusionDal();
+            //CurrentDal =NinjectDI.GetComm_ResidentFile_Followup_Blood_TransfusionDal;
         } 
 	}  
 	
@@ -127,7 +141,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetComm_ResidentFile_Followup_Family_DiseaseDal();
+            CurrentDal =AbstractFactory.GetComm_ResidentFile_Followup_Family_DiseaseDal();
+            //CurrentDal =NinjectDI.GetComm_ResidentFile_Followup_Family_DiseaseDal;
         } 
 	}  
 	
@@ -135,7 +150,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_SmokeAndDrinkDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_SmokeAndDrinkDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_SmokeAndDrinkDal;
         } 
 	}  
 	
@@ -143,7 +159,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetComm_EHR_AbstractDal();
+            CurrentDal =AbstractFactory.GetComm_EHR_AbstractDal();
+            //CurrentDal =NinjectDI.GetComm_EHR_AbstractDal;
         } 
 	}  
 	
@@ -151,7 +168,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetComm_ResidentFile_Change_AddressDal();
+            CurrentDal =AbstractFactory.GetComm_ResidentFile_Change_AddressDal();
+            //CurrentDal =NinjectDI.GetComm_ResidentFile_Change_AddressDal;
         } 
 	}  
 	
@@ -159,7 +177,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetShare_DataDictionaryDal();
+            CurrentDal =AbstractFactory.GetShare_DataDictionaryDal();
+            //CurrentDal =NinjectDI.GetShare_DataDictionaryDal;
         } 
 	}  
 	
@@ -167,7 +186,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Diabetes_familyDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Diabetes_familyDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Diabetes_familyDal;
         } 
 	}  
 	
@@ -175,7 +195,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Diabetes_family_relationDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Diabetes_family_relationDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Diabetes_family_relationDal;
         } 
 	}  
 	
@@ -183,7 +204,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_DailyLifeDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_DailyLifeDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_DailyLifeDal;
         } 
 	}  
 	
@@ -191,7 +213,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_PhysicalExerciseDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_PhysicalExerciseDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_PhysicalExerciseDal;
         } 
 	}  
 	
@@ -199,7 +222,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_PhysicalExercise_AddDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_PhysicalExercise_AddDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_PhysicalExercise_AddDal;
         } 
 	}  
 	
@@ -207,7 +231,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetICD_10_oldDal();
+            CurrentDal =AbstractFactory.GetICD_10_oldDal();
+            //CurrentDal =NinjectDI.GetICD_10_oldDal;
         } 
 	}  
 	
@@ -215,7 +240,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_MedicineDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Comm_MedicineDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Comm_MedicineDal;
         } 
 	}  
 	
@@ -223,7 +249,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Data_DiseaseNameDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Data_DiseaseNameDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Data_DiseaseNameDal;
         } 
 	}  
 	
@@ -231,7 +258,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_DiagnosticDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Comm_DiagnosticDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Comm_DiagnosticDal;
         } 
 	}  
 	
@@ -239,7 +267,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_OutpatientDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_OutpatientDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_OutpatientDal;
         } 
 	}  
 	
@@ -247,7 +276,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_MedicationDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Comm_MedicationDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Comm_MedicationDal;
         } 
 	}  
 	
@@ -255,7 +285,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Outpatient_JudgeDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Outpatient_JudgeDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Outpatient_JudgeDal;
         } 
 	}  
 	
@@ -263,7 +294,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Outpatient_PrescriptionDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Outpatient_PrescriptionDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Outpatient_PrescriptionDal;
         } 
 	}  
 	
@@ -271,7 +303,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Outpatient_AccessoryExaminationDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Outpatient_AccessoryExaminationDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Outpatient_AccessoryExaminationDal;
         } 
 	}  
 	
@@ -279,7 +312,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_MedicationAddDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Comm_MedicationAddDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Comm_MedicationAddDal;
         } 
 	}  
 	
@@ -287,7 +321,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_HospitalizationDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_HospitalizationDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_HospitalizationDal;
         } 
 	}  
 	
@@ -295,7 +330,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Hospitalization_ConsultationRecordDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Hospitalization_ConsultationRecordDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Hospitalization_ConsultationRecordDal;
         } 
 	}  
 	
@@ -303,7 +339,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Hospitalization_CourseRecordDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Hospitalization_CourseRecordDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Hospitalization_CourseRecordDal;
         } 
 	}  
 	
@@ -311,7 +348,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Hospitalization_ExpensesDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Hospitalization_ExpensesDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Hospitalization_ExpensesDal;
         } 
 	}  
 	
@@ -319,7 +357,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Hospitalization_DischargeAbstractDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Hospitalization_DischargeAbstractDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Hospitalization_DischargeAbstractDal;
         } 
 	}  
 	
@@ -327,7 +366,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Hospitalization_DischargeAbstract_AdviceDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Hospitalization_DischargeAbstract_AdviceDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Hospitalization_DischargeAbstract_AdviceDal;
         } 
 	}  
 	
@@ -335,7 +375,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_DiagnosticAddDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Comm_DiagnosticAddDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Comm_DiagnosticAddDal;
         } 
 	}  
 	
@@ -343,7 +384,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Data_NamesDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Data_NamesDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Data_NamesDal;
         } 
 	}  
 	
@@ -351,7 +393,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Data_UnitsDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Data_UnitsDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Data_UnitsDal;
         } 
 	}  
 	
@@ -359,7 +402,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Data_SectionsDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Data_SectionsDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Data_SectionsDal;
         } 
 	}  
 	
@@ -367,7 +411,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_Testing_BloodDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Comm_Testing_BloodDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Comm_Testing_BloodDal;
         } 
 	}  
 	
@@ -375,7 +420,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_Testing_Blood_AddDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Comm_Testing_Blood_AddDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Comm_Testing_Blood_AddDal;
         } 
 	}  
 	
@@ -383,7 +429,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_PicturesDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_PicturesDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_PicturesDal;
         } 
 	}  
 	
@@ -391,7 +438,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Data_ResultsDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Data_ResultsDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Data_ResultsDal;
         } 
 	}  
 	
@@ -399,7 +447,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_Testing_UrineDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Comm_Testing_UrineDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Comm_Testing_UrineDal;
         } 
 	}  
 	
@@ -407,7 +456,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_Testing_Urine_AddDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Comm_Testing_Urine_AddDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Comm_Testing_Urine_AddDal;
         } 
 	}  
 	
@@ -415,7 +465,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_Testing_FaecesDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Comm_Testing_FaecesDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Comm_Testing_FaecesDal;
         } 
 	}  
 	
@@ -423,7 +474,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_Testing_SputumDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Comm_Testing_SputumDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Comm_Testing_SputumDal;
         } 
 	}  
 	
@@ -431,7 +483,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_Testing_CSFDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Comm_Testing_CSFDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Comm_Testing_CSFDal;
         } 
 	}  
 	
@@ -439,7 +492,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_Testing_CSFAddDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Comm_Testing_CSFAddDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Comm_Testing_CSFAddDal;
         } 
 	}  
 	
@@ -447,7 +501,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_Testing_SCEDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Comm_Testing_SCEDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Comm_Testing_SCEDal;
         } 
 	}  
 	
@@ -455,7 +510,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_Testing_SCEAddDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Comm_Testing_SCEAddDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Comm_Testing_SCEAddDal;
         } 
 	}  
 	
@@ -463,7 +519,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_HumorProjectNamesDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Comm_HumorProjectNamesDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Comm_HumorProjectNamesDal;
         } 
 	}  
 	
@@ -471,7 +528,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_HumorAddDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Comm_HumorAddDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Comm_HumorAddDal;
         } 
 	}  
 	
@@ -479,7 +537,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_HumorDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Comm_HumorDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Comm_HumorDal;
         } 
 	}  
 	
@@ -487,7 +546,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_HumorUnitDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Comm_HumorUnitDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Comm_HumorUnitDal;
         } 
 	}  
 	
@@ -495,7 +555,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_HumorResultDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Comm_HumorResultDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Comm_HumorResultDal;
         } 
 	}  
 	
@@ -503,7 +564,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_HumorQuJianDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Comm_HumorQuJianDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Comm_HumorQuJianDal;
         } 
 	}  
 	
@@ -511,7 +573,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_Testing_BMCDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Comm_Testing_BMCDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Comm_Testing_BMCDal;
         } 
 	}  
 	
@@ -519,7 +582,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_Testing_BMCAddDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Comm_Testing_BMCAddDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Comm_Testing_BMCAddDal;
         } 
 	}  
 	
@@ -527,7 +591,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_Testing_GeneDetection_AddDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Comm_Testing_GeneDetection_AddDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Comm_Testing_GeneDetection_AddDal;
         } 
 	}  
 	
@@ -535,7 +600,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_Testing_GeneDetectionDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Comm_Testing_GeneDetectionDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Comm_Testing_GeneDetectionDal;
         } 
 	}  
 	
@@ -543,7 +609,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetICD_9_oldDal();
+            CurrentDal =AbstractFactory.GetICD_9_oldDal();
+            //CurrentDal =NinjectDI.GetICD_9_oldDal;
         } 
 	}  
 	
@@ -551,7 +618,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_OperationDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Comm_OperationDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Comm_OperationDal;
         } 
 	}  
 	
@@ -559,7 +627,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_OperationAddDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Comm_OperationAddDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Comm_OperationAddDal;
         } 
 	}  
 	
@@ -567,7 +636,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Supplementary_Examination_CTDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Supplementary_Examination_CTDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Supplementary_Examination_CTDal;
         } 
 	}  
 	
@@ -575,7 +645,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Supplementary_Examination_XDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Supplementary_Examination_XDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Supplementary_Examination_XDal;
         } 
 	}  
 	
@@ -583,7 +654,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Supplementary_Examination_USDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Supplementary_Examination_USDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Supplementary_Examination_USDal;
         } 
 	}  
 	
@@ -591,7 +663,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Supplementary_Examination_StomachDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Supplementary_Examination_StomachDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Supplementary_Examination_StomachDal;
         } 
 	}  
 	
@@ -599,7 +672,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Supplementary_Examination_MRIDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Supplementary_Examination_MRIDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Supplementary_Examination_MRIDal;
         } 
 	}  
 	
@@ -607,7 +681,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Supplementary_Examination_HeartDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Supplementary_Examination_HeartDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Supplementary_Examination_HeartDal;
         } 
 	}  
 	
@@ -615,7 +690,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_LungProjectNamesDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Comm_LungProjectNamesDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Comm_LungProjectNamesDal;
         } 
 	}  
 	
@@ -623,7 +699,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_LungQuJianDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Comm_LungQuJianDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Comm_LungQuJianDal;
         } 
 	}  
 	
@@ -631,7 +708,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_LungSexQuJianDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Comm_LungSexQuJianDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Comm_LungSexQuJianDal;
         } 
 	}  
 	
@@ -639,7 +717,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_LungTitleDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Comm_LungTitleDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Comm_LungTitleDal;
         } 
 	}  
 	
@@ -647,7 +726,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_LungUnitDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Comm_LungUnitDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Comm_LungUnitDal;
         } 
 	}  
 	
@@ -655,7 +735,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_LungDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Comm_LungDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Comm_LungDal;
         } 
 	}  
 	
@@ -663,7 +744,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_Comm_LungAddDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_Comm_LungAddDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_Comm_LungAddDal;
         } 
 	}  
 	
@@ -671,7 +753,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetTestDal();
+            CurrentDal =AbstractFactory.GetTestDal();
+            //CurrentDal =NinjectDI.GetTestDal;
         } 
 	}  
 	
@@ -679,7 +762,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_BloodPressureDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_BloodPressureDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_BloodPressureDal;
         } 
 	}  
 	
@@ -687,7 +771,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_BloodPressure_AddDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_BloodPressure_AddDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_BloodPressure_AddDal;
         } 
 	}  
 	
@@ -695,7 +780,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_BloodGlucoseDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_BloodGlucoseDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_BloodGlucoseDal;
         } 
 	}  
 	
@@ -703,7 +789,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_BloodGlucose_AddDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_BloodGlucose_AddDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_BloodGlucose_AddDal;
         } 
 	}  
 	
@@ -711,7 +798,8 @@ namespace MalignantTumorSystem.BLL
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.GetChronic_disease_ConstitutionDal();
+            CurrentDal =AbstractFactory.GetChronic_disease_ConstitutionDal();
+            //CurrentDal =NinjectDI.GetChronic_disease_ConstitutionDal;
         } 
 	}  
 }

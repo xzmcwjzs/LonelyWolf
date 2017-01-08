@@ -21,8 +21,10 @@ namespace MalignantTumorSystem.WebApplication
         {
              
             #region Ninject IOC/DI 注入
-            NinjectRegister.RegisterFovMvc(); //为ASP.NET MVC注册IOC容器
-            NinjectRegister.RegisterFovWebApi(GlobalConfiguration.Configuration);//为WebApi注册IOC容器 
+
+            MalignantTumorSystem.WebApplication.Ninject.NinjectRegister.RegisterFovMvc(); //为ASP.NET MVC注册IOC容器
+            MalignantTumorSystem.WebApplication.Ninject.NinjectRegister.RegisterFovWebApi(GlobalConfiguration.Configuration);//为WebApi注册IOC容器 
+             
             #endregion
 
             AreaRegistration.RegisterAllAreas();

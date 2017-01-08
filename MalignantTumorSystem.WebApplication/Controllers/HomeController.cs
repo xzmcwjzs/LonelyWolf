@@ -16,6 +16,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
         // GET: /Home/
         [Inject]
         public IComm_Platform_WorkerService workerService { get; set; }
+        
         public ActionResult Index()
         {
             return View();

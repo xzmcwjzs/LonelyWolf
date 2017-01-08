@@ -12,7 +12,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MalignantTumorSystem.DAL;
+using MalignantTumorSystem.DI;
 using MalignantTumorSystem.IBLL;
 using MalignantTumorSystem.Model;
 using MalignantTumorSystem.Model.Entities;
@@ -39,7 +39,8 @@ foreach (var className in ClassNameList)
     {	
 		public override void SetCurrentDal()
         {
-            CurrentDal =DAL.DALFactory.AbstractFactory.Get<#=className#>Dal();
+            CurrentDal =AbstractFactory.Get<#=className#>Dal();
+            //CurrentDal =NinjectDI.Get<#=className#>Dal;
         } 
 	}  
 <#}

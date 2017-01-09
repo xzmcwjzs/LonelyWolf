@@ -97,16 +97,7 @@ namespace MalignantTumorSystem.BLL
         public bool DeleteEntity(T entity)
         {
             return CurrentDal.DeleteEntity(entity); 
-        }
-        /// <summary>
-        /// 删除2
-        /// </summary>
-        /// <param name="entity"></param>
-        /// <returns></returns>
-        public bool DeleteEntity2(T entity)
-        {
-            return CurrentDal.DeleteEntity2(entity); 
-        }
+        } 
         /// <summary>
         /// 批量删除
         /// </summary>

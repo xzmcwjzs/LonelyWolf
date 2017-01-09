@@ -393,10 +393,11 @@ namespace MalignantTumorSystem.DAL
                 //实例化一个Users对象，并指定Id的值 
                 //Users entity = new Users() { Id = 1 };
 
-                //1.将entity附加到上下文对象中，并获得EF容器的管理对象
-                var entry = Db.Entry<T>(entity);
+                //1.将entity附加到上下文对象中，并获得EF容器的管理对象 
+                Db.Set<T>().Attach(entity as T);
                 //2.设置该对象的状态为删除
-                entry.State = EntityState.Deleted;
+                Db.Entry(entity).State = EntityState.Deleted;
+                Db.Set<T>().Remove(entity as T);
                 return Db.SaveChanges() > 0;
             }
             catch (Exception ex)
@@ -407,33 +408,7 @@ namespace MalignantTumorSystem.DAL
             }
 
         }
-        /// <summary>
-        /// 根据主键删除方法2
-        /// </summary>
-        /// <param name="entity"></param>
-        /// <returns></returns>
-        public bool DeleteEntity2(T entity)
-        {
-            try
-            {
-                //实例化一个Users对象，并指定Id的值 
-                //Users entity = new Users() { Id = 1 };
-
-                //1.将entity附加到上下文对象中
-                Db.Set<T>().Attach(entity);
-                //2.删除entity对象
-                Db.Set<T>().Remove(entity);
-                //Db.Entry<T>(entity).State = EntityState.Deleted;
-                return Db.SaveChanges() > 0;
-            }
-            catch (Exception ex)
-            {
-                if (!string.IsNullOrEmpty(ex.InnerException.Message))
-                    throw new Exception("删除失败：" + ex.InnerException.Message);
-                throw new Exception("删除失败：" + ex.Message);
-            }
-
-        }
+       
         /// <summary>
         /// 批量删除
         /// </summary>

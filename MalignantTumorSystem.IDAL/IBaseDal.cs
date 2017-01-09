@@ -30,8 +30,7 @@ namespace MalignantTumorSystem.IDAL
         bool UpdatePartialPropertity(T entity, string[] propertyName);
         bool UpdatePartialPropertity2(T entity, params string[] propertyName);
          bool UpdatePartialPropertityByLambda(Expression<Func<T, bool>> whereLambda, T entity, params string[] propertyName);
-        bool DeleteEntity(T entity);
-        bool DeleteEntity2(T entity);
+        bool DeleteEntity(T entity); 
         bool DeleteAllEntity(IList<T> list);
         bool DeleteByLambda(Expression<Func<T, bool>> whereLambda);
         IQueryable<T> LoadEntityBySql(string sql, params SqlParameter[] parms);

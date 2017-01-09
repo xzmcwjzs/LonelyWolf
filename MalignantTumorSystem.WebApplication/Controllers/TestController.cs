@@ -17,8 +17,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
     {
         //
         // GET: /Test/
-        ITestService testService = new TestService();
-        SqlHelper ado = new SqlHelper();
+        ITestService testService = new TestService(); 
         public ActionResult Index()
         {
             return View();
@@ -110,7 +109,7 @@ namespace MalignantTumorSystem.WebApplication.Controllers
             //    dt.Rows.Add(row);
             //}
             //ado.InsertBySqlBulkCopy(dt, "Test");
-            ado.InsertBySqlBulkCopy<Test>(listModel, "Test");
+            SqlHelper.InsertBySqlBulkCopy<Test>(listModel, "Test");
             sw.Stop();
             var temp = sw.Elapsed;
             string date = "10W 数据 使用BulkInsert的批量插入总耗时为：" + temp.ToString();

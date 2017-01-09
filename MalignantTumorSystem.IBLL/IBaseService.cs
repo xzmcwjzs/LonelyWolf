@@ -18,8 +18,7 @@ namespace MalignantTumorSystem.IBLL
         IQueryable<T> LoadEntityAsNoTracking(System.Linq.Expressions.Expression<Func<T, bool>> whereLambda);
         IQueryable<T> LoadOrderEntities<S>(Expression<Func<T, bool>> whereLambda, Expression<Func<T, S>> orderByLambda, bool isAsc);
         IQueryable<T> LoadPageEntities<S>(int pageSize, int pageIndex, out int totalCount, System.Linq.Expressions.Expression<Func<T, bool>> whereLambda, System.Linq.Expressions.Expression<Func<T, S>> orderbyLambda, bool isAsc);
-        bool DeleteEntity(T entity);
-        bool DeleteEntity2(T entity);
+        bool DeleteEntity(T entity); 
         bool DeleteAllEntity(IList<T> list);
         bool DeleteByLambda(Expression<Func<T, bool>> whereLambda);
         bool UpdateEntity(T entity);

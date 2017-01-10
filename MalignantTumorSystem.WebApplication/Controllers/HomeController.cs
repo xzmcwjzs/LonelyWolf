@@ -19,12 +19,14 @@ namespace MalignantTumorSystem.WebApplication.Controllers
         
         public ActionResult Index()
         {
+            ViewData["Message"] = "单元测试";
             return View();
         }
 
         #region 登录
         public ActionResult DengLu()
         {
+            
             string validateCode = Session["validateCode"] != null ? Session["validateCode"].ToString() : string.Empty;
             if (string.IsNullOrEmpty(validateCode))
             {
